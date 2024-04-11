@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04139394</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+        </availability>
+        <date when="2023-07-20T02:51:52+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Photography by Hermelind Le Doeuff | Linguistic fieldwork in South Africa | Ubuhlanti or the cattle pen</title>
+            <title xml:lang="fr">Photographie Hermelind Le Doeuff | Enquêtes linguistiques en Afrique du Sud | L'enclos du bétail ou ubuhlanti</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Hermelind</forename>
+                <surname>Le Doeuff</surname>
+              </persName>
+              <email type="md5">345f3e85b7bd0631fe3203ab7406e8fa</email>
+              <email type="domain">sorbonne-nouvelle.fr</email>
+              <idno type="idhal" notation="string">hermelindledoeuff</idno>
+              <idno type="idhal" notation="numeric">751122</idno>
+              <idno type="halauthorid" notation="string">50662-751122</idno>
+              <affiliation ref="#struct-406905"/>
+              <affiliation ref="#struct-52995"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Balthazar</forename>
+                <surname>Do Nascimento</surname>
+              </persName>
+              <email type="md5">8b297d6a27500375b53449414969af52</email>
+              <email type="domain">cnrs.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-06-23 15:11:52</date>
+              <date type="whenModified">2023-06-28 03:34:02</date>
+              <date type="whenReleased">2023-06-26 11:32:59</date>
+              <date type="whenProduced">2022</date>
+              <date type="whenEndEmbargoed">2023-06-23</date>
+              <ref type="file" target="https://media.hal.science/hal-04139394/image">
+                <date notBefore="2023-06-23"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://media.hal.science/hal-04139394/file/Image48_oct22_.jpg">
+                <date notBefore="2023-06-23"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="710144">
+                <persName>
+                  <forename>Balthazar</forename>
+                  <surname>Do Nascimento</surname>
+                </persName>
+                <email type="md5">8b297d6a27500375b53449414969af52</email>
+                <email type="domain">cnrs.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04139394</idno>
+            <idno type="halUri">https://media.hal.science/hal-04139394</idno>
+            <idno type="halBibtex">ledoeuff:hal-04139394</idno>
+            <idno type="halRefHtml">Photography. CNRS - LACITO, Région du Cap-Oriental, South Africa. 2022</idno>
+            <idno type="halRef">Photography. CNRS - LACITO, Région du Cap-Oriental, South Africa. 2022</idno>
+            <availability status="restricted">
+              <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="TICE">Bibliothèque TICE</idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="UNIV-PARIS3">Université Sorbonne Nouvelle</idno>
+            <idno type="stamp" n="AO-ETHNO">Archives ouvertes de l'Ethnologie</idno>
+            <idno type="stamp" n="INALCO">Institut national des langues et civilisations orientales</idno>
+            <idno type="stamp" n="ETHNO" corresp="AO-ETHNO">Productions de l'ethnologie</idno>
+            <idno type="stamp" n="AO-LINGUISTIQUE">Archives ouvertes de la Linguistique</idno>
+            <idno type="stamp" n="GIP-BE">GIP Bretagne Environnement</idno>
+            <idno type="stamp" n="LACITO" corresp="UNIV-PARIS3">Langues et civilisations à tradition orale</idno>
+            <idno type="stamp" n="CAMPUS-AAR">Campus-AAR</idno>
+            <idno type="stamp" n="AAI">Collection LaCAS - Open Archives in Language and Cultural Area Studies</idno>
+            <idno type="stamp" n="LANGUES_ET_CIVILISATIONS_A_TRADITION_ORALE">Collection des images de terrain au sujet de langues et civilisations à tradition orale</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="image" n="1">Photography</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Photography by Hermelind Le Doeuff | Linguistic fieldwork in South Africa | Ubuhlanti or the cattle pen</title>
+                <title xml:lang="fr">Photographie Hermelind Le Doeuff | Enquêtes linguistiques en Afrique du Sud | L'enclos du bétail ou ubuhlanti</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Hermelind</forename>
+                    <surname>Le Doeuff</surname>
+                  </persName>
+                  <email type="md5">345f3e85b7bd0631fe3203ab7406e8fa</email>
+                  <email type="domain">sorbonne-nouvelle.fr</email>
+                  <idno type="idhal" notation="string">hermelindledoeuff</idno>
+                  <idno type="idhal" notation="numeric">751122</idno>
+                  <idno type="halauthorid" notation="string">50662-751122</idno>
+                  <affiliation ref="#struct-406905"/>
+                  <affiliation ref="#struct-52995"/>
+                </author>
+              </analytic>
+              <monogr>
+                <settlement>Région du Cap-Oriental</settlement>
+                <country key="ZA">South Africa</country>
+                <imprint>
+                  <date type="datePub">2022</date>
+                </imprint>
+              </monogr>
+              <ref target="https://lacito.cnrs.fr/en/directory/hermelind_le_doeuff_en/" type="seeAlso"/>
+            </biblStruct>
+            <listPlace>
+              <place>
+                <location>
+                  <geo>-31.5902 28.791</geo>
+                </location>
+              </place>
+            </listPlace>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">Linguistic fieldwork</term>
+                <term xml:lang="en">Xhosa (language)</term>
+                <term xml:lang="en">South Africa</term>
+                <term xml:lang="fr">Ethnologie</term>
+                <term xml:lang="fr">Afrique du Sud</term>
+                <term xml:lang="fr">CNRS</term>
+                <term xml:lang="fr">Linguistique de terrain</term>
+                <term xml:lang="fr">Linguistique</term>
+                <term xml:lang="fr">Enquêtes de terrain</term>
+                <term xml:lang="fr">Archives scientifiques</term>
+                <term xml:lang="fr">Xhosa (langue)</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs.edu">Humanities and Social Sciences/Education</classCode>
+              <classCode scheme="halDomain" n="shs">Humanities and Social Sciences</classCode>
+              <classCode scheme="halDomain" n="shs.anthro-se">Humanities and Social Sciences/Social Anthropology and ethnology</classCode>
+              <classCode scheme="halDomain" n="shs.envir">Humanities and Social Sciences/Environmental studies</classCode>
+              <classCode scheme="halDomain" n="shs.langue">Humanities and Social Sciences/Linguistics</classCode>
+              <classCode scheme="halTypology" n="IMG">Photos</classCode>
+              <classCode scheme="halOldTypology" n="IMG">Photos</classCode>
+              <classCode scheme="halTreeTypology" n="IMG">Photos</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>This photograph has been captured by Hermelind Le Doeuff during a sociolinguistic fielwork conducted in the Eastern Cape region of South Africa in 2022. This fieldwork aimed at documenting contemporary discourses, representations and attitudes with regard to the sociolinguistic practices of ukuhlonipha/isihlonipho among Xhosa speakers.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>Cette photographie a été prise par Hermelind Le Doeuff durant l’année 2022, dans la région du Cap-Oriental (Eastern Cape), en territoire ancestral xhosa, ceci dans le cadre d'une enquête sociolinguistique de terrain pour documenter les représentations contemporaines des pratiques sociolangagières associées au ukuhlonipha/isihlonipho en Afrique du Sud [terrain de thèse].</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-406905" status="VALID">
+          <idno type="IdRef">026390825</idno>
+          <idno type="ISNI">0000000114990971</idno>
+          <orgName>Langues et civilisations à tradition orale</orgName>
+          <orgName type="acronym">LACITO</orgName>
+          <date type="start">2014-01-01</date>
+          <desc>
+            <address>
+              <addrLine>7, rue Guy Môquet, 94800, VILLEJUIF</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://lacito.cnrs.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation name="UMR7107" active="#struct-52995" type="direct"/>
+            <relation name="UMR7107" active="#struct-300064" type="direct"/>
+            <relation name="UMR7107" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-52995" status="VALID">
+          <idno type="IdRef">027361837</idno>
+          <idno type="ISNI">0000 0004 1937 060X </idno>
+          <idno type="ROR">03z6jp965</idno>
+          <orgName>Université Sorbonne Nouvelle - Paris 3</orgName>
+          <date type="start">1970-01-01</date>
+          <desc>
+            <address>
+              <addrLine>17, rue de la Sorbonne - 75231 Paris cedex 05</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris3.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300064" status="VALID">
+          <idno type="IdRef">026388715</idno>
+          <idno type="ISNI">0000000121884202</idno>
+          <idno type="ROR">023zg8w32</idno>
+          <orgName>Institut National des Langues et Civilisations Orientales</orgName>
+          <orgName type="acronym">Inalco</orgName>
+          <date type="start">1971-01-01</date>
+          <desc>
+            <address>
+              <addrLine>65, rue des Grands Moulins, 75013, PARIS.2, rue de Lille, 75007, PARIS.</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inalco.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

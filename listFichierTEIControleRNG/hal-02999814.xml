@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-02999814</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-21T10:12:18+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Socko Lokaf’s fonnkèr : a poetry of agency</title>
+            <title xml:lang="fr">Le fonnkèr de Socko Lokaf : une poésie de l’émancipation, Cahiers de Littérature Orale, Hors-Série Oralités contestataires, 2020, pp.91-99.</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Philippe</forename>
+                <surname>Glâtre</surname>
+              </persName>
+              <email type="md5">d47d0c20d99c6f53ee252f54df711339</email>
+              <email type="domain">hotmail.com</email>
+              <idno type="idhal" notation="string">philippe-glatre</idno>
+              <idno type="idhal" notation="numeric">737610</idno>
+              <idno type="halauthorid" notation="string">37406-737610</idno>
+              <idno type="ORCID">https://orcid.org/0000-0002-0393-8913</idno>
+              <affiliation ref="#struct-406905"/>
+              <affiliation ref="#struct-525755"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Philippe</forename>
+                <surname>Glâtre</surname>
+              </persName>
+              <email type="md5">d47d0c20d99c6f53ee252f54df711339</email>
+              <email type="domain">hotmail.com</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2020-11-11 09:56:28</date>
+              <date type="whenWritten">2020</date>
+              <date type="whenModified">2023-03-24 14:53:19</date>
+              <date type="whenReleased">2020-11-11 09:56:28</date>
+              <date type="whenProduced">2020</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="481084">
+                <persName>
+                  <forename>Philippe</forename>
+                  <surname>Glâtre</surname>
+                </persName>
+                <email type="md5">d47d0c20d99c6f53ee252f54df711339</email>
+                <email type="domain">hotmail.com</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-02999814</idno>
+            <idno type="halUri">https://hal.science/hal-02999814</idno>
+            <idno type="halBibtex">glatre:hal-02999814</idno>
+            <idno type="halRefHtml">&lt;i&gt;Cahiers de Littérature Orale&lt;/i&gt;, 2020, Oralités contestataires, Hors-Série, pp.91-99</idno>
+            <idno type="halRef">Cahiers de Littérature Orale, 2020, Oralités contestataires, Hors-Série, pp.91-99</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="UNIV-PARIS3">Université Sorbonne Nouvelle</idno>
+            <idno type="stamp" n="INALCO">Institut national des langues et civilisations orientales</idno>
+            <idno type="stamp" n="LACITO" corresp="UNIV-PARIS3">Langues et civilisations à tradition orale</idno>
+            <idno type="stamp" n="CAMPUS-AAR">Campus-AAR</idno>
+            <idno type="stamp" n="AAI">Collection LaCAS - Open Archives in Language and Cultural Area Studies</idno>
+            <idno type="stamp" n="USPC">Université Sorbonne Paris Cité</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="2">International</note>
+            <note type="popular" n="0">No</note>
+            <note type="peer" n="1">Yes</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Socko Lokaf’s fonnkèr : a poetry of agency</title>
+                <title xml:lang="fr">Le fonnkèr de Socko Lokaf : une poésie de l’émancipation, Cahiers de Littérature Orale, Hors-Série Oralités contestataires, 2020, pp.91-99.</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Philippe</forename>
+                    <surname>Glâtre</surname>
+                  </persName>
+                  <email type="md5">d47d0c20d99c6f53ee252f54df711339</email>
+                  <email type="domain">hotmail.com</email>
+                  <idno type="idhal" notation="string">philippe-glatre</idno>
+                  <idno type="idhal" notation="numeric">737610</idno>
+                  <idno type="halauthorid" notation="string">37406-737610</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0002-0393-8913</idno>
+                  <affiliation ref="#struct-406905"/>
+                  <affiliation ref="#struct-525755"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="halJournalId" status="VALID">25777</idno>
+                <idno type="issn">0396-891X</idno>
+                <idno type="eissn">2266-1816</idno>
+                <title level="j">Cahiers de Littérature Orale</title>
+                <imprint>
+                  <publisher>Presses de l'Inalco</publisher>
+                  <biblScope unit="serie">Oralités contestataires</biblScope>
+                  <biblScope unit="issue">Hors-Série</biblScope>
+                  <biblScope unit="pp">91-99</biblScope>
+                  <date type="datePub">2020</date>
+                  <date type="dateEpub">2020</date>
+                </imprint>
+              </monogr>
+              <ref type="publisher">http://journals.openedition.org/clo/6794</ref>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">fonnkèr</term>
+                <term xml:lang="en">Reunion Island</term>
+                <term xml:lang="en">Linguistic Anthropology</term>
+                <term xml:lang="en">Creole poetry</term>
+                <term xml:lang="en">monoculture</term>
+                <term xml:lang="en">decolonization</term>
+                <term xml:lang="en">minorization</term>
+                <term xml:lang="en">racialization</term>
+                <term xml:lang="en">diversity</term>
+                <term xml:lang="fr">fonnkèr</term>
+                <term xml:lang="fr">Île de La Réunion</term>
+                <term xml:lang="fr">anthropologie langagière</term>
+                <term xml:lang="fr">poésie créole</term>
+                <term xml:lang="fr">monoculture</term>
+                <term xml:lang="fr">décolonisation</term>
+                <term xml:lang="fr">minorisation</term>
+                <term xml:lang="fr">racialisation</term>
+                <term xml:lang="fr">diversité</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs">Humanities and Social Sciences</classCode>
+              <classCode scheme="halTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halOldTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halTreeTypology" n="ART">Journal articles</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>Taking part to a long minorized Creole oral tradition, Socko Lokaf’s poetry contributes to invent fonnkèr, an art of speech in Reunion Island. Deconstructing the monoculture stemming from the plantation society, its linguistic and stylistic choices bear witness to a decolonial utterance which struggles to combine creolity and diversity.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>Inscrite dans une tradition orale créole longtemps minorisée, la poésie de Socko Lokaf participe à l’invention du fonnkèr, art de la parole réunionnais. Déconstruisant la monoculture issue de la société de plantation, ses choix linguistiques et stylistiques témoignent d’une énonciation décoloniale qui lutte pour conjuguer créolité et diversité.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-406905" status="VALID">
+          <idno type="IdRef">026390825</idno>
+          <idno type="ISNI">0000000114990971</idno>
+          <orgName>Langues et civilisations à tradition orale</orgName>
+          <orgName type="acronym">LACITO</orgName>
+          <date type="start">2014-01-01</date>
+          <desc>
+            <address>
+              <addrLine>7, rue Guy Môquet, 94800, VILLEJUIF</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://lacito.cnrs.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation name="UMR7107" active="#struct-52995" type="direct"/>
+            <relation name="UMR7107" active="#struct-300064" type="direct"/>
+            <relation name="UMR7107" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-525755" status="VALID">
+          <orgName>Université Sorbonne Nouvelle - Paris 3 - Département : Didactique du Français Langue Etrangère</orgName>
+          <orgName type="acronym">DFLE</orgName>
+          <desc>
+            <address>
+              <addrLine>13, rue Santeuil - 75231 Paris Cedex 05</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris3.fr/departement-didactique-du-francais-langue-etrangere-dfle--22792.kjsp?RH=1178827246954</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-572652" type="direct"/>
+            <relation active="#struct-52995" type="indirect"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-52995" status="VALID">
+          <idno type="IdRef">027361837</idno>
+          <idno type="ISNI">0000 0004 1937 060X </idno>
+          <idno type="ROR">03z6jp965</idno>
+          <orgName>Université Sorbonne Nouvelle - Paris 3</orgName>
+          <date type="start">1970-01-01</date>
+          <desc>
+            <address>
+              <addrLine>17, rue de la Sorbonne - 75231 Paris cedex 05</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris3.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300064" status="VALID">
+          <idno type="IdRef">026388715</idno>
+          <idno type="ISNI">0000000121884202</idno>
+          <idno type="ROR">023zg8w32</idno>
+          <orgName>Institut National des Langues et Civilisations Orientales</orgName>
+          <orgName type="acronym">Inalco</orgName>
+          <date type="start">1971-01-01</date>
+          <desc>
+            <address>
+              <addrLine>65, rue des Grands Moulins, 75013, PARIS.2, rue de Lille, 75007, PARIS.</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inalco.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+        <org type="regrouplaboratory" xml:id="struct-572652" status="VALID">
+          <orgName>Université Sorbonne Nouvelle - Paris 3 - UFR Littérature, Linguistique, Didactique</orgName>
+          <orgName type="acronym">USN LLD</orgName>
+          <desc>
+            <address>
+              <addrLine>13, rue Santeuil - 75231 Paris Cedex 05</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris3.fr/ufr-litterature-linguistique-didactique-lld--96090.kjsp</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-52995" type="direct"/>
+          </listRelation>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-02806496</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-15T13:05:10+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">FaMoz a software for parentage studies for codominant and dominant markers</title>
+            <title xml:lang="fr">FaMoz un logiciel pour faire des études de parenté à partir de marqueurs codominants et dominants</title>
+            <author role="coding">
+              <persName>
+                <forename type="first">Sophie</forename>
+                <surname>Gerber</surname>
+              </persName>
+              <email type="md5">e90ff494b8a1b499022ce97cbfb5d831</email>
+              <email type="domain">u-bordeaux.fr</email>
+              <idno type="idhal" notation="string">sophie-gerber</idno>
+              <idno type="idhal" notation="numeric">747479</idno>
+              <idno type="halauthorid" notation="string">54153-747479</idno>
+              <affiliation ref="#struct-138898"/>
+            </author>
+            <author role="coding">
+              <persName>
+                <forename type="first">Patrick</forename>
+                <forename type="middle">P.</forename>
+                <surname>Chabrier</surname>
+              </persName>
+              <email type="md5">d23de36197a5fc7a713959f1f7a65bc1</email>
+              <email type="domain">toulouse.inra.fr</email>
+              <idno type="idhal" notation="string">patrick-chabrier</idno>
+              <idno type="idhal" notation="numeric">742760</idno>
+              <idno type="halauthorid" notation="string">834666-742760</idno>
+              <affiliation ref="#struct-244474"/>
+            </author>
+            <author role="coding">
+              <persName>
+                <forename type="first">Antoine</forename>
+                <surname>Kremer</surname>
+              </persName>
+              <email type="md5">7e9f28b4ca33e1cf3c04a3a2fc05afa1</email>
+              <email type="domain">inrae.fr</email>
+              <idno type="idhal" notation="string">antoine-kremer</idno>
+              <idno type="idhal" notation="numeric">747402</idno>
+              <idno type="halauthorid" notation="string">53111-747402</idno>
+              <idno type="ORCID">https://orcid.org/0000-0002-3372-3235</idno>
+              <idno type="IDREF">https://www.idref.fr/071401008</idno>
+              <affiliation ref="#struct-138898"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Thierry</forename>
+                <surname>Labbé</surname>
+              </persName>
+              <email type="md5">25626b03090d986e9ec53f1bbc4a453e</email>
+              <email type="domain">inra.fr</email>
+              <idno type="idhal" notation="numeric">1205651</idno>
+              <idno type="halauthorid" notation="string">1397278-1205651</idno>
+              <affiliation ref="#struct-52078"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Migration</forename>
+                <surname>ProdInra</surname>
+              </persName>
+              <email type="md5">9e5ed7d56b52b3d4383123b1ffb42236</email>
+              <email type="domain">inrae.fr</email>
+            </editor>
+            <funder ref="#projeurop-713957"/>
+            <funder ref="#projeurop-713958"/>
+            <funder>French national project (2000–2002) (BRG (Genetic Resources Board) / DERF (Rural Space and Forest Direction, French Ministry of Agriculture)).</funder>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2020-06-06 02:14:14</date>
+              <date type="whenModified">2023-04-18 16:44:21</date>
+              <date type="whenReleased">2020-06-06 02:14:14</date>
+              <date type="whenProduced">2013</date>
+              <fs>
+                <f name="inra_publicVise_local" notation="string">
+                  <string>Scientists</string>
+                </f>
+              </fs>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="888556">
+                <persName>
+                  <forename>Migration</forename>
+                  <surname>ProdInra</surname>
+                </persName>
+                <email type="md5">9e5ed7d56b52b3d4383123b1ffb42236</email>
+                <email type="domain">inrae.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-02806496</idno>
+            <idno type="halUri">https://hal.inrae.fr/hal-02806496</idno>
+            <idno type="halBibtex">gerber:hal-02806496</idno>
+            <idno type="halRefHtml">2013</idno>
+            <idno type="halRef">2013</idno>
+            <availability status="restricted">
+              <licence>GNU General Public License as published by the Free Software Foundation, version 3.</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="INRA">INRA - Institut national de la recherche agronomique</idno>
+            <idno type="stamp" n="OPENAIRE">OpenAIRE</idno>
+            <idno type="stamp" n="GIP-BE">GIP Bretagne Environnement</idno>
+            <idno type="stamp" n="TESTANNE">Anne</idno>
+            <idno type="stamp" n="AGREENIUM">Archive ouverte en agrobiosciences</idno>
+            <idno type="stamp" n="SOFTWARE">SOFTWARE</idno>
+            <idno type="stamp" n="INRAE">Institut National de Recherche en Agriculture, Alimentation et Environnement</idno>
+            <idno type="stamp" n="INRAEOCCITANIETOULOUSE" corresp="INRAE">INRAE Occitanie Toulouse</idno>
+            <idno type="stamp" n="BIOGECO">BioGeCo – Biodiversité Gènes et Communautés</idno>
+            <idno type="stamp" n="MATHNUM">Département MathNum</idno>
+            <idno type="stamp" n="MIAT">Unité de Mathématiques et Informatique Appliquées de Toulouse</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="commentary">https://github.com/SophGer/FaMoz</note>
+            <note type="popular" n="0">No</note>
+            <note type="operatingSystem">Linux</note>
+            <note type="operatingSystem">Windows 7</note>
+            <note type="developmentStatus">Logiciel actif entre 2003 et 2018 environ</note>
+            <note type="programmingLanguage">C</note>
+            <note type="programmingLanguage">TclTk</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">FaMoz a software for parentage studies for codominant and dominant markers</title>
+                <title xml:lang="fr">FaMoz un logiciel pour faire des études de parenté à partir de marqueurs codominants et dominants</title>
+                <author role="coding">
+                  <persName>
+                    <forename type="first">Sophie</forename>
+                    <surname>Gerber</surname>
+                  </persName>
+                  <email type="md5">e90ff494b8a1b499022ce97cbfb5d831</email>
+                  <email type="domain">u-bordeaux.fr</email>
+                  <idno type="idhal" notation="string">sophie-gerber</idno>
+                  <idno type="idhal" notation="numeric">747479</idno>
+                  <idno type="halauthorid" notation="string">54153-747479</idno>
+                  <affiliation ref="#struct-138898"/>
+                </author>
+                <author role="coding">
+                  <persName>
+                    <forename type="first">Patrick</forename>
+                    <forename type="middle">P.</forename>
+                    <surname>Chabrier</surname>
+                  </persName>
+                  <email type="md5">d23de36197a5fc7a713959f1f7a65bc1</email>
+                  <email type="domain">toulouse.inra.fr</email>
+                  <idno type="idhal" notation="string">patrick-chabrier</idno>
+                  <idno type="idhal" notation="numeric">742760</idno>
+                  <idno type="halauthorid" notation="string">834666-742760</idno>
+                  <affiliation ref="#struct-244474"/>
+                </author>
+                <author role="coding">
+                  <persName>
+                    <forename type="first">Antoine</forename>
+                    <surname>Kremer</surname>
+                  </persName>
+                  <email type="md5">7e9f28b4ca33e1cf3c04a3a2fc05afa1</email>
+                  <email type="domain">inrae.fr</email>
+                  <idno type="idhal" notation="string">antoine-kremer</idno>
+                  <idno type="idhal" notation="numeric">747402</idno>
+                  <idno type="halauthorid" notation="string">53111-747402</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0002-3372-3235</idno>
+                  <idno type="IDREF">https://www.idref.fr/071401008</idno>
+                  <affiliation ref="#struct-138898"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Thierry</forename>
+                    <surname>Labbé</surname>
+                  </persName>
+                  <email type="md5">25626b03090d986e9ec53f1bbc4a453e</email>
+                  <email type="domain">inra.fr</email>
+                  <idno type="idhal" notation="numeric">1205651</idno>
+                  <idno type="halauthorid" notation="string">1397278-1205651</idno>
+                  <affiliation ref="#struct-52078"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint>
+                  <date type="datePub">2013</date>
+                </imprint>
+              </monogr>
+              <idno type="prodinra">255692</idno>
+              <ref type="codeRepository" target="https://github.com/SophGer/FaMoz"/>
+              <ref target="https://archive.softwareheritage.org/browse/revision/8224328839a624f7f7e0ab982cce1dfa6e342a49/" type="seeAlso"/>
+              <ref target="http://www.pierroton.inra.fr/genetics/labo/Software/Famoz/index.html" type="seeAlso"/>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">Parentage analysis</term>
+                <term xml:lang="en">likelihood</term>
+              </keywords>
+              <classCode scheme="halDomain" n="sdv.sa.sf">Life Sciences [q-bio]/Agricultural sciences/Silviculture, forestry</classCode>
+              <classCode scheme="halDomain" n="stat">Statistics [stat]</classCode>
+              <classCode scheme="halDomain" n="sdv">Life Sciences [q-bio]</classCode>
+              <classCode scheme="vocinrae" n="logiciel informatique">logiciel informatique</classCode>
+              <classCode scheme="vocinrae" n="marqueur dominant">marqueur dominant</classCode>
+              <classCode scheme="vocinrae" n="test statistique">test statistique</classCode>
+              <classCode scheme="vocinrae" n="filiation">filiation</classCode>
+              <classCode scheme="vocinrae" n="arbre">arbre</classCode>
+              <classCode scheme="halTypology" n="SOFTWARE">Software</classCode>
+              <classCode scheme="halOldTypology" n="SOFTWARE">Software</classCode>
+              <classCode scheme="halTreeTypology" n="SOFTWARE">Software</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>FAMOZ (an acronym for father/mother) is a software useful in reconstructing parentage for dominant, codominant markers. It is written in C and TclTk languages and is available to be downloaded for Unix, Linux and Windows systems. Parameters and assumptions used in the calculations are few and simple. Exclusion and identity probabilities, log-likelihoods of potential father and parent or parent pair are calculated based on real or simulated data. Error rates for genotypic mistyping can be introduced. Simulations can be done to build statistical tests for parentage assignment.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>FaMoz (un acronyme pour père/mère -father/mother- en anglais) est un logiciel utile pour reconstruire des parentés à partir de marqueurs dominants et codominants. Il est écrit dans les langages C et TclTk et est téléchargeable et utilisable sur des systèmes Unix, Linux et Windows. Les paramètres et les hypothèses utilisées dans les calculs sont peu nombreux et simples. Les probabilités d'identité et d'exclusion, les log-vraisemblances des pères, parents et paires de parents potentiels sont calculées à partir de données réelles ou simulées. Des taux d'erreur, liés à de mauvais génotypages, peuvent être introduits. Des simulations peuvent être faites pour construire des tests statistiques afin d'affecter les parentés.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-138898" status="OLD">
+          <orgName>Biodiversité, Gènes &amp; Communautés</orgName>
+          <orgName type="acronym">BioGeCo</orgName>
+          <date type="start">2007-01-01</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Site de recherche Forêt - Bois de Pierroton - 69, route d'Arcachon F-33612 Cestas Cedex FRANCE</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www6.bordeaux-aquitaine.inrae.fr/biogeco</ref>
+          </desc>
+          <listRelation>
+            <relation name="UMR1202" active="#struct-92114" type="direct"/>
+            <relation active="#struct-259761" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-244474" status="OLD">
+          <orgName>Unité de Mathématiques et Informatique Appliquées de Toulouse</orgName>
+          <orgName type="acronym">MIAT INRA</orgName>
+          <date type="start">2013-01-01</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Chemin de Borde Rouge, 31320 Castanet Tolosan</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://carlit.toulouse.inra.fr/wikiz/index.php/Accueil</ref>
+          </desc>
+          <listRelation>
+            <relation name="UR0875" active="#struct-92114" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-52078" status="OLD">
+          <orgName>Unité de recherches forestières</orgName>
+          <orgName type="acronym">BORDX PIERR UR </orgName>
+          <date type="start">1990-01-01</date>
+          <date type="end">2004-12-31</date>
+          <desc>
+            <address>
+              <addrLine>33610 Cestas</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation name="UR0911" active="#struct-92114" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-92114" status="OLD">
+          <orgName>Institut National de la Recherche Agronomique</orgName>
+          <orgName type="acronym">INRA</orgName>
+          <date type="start">1946-05-18</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inra.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-259761" status="VALID">
+          <idno type="ROR">https://ror.org/057qpr032</idno>
+          <orgName>Université de Bordeaux</orgName>
+          <orgName type="acronym">UB</orgName>
+          <desc>
+            <address>
+              <addrLine>35, place Pey Berland - 33076 Bordeaux</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.u-bordeaux.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+      <listOrg type="projects">
+        <org type="europeanProject" xml:id="projeurop-713957" status="INCOMING">
+          <desc>European projects BIO4 CT96 0706</desc>
+        </org>
+        <org type="europeanProject" xml:id="projeurop-713958" status="INCOMING">
+          <idno type="number">QLK5-CT-2000-00960</idno>
+          <orgName>OAKFLOW</orgName>
+          <desc>OAKFLOW</desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

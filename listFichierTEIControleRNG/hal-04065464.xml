@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04065464</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-18T02:28:10+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Software to extract and analyze data from NOAA drifters (driftViewer)</title>
+            <author role="design">
+              <persName>
+                <forename type="first">Carlos</forename>
+                <surname>Noriega</surname>
+              </persName>
+              <idno type="halauthorid">949457-0</idno>
+              <affiliation ref="#struct-1160256"/>
+              <affiliation ref="#struct-1077217"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Humberto L.</forename>
+                <surname>Varona</surname>
+              </persName>
+              <email type="md5">98686f29dd7787359b0d4c88ee004609</email>
+              <email type="domain">ufpe.br</email>
+              <idno type="idhal" notation="numeric">1246384</idno>
+              <idno type="halauthorid" notation="string">2289928-1246384</idno>
+              <affiliation ref="#struct-1160256"/>
+              <affiliation ref="#struct-1077217"/>
+            </author>
+            <author role="testing">
+              <persName>
+                <forename type="first">Julia</forename>
+                <surname>Araujo</surname>
+              </persName>
+              <idno type="halauthorid">1298469-0</idno>
+              <affiliation ref="#struct-1152265"/>
+            </author>
+            <author role="support">
+              <persName>
+                <forename type="first">Moacyr</forename>
+                <surname>Araujo</surname>
+              </persName>
+              <idno type="halauthorid">440068-0</idno>
+              <affiliation ref="#struct-1160256"/>
+              <affiliation ref="#struct-1077217"/>
+              <affiliation ref="#struct-1152265"/>
+            </author>
+            <author role="testing">
+              <persName>
+                <forename type="first">Marcus</forename>
+                <surname>Silva</surname>
+              </persName>
+              <idno type="halauthorid">212136-0</idno>
+              <affiliation ref="#struct-1160256"/>
+              <affiliation ref="#struct-1077217"/>
+            </author>
+            <author role="support">
+              <persName>
+                <forename type="first">Márcio das Chagas</forename>
+                <surname>Moura</surname>
+              </persName>
+              <idno type="halauthorid">582187-0</idno>
+              <affiliation ref="#struct-1077217"/>
+              <affiliation ref="#struct-1077218"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>H. L.</forename>
+                <surname>Varona</surname>
+              </persName>
+              <email type="md5">0a34cb445b93e56616e6c54d3d02d800</email>
+              <email type="domain">yandex.com</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-04-11 21:02:06</date>
+              <date type="whenWritten">2023-03-16</date>
+              <date type="whenModified">2023-04-19 03:54:08</date>
+              <date type="whenReleased">2023-04-18 10:15:42</date>
+              <date type="whenProduced">2023-03-16</date>
+              <date type="whenEndEmbargoed">2023-04-11</date>
+              <ref type="file" target="https://hal.science/hal-04065464/document">
+                <date notBefore="2023-04-11"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://hal.science/hal-04065464/file/driftViewer_v1.tar.gz">
+                <date notBefore="2023-04-11"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="1074502">
+                <persName>
+                  <forename>H. L.</forename>
+                  <surname>Varona</surname>
+                </persName>
+                <email type="md5">0a34cb445b93e56616e6c54d3d02d800</email>
+                <email type="domain">yandex.com</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04065464</idno>
+            <idno type="halUri">https://hal.science/hal-04065464</idno>
+            <idno type="halBibtex">noriega:hal-04065464</idno>
+            <idno type="halRefHtml">2023, &lt;a target="_blank" style="word-break: break-all;" href="https://archive.softwareheritage.org/browse/swh:1:dir:c90eff4e3b6b2f53f3a5788fc150aabb13f5002a;origin=https://hal.archives-ouvertes.fr/hal-04065464;visit=swh:1:snp:ae13b276cc717dd2ccaa3907d027a2e76275e605;anchor=swh:1:rel:8fb0c1b59a7bae89d7fb32d37f4b575379866c5c;path=/"&gt;&amp;#x27E8;swh:1:dir:c90eff4e3b6b2f53f3a5788fc150aabb13f5002a;origin=https://hal.archives-ouvertes.fr/hal-04065464;visit=swh:1:snp:ae13b276cc717dd2ccaa3907d027a2e76275e605;anchor=swh:1:rel:8fb0c1b59a7bae89d7fb32d37f4b575379866c5c;path=/&amp;#x27E9;&lt;/a&gt;</idno>
+            <idno type="halRef">2023, &amp;#x27E8;swh:1:dir:c90eff4e3b6b2f53f3a5788fc150aabb13f5002a;origin=https://hal.archives-ouvertes.fr/hal-04065464;visit=swh:1:snp:ae13b276cc717dd2ccaa3907d027a2e76275e605;anchor=swh:1:rel:8fb0c1b59a7bae89d7fb32d37f4b575379866c5c;path=/&amp;#x27E9;</idno>
+            <availability status="restricted">
+              <licence target="https://opensource.org/licenses/MIT">MIT License</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="TESTANNE">Anne</idno>
+            <idno type="stamp" n="SOFTWARE">SOFTWARE</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="operatingSystem">Linux</note>
+            <note type="operatingSystem">MacOS</note>
+            <note type="operatingSystem">Windows</note>
+            <note type="version">1.0</note>
+            <note type="developmentStatus">Active</note>
+            <note type="runtimePlatform">Matlab 2021b</note>
+            <note type="programmingLanguage">Matlab</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Software to extract and analyze data from NOAA drifters (driftViewer)</title>
+                <author role="design">
+                  <persName>
+                    <forename type="first">Carlos</forename>
+                    <surname>Noriega</surname>
+                  </persName>
+                  <idno type="halauthorid">949457-0</idno>
+                  <affiliation ref="#struct-1160256"/>
+                  <affiliation ref="#struct-1077217"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Humberto L.</forename>
+                    <surname>Varona</surname>
+                  </persName>
+                  <email type="md5">98686f29dd7787359b0d4c88ee004609</email>
+                  <email type="domain">ufpe.br</email>
+                  <idno type="idhal" notation="numeric">1246384</idno>
+                  <idno type="halauthorid" notation="string">2289928-1246384</idno>
+                  <affiliation ref="#struct-1160256"/>
+                  <affiliation ref="#struct-1077217"/>
+                </author>
+                <author role="testing">
+                  <persName>
+                    <forename type="first">Julia</forename>
+                    <surname>Araujo</surname>
+                  </persName>
+                  <idno type="halauthorid">1298469-0</idno>
+                  <affiliation ref="#struct-1152265"/>
+                </author>
+                <author role="support">
+                  <persName>
+                    <forename type="first">Moacyr</forename>
+                    <surname>Araujo</surname>
+                  </persName>
+                  <idno type="halauthorid">440068-0</idno>
+                  <affiliation ref="#struct-1160256"/>
+                  <affiliation ref="#struct-1077217"/>
+                  <affiliation ref="#struct-1152265"/>
+                </author>
+                <author role="testing">
+                  <persName>
+                    <forename type="first">Marcus</forename>
+                    <surname>Silva</surname>
+                  </persName>
+                  <idno type="halauthorid">212136-0</idno>
+                  <affiliation ref="#struct-1160256"/>
+                  <affiliation ref="#struct-1077217"/>
+                </author>
+                <author role="support">
+                  <persName>
+                    <forename type="first">Márcio das Chagas</forename>
+                    <surname>Moura</surname>
+                  </persName>
+                  <idno type="halauthorid">582187-0</idno>
+                  <affiliation ref="#struct-1077217"/>
+                  <affiliation ref="#struct-1077218"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint/>
+                <authority type="institution">Federal University of Pernambuco</authority>
+              </monogr>
+              <idno type="swhid">swh:1:dir:c90eff4e3b6b2f53f3a5788fc150aabb13f5002a;origin=https://hal.archives-ouvertes.fr/hal-04065464;visit=swh:1:snp:ae13b276cc717dd2ccaa3907d027a2e76275e605;anchor=swh:1:rel:8fb0c1b59a7bae89d7fb32d37f4b575379866c5c;path=/</idno>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">Drifter</term>
+                <term xml:lang="en">Sea surface current</term>
+                <term xml:lang="en">Sea Surface Temperature</term>
+                <term xml:lang="en">NOAA</term>
+              </keywords>
+              <classCode scheme="halDomain" n="phys.phys.phys-ao-ph">Physics [physics]/Physics [physics]/Atmospheric and Oceanic Physics [physics.ao-ph]</classCode>
+              <classCode scheme="halTypology" n="SOFTWARE">Software</classCode>
+              <classCode scheme="halOldTypology" n="SOFTWARE">Software</classCode>
+              <classCode scheme="halTreeTypology" n="SOFTWARE">Software</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>driftViewer allows selection and analysis of drifter trajectories from the PhOD/AOML/NOAA dataset. This dataset is provided in SQLite database format and is current up to 2022, these data are the same as those available on the official NOAA site located at:https://www.aoml.noaa.gov/phod/gdp/interpolated/data/subset.php</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="institution" xml:id="struct-1160256" status="INCOMING">
+          <orgName>Laboratory of Physical, Coastal and Estuarine Oceanography (LOFEC). Department of Oceanography (DOCEAN). Federal University of Pernambuco. Recife-PE. Brazil</orgName>
+          <orgName type="acronym">LOFEC</orgName>
+          <desc>
+            <address>
+              <country key="BR"/>
+            </address>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-1077217" status="INCOMING">
+          <orgName>Center for Risk Analysis and Environmental Modeling - CEERMA. Federal University of Pernambuco, Recife, PE, Brazil.</orgName>
+        </org>
+        <org type="institution" xml:id="struct-1152265" status="INCOMING">
+          <orgName>Brazilian Research network on Global Climate Change (Rede CLIMA), São Jose dos Campos, SP, Brazil</orgName>
+          <desc>
+            <address>
+              <country key="BR"/>
+            </address>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-1077218" status="INCOMING">
+          <orgName>Department of Production Engineering, Federal University of Pernambuco, Recife, PE, Brazil.</orgName>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

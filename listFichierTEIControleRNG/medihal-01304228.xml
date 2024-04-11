@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of medihal-01304228</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+        </availability>
+        <date when="2023-07-15T14:40:19+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">"Entre la pierre et le concept". Exposition de Jérôme Gulon.</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Jérôme</forename>
+                <surname>Gulon</surname>
+              </persName>
+              <idno type="halauthorid">1475606-0</idno>
+            </author>
+            <author role="sad">
+              <persName>
+                <forename type="first">Véronique</forename>
+                <surname>Alexandre Journeau</surname>
+              </persName>
+              <email type="md5">72dfae18c80f91827082631a0736f167</email>
+              <email type="domain">orange.fr</email>
+              <idno type="idhal" notation="string">veronique-alexandre-journeau</idno>
+              <idno type="idhal" notation="numeric">171660</idno>
+              <idno type="halauthorid" notation="string">29721-171660</idno>
+              <idno type="IDREF">https://www.idref.fr/091643821</idno>
+              <affiliation ref="#struct-1072344"/>
+            </author>
+            <author role="oth">
+              <persName>
+                <forename type="first">Elisabeth</forename>
+                <surname>de Pablo</surname>
+              </persName>
+              <email type="md5">58edd2c987bd9268d92f56f579ae5c0c</email>
+              <email type="domain">gmail.com</email>
+              <ptr type="url" target="http://www.inalco.fr/enseignant-chercheur/elisabeth-pablo"/>
+              <idno type="idhal" notation="string">elisabeth-de-pablo</idno>
+              <idno type="idhal" notation="numeric">8307</idno>
+              <idno type="halauthorid" notation="string">29668-8307</idno>
+              <idno type="IDREF">https://www.idref.fr/187554269</idno>
+              <orgName ref="#struct-300064"/>
+              <affiliation ref="#struct-29255"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Véronique</forename>
+                <surname>Alexandre Journeau</surname>
+              </persName>
+              <email type="md5">72dfae18c80f91827082631a0736f167</email>
+              <email type="domain">orange.fr</email>
+            </editor>
+            <funder ref="#projanr-36737"/>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2016-04-19 13:15:39</date>
+              <date type="whenWritten">2012-04-18</date>
+              <date type="whenModified">2023-02-27 20:33:55</date>
+              <date type="whenReleased">2016-04-20 09:03:19</date>
+              <date type="whenProduced">2008-05-15</date>
+              <date type="whenEndEmbargoed">2016-04-19</date>
+              <ref type="file" target="https://hal.science/medihal-01304228/document">
+                <date notBefore="2016-04-19"/>
+              </ref>
+              <ref type="file" n="1" target="https://hal.science/medihal-01304228/file/pierre_concept_720p.mp4">
+                <date notBefore="2016-04-19"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="337900">
+                <persName>
+                  <forename>Véronique</forename>
+                  <surname>Alexandre Journeau</surname>
+                </persName>
+                <email type="md5">72dfae18c80f91827082631a0736f167</email>
+                <email type="domain">orange.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">medihal-01304228</idno>
+            <idno type="halUri">https://hal.science/medihal-01304228</idno>
+            <idno type="halBibtex">gulon:medihal-01304228</idno>
+            <idno type="halRefHtml">2008</idno>
+            <idno type="halRef">2008</idno>
+            <availability status="restricted">
+              <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="CAMPUS-AAR">Campus-AAR</idno>
+            <idno type="stamp" n="ARC" corresp="CAMPUS-AAR">Archives Rencontre des Cultures</idno>
+            <idno type="stamp" n="AAI">Collection LaCAS - Open Archives in Language and Cultural Area Studies</idno>
+            <idno type="stamp" n="LANGARTS" corresp="CAMPUS-AAR">Langages artistiques</idno>
+            <idno type="stamp" n="RNMSH">Réseau National des Maisons des Sciences de l'Homme</idno>
+            <idno type="stamp" n="SORBONNE-UNIVERSITE">Sorbonne Université</idno>
+            <idno type="stamp" n="CREOPS" corresp="SORBONNE-UNIVERSITE">Centre de Recherches sur l’Extrême Orient de Paris-Sorbonne </idno>
+            <idno type="stamp" n="SU-INF-2018" corresp="SORBONNE-UNIVERSITE">SORBONNE université &lt;2018</idno>
+            <idno type="stamp" n="SU-LETTRES" corresp="SORBONNE-UNIVERSITE">Faculté des Lettres de Sorbonne Université</idno>
+            <idno type="stamp" n="ESCOMAAR" corresp="CAMPUS-AAR">Documentation ESCoM AAR</idno>
+            <idno type="stamp" n="ASIES_ET_PACIFIQUE">Études aréales - Asies et Pacifique</idno>
+            <idno type="stamp" n="SU-TI">Sorbonne Université - Texte Intégral</idno>
+            <idno type="stamp" n="ANR">ANR</idno>
+            <idno type="stamp" n="ALLIANCE-SU"> Alliance Sorbonne Université</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="commentary">Fonds audiovisuel Langarts. La première mise en ligne est issue d'une collaboration avec le programme ESCoM-AAR (Equipe Sémiotique Cognitive et nouveaux Médias - Archives Audiovisuelles de la Recherche, 2001-2016). (Cf. ANR infra)</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">"Entre la pierre et le concept". Exposition de Jérôme Gulon.</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Jérôme</forename>
+                    <surname>Gulon</surname>
+                  </persName>
+                  <idno type="halauthorid">1475606-0</idno>
+                </author>
+                <author role="sad">
+                  <persName>
+                    <forename type="first">Véronique</forename>
+                    <surname>Alexandre Journeau</surname>
+                  </persName>
+                  <email type="md5">72dfae18c80f91827082631a0736f167</email>
+                  <email type="domain">orange.fr</email>
+                  <idno type="idhal" notation="string">veronique-alexandre-journeau</idno>
+                  <idno type="idhal" notation="numeric">171660</idno>
+                  <idno type="halauthorid" notation="string">29721-171660</idno>
+                  <idno type="IDREF">https://www.idref.fr/091643821</idno>
+                  <affiliation ref="#struct-1072344"/>
+                </author>
+                <author role="oth">
+                  <persName>
+                    <forename type="first">Elisabeth</forename>
+                    <surname>de Pablo</surname>
+                  </persName>
+                  <email type="md5">58edd2c987bd9268d92f56f579ae5c0c</email>
+                  <email type="domain">gmail.com</email>
+                  <ptr type="url" target="http://www.inalco.fr/enseignant-chercheur/elisabeth-pablo"/>
+                  <idno type="idhal" notation="string">elisabeth-de-pablo</idno>
+                  <idno type="idhal" notation="numeric">8307</idno>
+                  <idno type="halauthorid" notation="string">29668-8307</idno>
+                  <idno type="IDREF">https://www.idref.fr/187554269</idno>
+                  <orgName ref="#struct-300064"/>
+                  <affiliation ref="#struct-29255"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint>
+                  <date type="datePub">2008-05-15</date>
+                </imprint>
+              </monogr>
+              <ref target="https://langarts.hypotheses.org/" type="seeAlso"/>
+            </biblStruct>
+            <recordingStmt>
+              <recording type="video" dur="01:17:04"/>
+            </recordingStmt>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">mosaïque</term>
+                <term xml:lang="fr">art</term>
+                <term xml:lang="fr">concept</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs.art">Humanities and Social Sciences/Art and art history</classCode>
+              <classCode scheme="halTypology" n="VIDEO">Videos</classCode>
+              <classCode scheme="halOldTypology" n="VIDEO">Videos</classCode>
+              <classCode scheme="halTreeTypology" n="VIDEO">Videos</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>"Entre la Pierre et le concept" est une exposition de mosaïques réalisée par Jérôme Gulon à la Chapelle Saint-Eman à Chartres en 2008.L'exposition est présentée par la ville de Chartres et l'association 3R.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="researchteam" xml:id="struct-1072344" status="INCOMING">
+          <orgName>Langarts</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://langarts.hypotheses.org/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-542263" type="direct"/>
+            <relation name="EA2565 / UR_2565" active="#struct-413221" type="indirect"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-29255" status="VALID">
+          <orgName>Equipe Sémiotique Cognitive et Nouveaux Médias</orgName>
+          <orgName type="acronym">ESCOM</orgName>
+          <desc>
+            <address>
+              <addrLine>54, Bd. Raspail - 75006 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.semionet.com</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-301260" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-542263" status="VALID">
+          <idno type="IdRef">03179288X</idno>
+          <idno type="ISNI">0000000123372147</idno>
+          <idno type="RNSR">199814092F</idno>
+          <orgName>Centre de Recherches sur l’Extrême Orient de Paris-Sorbonne</orgName>
+          <orgName type="acronym">CREOPS</orgName>
+          <desc>
+            <address>
+              <addrLine>Institut National d’Histoire de l’art (INHA), 2, rue Vivienne, 75002 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.creops.paris-sorbonne.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation name="EA2565 / UR_2565" active="#struct-413221" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-413221" status="VALID">
+          <idno type="ROR">https://ror.org/02en5vm52</idno>
+          <orgName>Sorbonne Université</orgName>
+          <orgName type="acronym">SU</orgName>
+          <date type="start">2018-01-01</date>
+          <desc>
+            <address>
+              <addrLine>21 rue de l’École de médecine - 75006 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.sorbonne-universite.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-301260" status="VALID">
+          <idno type="IdRef">026460076</idno>
+          <orgName>Fondation Maison des sciences de l'homme</orgName>
+          <orgName type="acronym">FMSH</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.fmsh.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+      <listOrg type="projects">
+        <org type="anrProject" xml:id="projanr-36737" status="VALID">
+          <idno type="anr">ANR-13-CORD-0016</idno>
+          <idno type="program">CONTENUS NUMERIQUES ET INTERACTIONS</idno>
+          <orgName>Campus AAR</orgName>
+          <desc>Campus " Archives Audiovisuelles de la Recherche " - le démonstrateur d'un environnement numérique pour la production, description/indexation et publication d'archives audiovisuelles. Domaine d'application : les humanités numériques.</desc>
+          <date type="start">2013</date>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

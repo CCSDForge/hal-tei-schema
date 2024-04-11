@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04167793</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-21T10:41:08+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Flors inde Blanzeflors ; Flos unde Blankeflos</title>
+            <title xml:lang="fr" type="sub">traduction de textes du moyen haut-allemand et moyen bas-allemand vers le français, et traduction de notices introductives</title>
+            <author role="trl">
+              <persName>
+                <forename type="first">Marie-Sophie</forename>
+                <surname>Masse</surname>
+              </persName>
+              <email type="md5">2ed9292ae29f11c967e5c8c5087207eb</email>
+              <email type="domain">u-picardie.fr</email>
+              <idno type="idhal" notation="string">marie-sophie-masse</idno>
+              <idno type="idhal" notation="numeric">749031</idno>
+              <idno type="halauthorid" notation="string">38348-749031</idno>
+              <idno type="IDREF">https://www.idref.fr/073307920</idno>
+              <affiliation ref="#struct-220237"/>
+            </author>
+            <author role="trl">
+              <persName>
+                <forename type="first">Bernd</forename>
+                <surname>Bastert</surname>
+              </persName>
+              <idno type="halauthorid">2866192-0</idno>
+            </author>
+            <author role="trl">
+              <persName>
+                <forename type="first">Elisabeth</forename>
+                <surname>de Bruijn</surname>
+              </persName>
+              <idno type="halauthorid">2866193-0</idno>
+            </author>
+            <author role="trl">
+              <persName>
+                <forename type="first">Christine</forename>
+                <surname>Putzo</surname>
+              </persName>
+              <idno type="halauthorid">2866194-0</idno>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Louise</forename>
+                <surname>DESSAIVRE</surname>
+              </persName>
+              <email type="md5">685d55eef963fb90de2023edc9d11c27</email>
+              <email type="domain">u-picardie.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-07-21 09:35:19</date>
+              <date type="whenModified">2023-07-21 10:40:59</date>
+              <date type="whenReleased">2023-07-21 09:35:19</date>
+              <date type="whenProduced">2022</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="799781">
+                <persName>
+                  <forename>Louise</forename>
+                  <surname>DESSAIVRE</surname>
+                </persName>
+                <email type="md5">685d55eef963fb90de2023edc9d11c27</email>
+                <email type="domain">u-picardie.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04167793</idno>
+            <idno type="halUri">https://u-picardie.hal.science/hal-04167793</idno>
+            <idno type="halBibtex">masse:hal-04167793</idno>
+            <idno type="halRefHtml">Sofia Lodén, Vanessa Obry (dir.). &lt;i&gt;Floire et Blancheflor en Europe : Anthologie&lt;/i&gt;, UGA Éditions, pp.139-151, 2022, Collection Moyen Âge européen, 9782377473205</idno>
+            <idno type="halRef">Sofia Lodén, Vanessa Obry (dir.). Floire et Blancheflor en Europe : Anthologie, UGA Éditions, pp.139-151, 2022, Collection Moyen Âge européen, 9782377473205</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="U-PICARDIE">Université de Picardie Jules Verne</idno>
+            <idno type="stamp" n="TRAME" corresp="U-PICARDIE">Textes, Représentations, Archéologie, Autorité et Mémoires de l'Antiquité à la Renaissance - UR UPJV 4284</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="2">International</note>
+            <note type="popular" n="0">No</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Flors inde Blanzeflors ; Flos unde Blankeflos</title>
+                <title xml:lang="fr" type="sub">traduction de textes du moyen haut-allemand et moyen bas-allemand vers le français, et traduction de notices introductives</title>
+                <author role="trl">
+                  <persName>
+                    <forename type="first">Marie-Sophie</forename>
+                    <surname>Masse</surname>
+                  </persName>
+                  <email type="md5">2ed9292ae29f11c967e5c8c5087207eb</email>
+                  <email type="domain">u-picardie.fr</email>
+                  <idno type="idhal" notation="string">marie-sophie-masse</idno>
+                  <idno type="idhal" notation="numeric">749031</idno>
+                  <idno type="halauthorid" notation="string">38348-749031</idno>
+                  <idno type="IDREF">https://www.idref.fr/073307920</idno>
+                  <affiliation ref="#struct-220237"/>
+                </author>
+                <author role="trl">
+                  <persName>
+                    <forename type="first">Bernd</forename>
+                    <surname>Bastert</surname>
+                  </persName>
+                  <idno type="halauthorid">2866192-0</idno>
+                </author>
+                <author role="trl">
+                  <persName>
+                    <forename type="first">Elisabeth</forename>
+                    <surname>de Bruijn</surname>
+                  </persName>
+                  <idno type="halauthorid">2866193-0</idno>
+                </author>
+                <author role="trl">
+                  <persName>
+                    <forename type="first">Christine</forename>
+                    <surname>Putzo</surname>
+                  </persName>
+                  <idno type="halauthorid">2866194-0</idno>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="isbn">9782377473205</idno>
+                <title level="m">Floire et Blancheflor en Europe : Anthologie</title>
+                <editor>Sofia Lodén,  Vanessa Obry (dir.)</editor>
+                <imprint>
+                  <publisher>UGA Éditions</publisher>
+                  <biblScope unit="serie">Collection Moyen Âge européen</biblScope>
+                  <biblScope unit="pp">139-151</biblScope>
+                  <date type="datePub">2022</date>
+                </imprint>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <classCode scheme="halDomain" n="shs.litt">Humanities and Social Sciences/Literature</classCode>
+              <classCode scheme="halTypology" n="COUV">Book sections</classCode>
+              <classCode scheme="halOldTypology" n="COUV">Book sections</classCode>
+              <classCode scheme="halTreeTypology" n="COUV">Book sections</classCode>
+            </textClass>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-220237" status="VALID">
+          <idno type="IdRef">169358313</idno>
+          <idno type="RNSR">200815521R</idno>
+          <orgName>Textes, Représentations, Archéologie, Autorité et Mémoires de l'Antiquité à la Renaissance - UR UPJV 4284</orgName>
+          <orgName type="acronym">TRAME</orgName>
+          <date type="start">2008-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Université de Picardie Jules Verne - Pôle Citadelle - Bureau E226 - 10 rue des Français Libres - 80080 AMIENS</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.u-picardie.fr/unites-de-recherche/trame/</ref>
+          </desc>
+          <listRelation>
+            <relation name="UR4284" active="#struct-300258" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300258" status="VALID">
+          <idno type="IdRef">026403714</idno>
+          <idno type="ISNI">0000 0001 0789 1385</idno>
+          <idno type="ROR">01gyxrk03</idno>
+          <orgName>Université de Picardie Jules Verne</orgName>
+          <orgName type="acronym">UPJV</orgName>
+          <desc>
+            <address>
+              <addrLine>Chemin du Thil - 80000 Amiens</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.u-picardie.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

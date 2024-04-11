@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of mem_03847446</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+        </availability>
+        <date when="2023-07-21T14:55:02+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Les outils de Business Intelligence dans le secteur des études et de la communication</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Tom</forename>
+                <surname>Blachon</surname>
+              </persName>
+              <idno type="halauthorid">2637196-0</idno>
+              <affiliation ref="#struct-25111"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>intd</forename>
+                <surname>Crepac</surname>
+              </persName>
+              <email type="md5">40f64fecc64a39c09ab6f36e4be62129</email>
+              <email type="domain">lecnam.net</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2022-11-10 15:48:21</date>
+              <date type="whenWritten">2022</date>
+              <date type="whenModified">2022-11-12 03:53:27</date>
+              <date type="whenReleased">2022-11-10 17:32:18</date>
+              <date type="whenProduced">2022-07-06</date>
+              <date type="whenEndEmbargoed">2022-11-10</date>
+              <ref type="file" target="https://memsic.ccsd.cnrs.fr/mem_03847446/document">
+                <date notBefore="2022-11-10"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://memsic.ccsd.cnrs.fr/mem_03847446/file/BLACHON.pdf">
+                <date notBefore="2022-11-10"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="154816">
+                <persName>
+                  <forename>intd</forename>
+                  <surname>Crepac</surname>
+                </persName>
+                <email type="md5">40f64fecc64a39c09ab6f36e4be62129</email>
+                <email type="domain">lecnam.net</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">mem_03847446</idno>
+            <idno type="halUri">https://memsic.ccsd.cnrs.fr/mem_03847446</idno>
+            <idno type="halBibtex">blachon:mem_03847446</idno>
+            <idno type="halRefHtml">domain_shs.info.docu. 2022</idno>
+            <idno type="halRef">domain_shs.info.docu. 2022</idno>
+            <availability status="restricted">
+              <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="HESAM-CNAM" corresp="HESAM">Conservatoire National des Arts et Métiers - Hesam</idno>
+            <idno type="stamp" n="HESAM">Hesam</idno>
+          </seriesStmt>
+          <notesStmt/>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Les outils de Business Intelligence dans le secteur des études et de la communication</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Tom</forename>
+                    <surname>Blachon</surname>
+                  </persName>
+                  <idno type="halauthorid">2637196-0</idno>
+                  <affiliation ref="#struct-25111"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint>
+                  <biblScope unit="pp">102 p.</biblScope>
+                  <date type="dateDefended">2022-07-06</date>
+                </imprint>
+                <authority type="institution">INTD-CNAM-Institut national des techniques de la documentation</authority>
+                <authority type="supervisor">Ghislaine Chartron</authority>
+                <authority type="supervisorEmail">intd@cnam.fr</authority>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">Donnée</term>
+                <term xml:lang="fr">Sondage</term>
+                <term xml:lang="fr">Analyse de données</term>
+                <term xml:lang="fr">Système d'information</term>
+                <term xml:lang="fr">Intégration</term>
+                <term xml:lang="fr">Datavisualisation</term>
+                <term xml:lang="fr">Tableau de bord</term>
+                <term xml:lang="fr">Indicateur de performance</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs.info.docu">Humanities and Social Sciences/Library and information sciences/domain_shs.info.docu</classCode>
+              <classCode scheme="halTypology" n="MEM">Master thesis</classCode>
+              <classCode scheme="halOldTypology" n="MEM">Master thesis</classCode>
+              <classCode scheme="halTreeTypology" n="MEM">Master thesis</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>Ce  mémoire  aborde  sous  différents  aspects  les  techniques  et  les outils  de  l’informatique  décisionnelle (ou Business  Intelligence/BI) dans le domaine des études et sondages. Il propose en premier lieu une  approche  théorique  du  sujet  visant  à  présenter  les  grands concepts de la BI et ses possibilités d’applications au sein des instituts de  sondages. Dans  un  second  temps,  il  présente  un  projet  de déploiement d’outils BI en situation réelle au sein du cabinet d’étude Occurrence sur plus de 18 mois. Cette partie  est  notamment consacrée  au progiciel MicrosoftPower  BI dont  l’intégration à  fait l’objet  de  nombreux  tests itératifs avant  de  proposer  un  service  de création de tableaux de bord aux clients de l’entreprise.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="regrouplaboratory" xml:id="struct-25111" status="VALID">
+          <idno type="IdRef">029529700</idno>
+          <idno type="ISNI">0000000121989776</idno>
+          <orgName>Institut national des techniques de la documentation</orgName>
+          <orgName type="acronym">INTD-CNAM</orgName>
+          <desc>
+            <address>
+              <addrLine>2 rue Conté - 75003 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://intd.cnam.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-300351" type="direct"/>
+            <relation active="#struct-302628" type="indirect"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300351" status="VALID">
+          <idno type="IdRef">027404978</idno>
+          <idno type="ISNI">0000000121690459</idno>
+          <idno type="ROR">0175hh227</idno>
+          <orgName>Conservatoire National des Arts et Métiers [CNAM]</orgName>
+          <orgName type="acronym">CNAM</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cnam.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-302628" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-302628" status="VALID">
+          <idno type="IdRef">238277429</idno>
+          <orgName>HESAM Université - Communauté d'universités et d'établissements Hautes écoles Sorbonne Arts et métiers université</orgName>
+          <orgName type="acronym">HESAM</orgName>
+          <date type="start">2010-01-01</date>
+          <desc>
+            <address>
+              <addrLine>15, rue Soufflot75005 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.hesam.eu</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

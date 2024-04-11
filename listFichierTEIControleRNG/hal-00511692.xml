@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-00511692v2</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-15T22:15:22+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Cyclistes Victimes d'Accidents (CVA), Partie 1 : caractéristiques et bilan lésionnel</title>
+            <author role="crp">
+              <persName>
+                <forename type="first">Emmanuelle</forename>
+                <surname>Amoros</surname>
+              </persName>
+              <email type="md5">8d033d4021f36eedf4aca57b8d08c50a</email>
+              <email type="domain">inrets.fr</email>
+              <idno type="idhal" notation="numeric">874535</idno>
+              <idno type="halauthorid" notation="string">484931-874535</idno>
+              <affiliation ref="#struct-170034"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Mireille</forename>
+                <surname>Chiron</surname>
+              </persName>
+              <email type="md5">1dcc6604add0d89354a352f68d45c4c5</email>
+              <email type="domain">inrets.fr</email>
+              <idno type="idhal" notation="numeric">833347</idno>
+              <idno type="halauthorid" notation="string">132867-833347</idno>
+              <affiliation ref="#struct-170034"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Amina</forename>
+                <surname>Ndiaye</surname>
+              </persName>
+              <email type="md5">e24f3b5704404189b6ac5c17d7de8c3e</email>
+              <email type="domain">inrets.fr</email>
+              <idno type="idhal" notation="numeric">875102</idno>
+              <idno type="halauthorid" notation="string">484932-875102</idno>
+              <affiliation ref="#struct-170034"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Bertrand</forename>
+                <surname>Thélot</surname>
+              </persName>
+              <email type="md5">f416b89a5e60a3e49594b73b93baab26</email>
+              <email type="domain">invs.sante.fr</email>
+              <idno type="idhal" notation="numeric">875103</idno>
+              <idno type="halauthorid" notation="string">376038-875103</idno>
+              <affiliation ref="#struct-160040"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Bernard</forename>
+                <surname>Laumon</surname>
+              </persName>
+              <email type="md5">13431ca6e6ef7ccf781775b9880bfb7c</email>
+              <email type="domain">inrets.fr</email>
+              <idno type="idhal" notation="numeric">875104</idno>
+              <idno type="halauthorid" notation="string">226351-875104</idno>
+              <affiliation ref="#struct-170034"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Emmanuelle</forename>
+                <surname>Amoros</surname>
+              </persName>
+              <email type="md5">18c851aecde53f4504e25bc3483d1012</email>
+              <email type="domain">ifsttar.fr</email>
+            </editor>
+            <funder>Convention InVS J06-24</funder>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1">
+              <date type="whenSubmitted">2010-08-25 16:57:43</date>
+            </edition>
+            <edition n="v2" type="current">
+              <date type="whenSubmitted">2011-06-24 14:54:29</date>
+              <date type="whenModified">2022-10-27 13:45:02</date>
+              <date type="whenReleased">2011-06-24 15:13:02</date>
+              <date type="whenProduced">2009-12-21</date>
+              <date type="whenEndEmbargoed">2011-06-24</date>
+              <ref type="file" target="https://hal.science/hal-00511692v2/document">
+                <date notBefore="2011-06-24"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://hal.science/hal-00511692v2/file/CVA1-rapport.pdf">
+                <date notBefore="2011-06-24"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="122324">
+                <persName>
+                  <forename>Emmanuelle</forename>
+                  <surname>Amoros</surname>
+                </persName>
+                <email type="md5">18c851aecde53f4504e25bc3483d1012</email>
+                <email type="domain">ifsttar.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-00511692</idno>
+            <idno type="halUri">https://hal.science/hal-00511692</idno>
+            <idno type="halBibtex">amoros:hal-00511692</idno>
+            <idno type="halRefHtml">2009, pp.80</idno>
+            <idno type="halRef">2009, pp.80</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="UNIV-LYON1">Université Claude Bernard - Lyon I</idno>
+            <idno type="stamp" n="INVS">Institut de veille sanitaire</idno>
+            <idno type="stamp" n="SANTE_PUB_INSERM" corresp="INSERM">Santé Publique à l'Inserm</idno>
+            <idno type="stamp" n="IFSTTAR">Ifsttar</idno>
+            <idno type="stamp" n="UDL">UDL</idno>
+            <idno type="stamp" n="UNIV-LYON">Université de Lyon</idno>
+            <idno type="stamp" n="UNIV-EIFFEL">Université Gustave Eiffel</idno>
+            <idno type="stamp" n="IFSTTAR-UNIVEIFFEL" corresp="UNIV-EIFFEL">Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="description">La première partie de l'étude CVA (CVA 1) décrit les Cyclistes victimes d'accidents, blessés et tués à vélo, dans le département du Rhône, sur la période 1996-2006. La majorité des cyclistes blessés se sont accidentés seuls. En ville, les cyclistes se blessent plus souvent dans un accident avec un antagoniste (une voiture la plupart du temps) que hors ville, mais malgré cela, les accidents de vélo en ville sont moins graves que les accidents hors ville. Les blessures mettant en jeu le pronostic</note>
+            <note type="popular" n="0">No</note>
+            <note type="other" n="0"/>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Cyclistes Victimes d'Accidents (CVA), Partie 1 : caractéristiques et bilan lésionnel</title>
+                <author role="crp">
+                  <persName>
+                    <forename type="first">Emmanuelle</forename>
+                    <surname>Amoros</surname>
+                  </persName>
+                  <email type="md5">8d033d4021f36eedf4aca57b8d08c50a</email>
+                  <email type="domain">inrets.fr</email>
+                  <idno type="idhal" notation="numeric">874535</idno>
+                  <idno type="halauthorid" notation="string">484931-874535</idno>
+                  <affiliation ref="#struct-170034"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Mireille</forename>
+                    <surname>Chiron</surname>
+                  </persName>
+                  <email type="md5">1dcc6604add0d89354a352f68d45c4c5</email>
+                  <email type="domain">inrets.fr</email>
+                  <idno type="idhal" notation="numeric">833347</idno>
+                  <idno type="halauthorid" notation="string">132867-833347</idno>
+                  <affiliation ref="#struct-170034"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Amina</forename>
+                    <surname>Ndiaye</surname>
+                  </persName>
+                  <email type="md5">e24f3b5704404189b6ac5c17d7de8c3e</email>
+                  <email type="domain">inrets.fr</email>
+                  <idno type="idhal" notation="numeric">875102</idno>
+                  <idno type="halauthorid" notation="string">484932-875102</idno>
+                  <affiliation ref="#struct-170034"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Bertrand</forename>
+                    <surname>Thélot</surname>
+                  </persName>
+                  <email type="md5">f416b89a5e60a3e49594b73b93baab26</email>
+                  <email type="domain">invs.sante.fr</email>
+                  <idno type="idhal" notation="numeric">875103</idno>
+                  <idno type="halauthorid" notation="string">376038-875103</idno>
+                  <affiliation ref="#struct-160040"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Bernard</forename>
+                    <surname>Laumon</surname>
+                  </persName>
+                  <email type="md5">13431ca6e6ef7ccf781775b9880bfb7c</email>
+                  <email type="domain">inrets.fr</email>
+                  <idno type="idhal" notation="numeric">875104</idno>
+                  <idno type="halauthorid" notation="string">226351-875104</idno>
+                  <affiliation ref="#struct-170034"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="localRef">INRETS/RR/10-549-FR</idno>
+                <imprint>
+                  <biblScope unit="pp">80</biblScope>
+                  <date type="datePub">2009-12-21</date>
+                </imprint>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">registre</term>
+                <term xml:lang="en">Abbreviated Injury Scale</term>
+                <term xml:lang="en">blessures</term>
+                <term xml:lang="en">accidents</term>
+                <term xml:lang="en">vélo</term>
+              </keywords>
+              <classCode scheme="mesh">Bicycling, Accidents, traffic Wounds and injuries Abbreviated Injury Scale Epidemiologic method Risk factors</classCode>
+              <classCode scheme="halDomain" n="sdv.spee">Life Sciences [q-bio]/Santé publique et épidémiologie</classCode>
+              <classCode scheme="halTypology" n="OTHER">Other publications</classCode>
+              <classCode scheme="halOldTypology" n="OTHER">Other publications</classCode>
+              <classCode scheme="halTreeTypology" n="OTHER">Other publications</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>The first part of the CVA study describes cyclists injured or killed in an accident. It is based on the Rhône Road Trauma Registry. Study period: 1996-2006. This study uses a categorisation of injured cyclists in 3 groups : injured children / teens and adults injured in towns / teens and adults injured outside towns. This allows a generalisation of the results.</p>
+            </abstract>
+            <particDesc>
+              <org type="consortium">étude CVA</org>
+            </particDesc>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-170034" status="OLD">
+          <orgName>Unité Mixte de Recherche Epidémiologique et de Surveillance Transport Travail Environnement</orgName>
+          <orgName type="acronym">UMRESTTE</orgName>
+          <date type="start">2007-07-01</date>
+          <date type="end">2010-12-31</date>
+          <desc>
+            <address>
+              <addrLine>25 Avenue François Mitterrand, 69675 Bron Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation name="UMRT9405" active="#struct-194495" type="direct"/>
+            <relation active="#struct-301088" type="indirect"/>
+            <relation active="#struct-300008" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-160040" status="INCOMING">
+          <orgName>unité Traumatismes</orgName>
+          <orgName type="acronym">DMCT</orgName>
+          <desc>
+            <address>
+              <addrLine>Unité Traumatismes, Département Maladies Chroniques et Traumatismes (DMCT), Institut de Veille Sanitaire (InVS) 12 rue du Val d'Osne 94415 Saint-Maurice cedex</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-300053" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-194495" status="VALID">
+          <idno type="IdRef">026402823</idno>
+          <idno type="ISNI">0000000121686185</idno>
+          <idno type="ROR">https://ror.org/029brtt94</idno>
+          <orgName>Université Claude Bernard Lyon 1</orgName>
+          <orgName type="acronym">UCBL</orgName>
+          <desc>
+            <address>
+              <addrLine>43, boulevard du 11 novembre 1918, 69622 Villeurbanne cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-lyon1.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-301088" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-301088" status="VALID">
+          <idno type="ROR">https://ror.org/01rk35k63</idno>
+          <orgName>Université de Lyon</orgName>
+          <desc>
+            <address>
+              <addrLine>92 rue Pasteur - CS 30122, 69361 Lyon Cedex 07</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.universite-lyon.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300008" status="OLD">
+          <orgName>Institut National de Recherche sur les Transports et leur Sécurité</orgName>
+          <orgName type="acronym">INRETS</orgName>
+          <desc>
+            <address>
+              <addrLine>25, Avenue François Mitterrand - Case 24 F-69675 BRON CEDEX</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300053" status="VALID">
+          <orgName>Institut de Veille Sanitaire </orgName>
+          <orgName type="acronym">INVS</orgName>
+          <desc>
+            <address>
+              <addrLine>12 rue du Val d'Osne, 94415 Saint Maurice Cedex, France</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of halshs-00391518</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-12T23:23:55+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Male and female patterns of labour force participation : a comparison between France and Japan</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Hiroatsu</forename>
+                <surname>Nohara</surname>
+              </persName>
+              <email type="md5">e8681b8b4a8e1e8d2bb64332951afcba</email>
+              <email type="domain">univ-amu.fr</email>
+              <idno type="idhal" notation="string">hiroatsu-nohara</idno>
+              <idno type="idhal" notation="numeric">2722</idno>
+              <idno type="halauthorid" notation="string">17890-2722</idno>
+              <idno type="IDREF">https://www.idref.fr/057576920</idno>
+              <affiliation ref="#struct-839"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Hiroatsu</forename>
+                <surname>Nohara</surname>
+              </persName>
+              <email type="md5">e8681b8b4a8e1e8d2bb64332951afcba</email>
+              <email type="domain">univ-amu.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2009-06-05 09:51:40</date>
+              <date type="whenWritten">1999-12</date>
+              <date type="whenModified">2023-03-24 14:52:52</date>
+              <date type="whenReleased">2009-06-08 13:57:51</date>
+              <date type="whenProduced">2000</date>
+              <date type="whenEndEmbargoed">2009-06-05</date>
+              <ref type="file" target="https://shs.hal.science/halshs-00391518/document">
+                <date notBefore="2009-06-05"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://shs.hal.science/halshs-00391518/file/femmehomme_france_japon.pdf">
+                <date notBefore="2009-06-05"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="107908">
+                <persName>
+                  <forename>Hiroatsu</forename>
+                  <surname>Nohara</surname>
+                </persName>
+                <email type="md5">e8681b8b4a8e1e8d2bb64332951afcba</email>
+                <email type="domain">univ-amu.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">halshs-00391518</idno>
+            <idno type="halUri">https://shs.hal.science/halshs-00391518</idno>
+            <idno type="halBibtex">nohara:halshs-00391518</idno>
+            <idno type="halRefHtml">Marc Maurice, Arndt Sorge. &lt;i&gt;Embedding Organizations : Societal Analysis of Actors, Organisations and Socio-economic Contexts&lt;/i&gt;, Johon Benjamins Publishing Company, pp.373-388, 2000, Advances in organization studies ; 4</idno>
+            <idno type="halRef">Marc Maurice, Arndt Sorge. Embedding Organizations : Societal Analysis of Actors, Organisations and Socio-economic Contexts, Johon Benjamins Publishing Company, pp.373-388, 2000, Advances in organization studies ; 4</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="UNIV-AMU">Aix Marseille Université</idno>
+            <idno type="stamp" n="LEST" corresp="SHS">Laboratoire d'Economie et de Sociologie du Travail</idno>
+            <idno type="stamp" n="AO-ECONOMIE">Archives ouvertes de l'Economie</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="commentary">Chapter 22</note>
+            <note type="audience" n="1">Not set</note>
+            <note type="popular" n="0">No</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Male and female patterns of labour force participation : a comparison between France and Japan</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Hiroatsu</forename>
+                    <surname>Nohara</surname>
+                  </persName>
+                  <email type="md5">e8681b8b4a8e1e8d2bb64332951afcba</email>
+                  <email type="domain">univ-amu.fr</email>
+                  <idno type="idhal" notation="string">hiroatsu-nohara</idno>
+                  <idno type="idhal" notation="numeric">2722</idno>
+                  <idno type="halauthorid" notation="string">17890-2722</idno>
+                  <idno type="IDREF">https://www.idref.fr/057576920</idno>
+                  <affiliation ref="#struct-839"/>
+                </author>
+              </analytic>
+              <monogr>
+                <title level="m">Embedding Organizations : Societal Analysis of Actors, Organisations and Socio-economic Contexts</title>
+                <editor>Marc Maurice, Arndt Sorge</editor>
+                <imprint>
+                  <publisher>Johon Benjamins Publishing Company</publisher>
+                  <biblScope unit="serie">Advances in organization studies ; 4</biblScope>
+                  <biblScope unit="pp">373-388</biblScope>
+                  <date type="datePub">2000</date>
+                </imprint>
+              </monogr>
+              <ref type="researchdata" target="https://doi.org/10.1075/aios.4.33noh"/>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">female activity</term>
+                <term xml:lang="en">labour force participation pattern</term>
+                <term xml:lang="en">family</term>
+                <term xml:lang="en">comparison France/Japan</term>
+                <term xml:lang="en">public policy</term>
+                <term xml:lang="fr">comparaison France/Japon</term>
+                <term xml:lang="fr">modèle d'activité féminine</term>
+                <term xml:lang="fr">famille</term>
+                <term xml:lang="fr">politiques sociales</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs.eco">Humanities and Social Sciences/Economics and Finance</classCode>
+              <classCode scheme="halTypology" n="COUV">Book sections</classCode>
+              <classCode scheme="halOldTypology" n="COUV">Book sections</classCode>
+              <classCode scheme="halTreeTypology" n="COUV">Book sections</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>This article seeks to compare the patterns of articulation - in France and Japan - between the men's activity and women's activity in the society. In particular, we focus on the differences of activity models between French and Japanese women, which can be considered as a good analyser to reveal a specific - and national - form of interdependence between work, family and society. Based on the descriptive macro-statistic method, we aim to show that the national model of women's activity doesn't originate purely neither from the individual rational choice - cost/advantage calculation within the household - nor from the national culture domination. We posit that such a model is a social ‘fabric' which is constructed on the interaction between the strategic interplay of various actors and the national representation of family crystallized in the public social policies.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>Ce texte se propose de comparer, entre la France et le Japon, les modalités d'articulation des activités des femmes et des hommes dans la société, en particulier en mettant l'accent sur la comparaison des modèles d'activité féminine qui s'avèrent comme un analyseur pertinent de l'interdépendance entre travail, famille et société. Basé sur la méthodologie du type macro - statistique, il vise à montrer que le modèle "national" d'activité féminine ne résulte ni simplement d'un choix fondé sur le calcul coût - avantage au sein du ménage considéré comme un espace de capital, ni d'une culture nationale omnipotente, mais qu'il se construit sur une interaction entre les jeux d'acteurs stratégiques et la représentation de la famille cristallisée autour des politiques des pouvoirs publics. Cet arbitrage au sein du ménage, qui n'exclue pas forcément le calcul, s'effectue néanmoins dans un espace fortement structuré non seulement par la tradition culturelle mais aussi et surtout par les conventions sociétales forgées différemment d'une société à l'autre.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-839" status="VALID">
+          <idno type="IdRef">029762812</idno>
+          <idno type="RNSR">201220323T</idno>
+          <orgName>Laboratoire d'Economie et de Sociologie du Travail</orgName>
+          <orgName type="acronym">LEST</orgName>
+          <date type="start">1966-01-01</date>
+          <desc>
+            <address>
+              <addrLine>35 Avenue Jules Ferry - 13626 Aix en Provence cedex 1</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://lest.fr/fr</ref>
+          </desc>
+          <listRelation>
+            <relation name="UMR7317 / UMR6123 / UPR9059 / ERS99 / UPR7511" active="#struct-198056" type="direct"/>
+            <relation name="UMR7317 / UMR6123 / UPR9059 / ERS99 / UPR7511" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-198056" status="VALID">
+          <idno type="IdRef">15863621X</idno>
+          <idno type="ISNI">0000 0001 2176 4817</idno>
+          <idno type="ROR">035xkbk20</idno>
+          <orgName>Aix Marseille Université</orgName>
+          <orgName type="acronym">AMU</orgName>
+          <date type="start">2012-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Aix-Marseille UniversitéJardins du Pharo58 Boulevard Charles Livon13284 Marseille cedex 7</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-amu.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

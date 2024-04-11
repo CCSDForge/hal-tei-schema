@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-02737739</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-19T13:49:37+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Influence of Fe content on the damage mechanism in A319 aluminum alloy: Tensile tests and digital image correlation</title>
+            <author role="crp">
+              <persName>
+                <forename type="first">Zaidao</forename>
+                <surname>Li</surname>
+              </persName>
+              <email type="md5">656ac25f1e3e249234c802948d143489</email>
+              <email type="domain">gmail.com</email>
+              <idno type="idhal" notation="numeric">1003936</idno>
+              <idno type="halauthorid" notation="string">1147817-1003936</idno>
+              <orgName ref="#struct-526912"/>
+              <affiliation ref="#struct-1252"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Nathalie</forename>
+                <surname>Limodin</surname>
+              </persName>
+              <email type="md5">5413b35dc665f0fcbee1062cd75db8ca</email>
+              <email type="domain">gmail.com</email>
+              <idno type="idhal" notation="string">nathalie-limodin</idno>
+              <idno type="idhal" notation="numeric">17008</idno>
+              <idno type="halauthorid" notation="string">38533-17008</idno>
+              <idno type="ORCID">https://orcid.org/0000-0003-0768-2676</idno>
+              <idno type="IDREF">https://www.idref.fr/190890126</idno>
+              <affiliation ref="#struct-1252"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Amina</forename>
+                <surname>Tandjaoui</surname>
+              </persName>
+              <idno type="halauthorid">892100-0</idno>
+              <affiliation ref="#struct-1252"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Philippe</forename>
+                <surname>Quaegebeur</surname>
+              </persName>
+              <email type="md5">3c5ea5238a987b43d593ffffa654bd46</email>
+              <email type="domain">centralelille.fr</email>
+              <idno type="idhal" notation="string">philippe-quaegebeur</idno>
+              <idno type="idhal" notation="numeric">735586</idno>
+              <idno type="halauthorid" notation="string">2187-735586</idno>
+              <idno type="ORCID">https://orcid.org/0000-0003-2433-8172</idno>
+              <affiliation ref="#struct-1252"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Jean-François</forename>
+                <surname>Witz</surname>
+              </persName>
+              <idno type="halauthorid">353294-0</idno>
+              <affiliation ref="#struct-1252"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">David</forename>
+                <surname>Balloy</surname>
+              </persName>
+              <idno type="halauthorid">6971-0</idno>
+              <affiliation ref="#struct-174496"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Migration</forename>
+                <surname>ProdInra</surname>
+              </persName>
+              <email type="md5">9e5ed7d56b52b3d4383123b1ffb42236</email>
+              <email type="domain">inrae.fr</email>
+            </editor>
+            <funder ref="#projanr-36106"/>
+            <funder>China Scholarship Council (CSC)</funder>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2021-08-24 08:44:54</date>
+              <date type="whenModified">2023-06-02 15:14:46</date>
+              <date type="whenReleased">2021-09-01 10:32:40</date>
+              <date type="whenProduced">2017</date>
+              <date type="whenEndEmbargoed">2021-08-24</date>
+              <ref type="file" target="https://hal.inrae.fr/hal-02737739/document">
+                <date notBefore="2021-08-24"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://hal.inrae.fr/hal-02737739/file/Li_EFM_2017_version%20HAL.pdf">
+                <date notBefore="2021-08-24"/>
+              </ref>
+              <ref type="externalLink" target="https://hal.inrae.fr/hal-02737739/file/Li_EFM_2017_version%20HAL.pdf"/>
+              <fs>
+                <f name="inra_etatDocument_local" notation="numeric">
+                  <numeric>0</numeric>
+                </f>
+                <f name="inra_etatDocument_local" notation="string">
+                  <string>inra_etatDocument_local_0</string>
+                </f>
+                <f name="inra_publicVise_local" notation="string">
+                  <string>inra_publicVise_local_SC</string>
+                </f>
+                <f name="inra_titreSpecial_local" notation="string">
+                  <string>Modern Imaging Techniques in Fracture and Damage Analyses</string>
+                </f>
+              </fs>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="888556">
+                <persName>
+                  <forename>Migration</forename>
+                  <surname>ProdInra</surname>
+                </persName>
+                <email type="md5">9e5ed7d56b52b3d4383123b1ffb42236</email>
+                <email type="domain">inrae.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-02737739</idno>
+            <idno type="halUri">https://hal.inrae.fr/hal-02737739</idno>
+            <idno type="halBibtex">li:hal-02737739</idno>
+            <idno type="halRefHtml">&lt;i&gt;Engineering Fracture Mechanics&lt;/i&gt;, 2017, Special Issue on ‘Modern Imaging Techniques in Fracture and Damage Analyses’: Selected papers from the 21st European Conference of Fracture (ECF 21), held in Catania, Sicily, Italy, on 20–24 June 2016, 183, pp.94-108. &lt;a target="_blank" href="https://dx.doi.org/10.1016/j.engfracmech.2017.05.006"&gt;&amp;#x27E8;10.1016/j.engfracmech.2017.05.006&amp;#x27E9;&lt;/a&gt;</idno>
+            <idno type="halRef">Engineering Fracture Mechanics, 2017, Special Issue on ‘Modern Imaging Techniques in Fracture and Damage Analyses’: Selected papers from the 21st European Conference of Fracture (ECF 21), held in Catania, Sicily, Italy, on 20–24 June 2016, 183, pp.94-108. &amp;#x27E8;10.1016/j.engfracmech.2017.05.006&amp;#x27E9;</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="ENSC-LILLE">Ecole Nationale Supérieure de Chimie de Lille</idno>
+            <idno type="stamp" n="INRA">INRA - Institut national de la recherche agronomique</idno>
+            <idno type="stamp" n="INC-CNRS">Institut de Chimie du CNRS</idno>
+            <idno type="stamp" n="AGREENIUM">Archive ouverte en agrobiosciences</idno>
+            <idno type="stamp" n="UNIV-LILLE">Université de Lille</idno>
+            <idno type="stamp" n="INRAE">Institut National de Recherche en Agriculture, Alimentation et Environnement</idno>
+            <idno type="stamp" n="TEST-HALCNRS">Collection test HAL CNRS</idno>
+            <idno type="stamp" n="ANR">ANR</idno>
+            <idno type="stamp" n="TEST2-HALCNRS">TEST2-HALCNRS</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="commentary">Modern Imaging Techniques in Fracture and Damage Analyses’: Selected papers from the 21st European Conference of Fracture (ECF 21), held in Catania, Sicily, Italy, on 20–24 June 2016</note>
+            <note type="audience" n="2">International</note>
+            <note type="invited" n="0">No</note>
+            <note type="popular" n="0">No</note>
+            <note type="peer" n="1">Yes</note>
+            <note type="proceedings" n="0">No</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Influence of Fe content on the damage mechanism in A319 aluminum alloy: Tensile tests and digital image correlation</title>
+                <author role="crp">
+                  <persName>
+                    <forename type="first">Zaidao</forename>
+                    <surname>Li</surname>
+                  </persName>
+                  <email type="md5">656ac25f1e3e249234c802948d143489</email>
+                  <email type="domain">gmail.com</email>
+                  <idno type="idhal" notation="numeric">1003936</idno>
+                  <idno type="halauthorid" notation="string">1147817-1003936</idno>
+                  <orgName ref="#struct-526912"/>
+                  <affiliation ref="#struct-1252"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Nathalie</forename>
+                    <surname>Limodin</surname>
+                  </persName>
+                  <email type="md5">5413b35dc665f0fcbee1062cd75db8ca</email>
+                  <email type="domain">gmail.com</email>
+                  <idno type="idhal" notation="string">nathalie-limodin</idno>
+                  <idno type="idhal" notation="numeric">17008</idno>
+                  <idno type="halauthorid" notation="string">38533-17008</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0003-0768-2676</idno>
+                  <idno type="IDREF">https://www.idref.fr/190890126</idno>
+                  <affiliation ref="#struct-1252"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Amina</forename>
+                    <surname>Tandjaoui</surname>
+                  </persName>
+                  <idno type="halauthorid">892100-0</idno>
+                  <affiliation ref="#struct-1252"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Philippe</forename>
+                    <surname>Quaegebeur</surname>
+                  </persName>
+                  <email type="md5">3c5ea5238a987b43d593ffffa654bd46</email>
+                  <email type="domain">centralelille.fr</email>
+                  <idno type="idhal" notation="string">philippe-quaegebeur</idno>
+                  <idno type="idhal" notation="numeric">735586</idno>
+                  <idno type="halauthorid" notation="string">2187-735586</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0003-2433-8172</idno>
+                  <affiliation ref="#struct-1252"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Jean-François</forename>
+                    <surname>Witz</surname>
+                  </persName>
+                  <idno type="halauthorid">353294-0</idno>
+                  <affiliation ref="#struct-1252"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">David</forename>
+                    <surname>Balloy</surname>
+                  </persName>
+                  <idno type="halauthorid">6971-0</idno>
+                  <affiliation ref="#struct-174496"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="isbn">9781510827011</idno>
+                <idno type="halJournalId" status="VALID">12924</idno>
+                <idno type="issn">0013-7944</idno>
+                <title level="j">Engineering Fracture Mechanics</title>
+                <meeting>
+                  <title>21e. European Conference on Fracture (ECF)</title>
+                  <date type="start">2016-06-20</date>
+                  <date type="end">2016-06-24</date>
+                  <settlement>Catania</settlement>
+                  <country key="IT">Italy</country>
+                </meeting>
+                <imprint>
+                  <publisher>PERGAMON-ELSEVIER SCIENCE LTD</publisher>
+                  <publisher>Elsevier</publisher>
+                  <pubPlace>OXFORD (united kingdom)</pubPlace>
+                  <biblScope unit="serie">Special Issue on ‘Modern Imaging Techniques in Fracture and Damage Analyses’: Selected papers from the 21st European Conference of Fracture (ECF 21), held in Catania, Sicily, Italy, on 20–24 June 2016</biblScope>
+                  <biblScope unit="volume">183</biblScope>
+                  <biblScope unit="pp">94-108</biblScope>
+                  <date type="datePub">2017</date>
+                </imprint>
+              </monogr>
+              <idno type="doi">10.1016/j.engfracmech.2017.05.006</idno>
+              <idno type="prodinra">417600</idno>
+              <idno type="wos">000413575100009</idno>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">Fe content</term>
+                <term xml:lang="en">Automotive components</term>
+                <term xml:lang="en">Experimental strain analysis</term>
+                <term xml:lang="en">Aluminium alloys</term>
+                <term xml:lang="en">Fractography</term>
+                <term xml:lang="fr">Digital image correlation</term>
+                <term xml:lang="fr">Damage</term>
+              </keywords>
+              <classCode scheme="halDomain" n="spi.mat">Engineering Sciences [physics]/Materials</classCode>
+              <classCode scheme="halDomain" n="spi.meca.mema">Engineering Sciences [physics]/Mechanics [physics.med-ph]/Mechanics of materials [physics.class-ph]</classCode>
+              <classCode scheme="halTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halOldTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halTreeTypology" n="ART">Journal articles</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>In order to study the role of Fe content on the damage mechanisms of Al-Si-Cu alloy on a microstructural level, a Digital Image Correlation (DIC) method has been developed and performed on two Al-Si-Cu alloys: a high-Fe alloy (0.1 wt.% Fe) and a low-Fe alloy (0.8 wt.% Fe). Tensile tests on flat specimens have been performed, and a Questar long distance microscope has been used for the in-situ observation during tensile tests. The field measurements allow to identify and track the development and localization of deformation, and the fracture surfaces of the tensile specimens are analyzed using Scanning Electron Microscopy and Energy-Dispersive X-ray spectrometry (SEM-EDX) to identify the damage mechanisms. The results show that crack initiation occurs through the fracture of hard inclusions, i.e. Si particles, iron-intermetallics and Al2Cu particles in the high stress concentration region. Cracks often propagate through the fracture of hard inclusions rather than by their decohesion from the matrix.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-1252" status="OLD">
+          <idno type="IdRef">150645597</idno>
+          <idno type="ISNI">0000 0004 0617 9507</idno>
+          <idno type="RNSR">200212764V</idno>
+          <orgName>Laboratoire de Mécanique de Lille - FRE 3723</orgName>
+          <orgName type="acronym">LML</orgName>
+          <date type="end">2017-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Bâtiment M6 Bvd Paul Langevin -  59655 VILLENEUVE D ASCQ CEDEX</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://lml.univ-lille1.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-92973" type="direct"/>
+            <relation active="#struct-120930" type="direct"/>
+            <relation name="UMR8107" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-174496" status="OLD">
+          <idno type="IdRef">161609465</idno>
+          <idno type="ISNI">0000 0004 0374 2878</idno>
+          <idno type="RNSR">196317940R</idno>
+          <idno type="ROR">03q99v794</idno>
+          <orgName>Unité Matériaux et Transformations - UMR 8207</orgName>
+          <orgName type="acronym">UMET</orgName>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Université Lille 1 Bâtiment C6 59655 Villeneuve d'Ascq</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://umet.univ-lille1.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation name="UMR0638" active="#struct-92114" type="direct"/>
+            <relation active="#struct-300369" type="direct"/>
+            <relation active="#struct-341038" type="direct"/>
+            <relation active="#struct-374570" type="direct"/>
+            <relation name="UMR8207" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-92973" status="OLD">
+          <idno type="IdRef">026404184</idno>
+          <idno type="ROR">https://ror.org/0546v5182</idno>
+          <orgName>Université de Lille, Sciences et Technologies</orgName>
+          <date type="end">2017-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Cité Scientifique - 59655 Villeneuve d'Ascq Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-lille1.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-120930" status="VALID">
+          <idno type="IdRef">256304629</idno>
+          <idno type="ISNI">0000000122034461</idno>
+          <idno type="ROR">01x441g73</idno>
+          <orgName>Centrale Lille</orgName>
+          <desc>
+            <address>
+              <addrLine>École Centrale de Lille - Cité Scientifique - CS 20048 59651 Villeneuve d'Ascq Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://centralelille.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-92114" status="OLD">
+          <orgName>Institut National de la Recherche Agronomique</orgName>
+          <orgName type="acronym">INRA</orgName>
+          <date type="start">1946-05-18</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inra.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300369" status="OLD">
+          <orgName>Ecole Nationale Supérieure de Chimie de Lille</orgName>
+          <orgName type="acronym">ENSCL</orgName>
+          <desc>
+            <address>
+              <addrLine>Cité ScientifiqueBât. C7Avenue MendeleïevCS 9010859652 VILLENEUVE D’ASCQ CEDEX</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.ensc-lille.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-341038" status="VALID">
+          <idno type="ISNI">0000 0001 0626 358X</idno>
+          <idno type="ROR">02cte4b68</idno>
+          <orgName>Institut de Chimie du CNRS</orgName>
+          <orgName type="acronym">INC</orgName>
+          <desc>
+            <address>
+              <addrLine>CENTRE NATIONAL DE LA RECHERCHE SCIENTIFIQUE3 rue Michel-Ange75794 PARIS CEDEX 16 - France </addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cnrs.fr/inc</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-374570" status="VALID">
+          <idno type="IdRef">223446556</idno>
+          <idno type="ISNI">0000 0001 2242 6780</idno>
+          <idno type="ROR">02kzqn938</idno>
+          <orgName>Université de Lille</orgName>
+          <desc>
+            <address>
+              <addrLine>EPE Université de Lille. -- 42 rue Paul Duez, 59000 Lille</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.univ-lille.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+      <listOrg type="projects">
+        <org type="anrProject" xml:id="projanr-36106" status="VALID">
+          <idno type="anr">ANR-12-RMNP-0011</idno>
+          <idno type="program">Matériaux et Procédés pour des Produits Performants</idno>
+          <orgName>INDiANA</orgName>
+          <desc>Influence des défauts de fonderie dans l'endommagement par fatigue thermomécanique oligocyclique des alliages d'aluminium obtenus par un procédé à modèle perdu</desc>
+          <date type="start">2012</date>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

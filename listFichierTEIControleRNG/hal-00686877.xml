@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-00686877</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+        </availability>
+        <date when="2023-07-15T12:08:55+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Biomass production and water purification from fresh liquid manure - Use of vermiculture, macrophytes ponds and constructed wetlands to recover nutrients and recycle water for flushing in pig housing</title>
+            <author role="crp">
+              <persName>
+                <forename type="first">Philippe</forename>
+                <surname>Morand</surname>
+              </persName>
+              <email type="md5">190c885090f5165fc77e3c2964d0b797</email>
+              <email type="domain">univ-rennes1.fr</email>
+              <idno type="idhal" notation="numeric">831463</idno>
+              <idno type="halauthorid" notation="string">123146-831463</idno>
+              <affiliation ref="#struct-928"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Paul</forename>
+                <surname>Robin</surname>
+              </persName>
+              <email type="md5">4c82cce9012f78ede1e784b30a26207b</email>
+              <email type="domain">inrae.fr</email>
+              <idno type="idhal" notation="string">paul-robin</idno>
+              <idno type="idhal" notation="numeric">740751</idno>
+              <idno type="halauthorid" notation="string">52062-740751</idno>
+              <idno type="RESEARCHERID">http://www.researcherid.com/rid/B-2623-2009</idno>
+              <idno type="ORCID">https://orcid.org/0000-0002-7265-6776</idno>
+              <idno type="GOOGLE SCHOLAR">https://scholar.google.fr/citations?user=i9XhpEEAAAAJ&amp;hl=fr</idno>
+              <idno type="IDREF">https://www.idref.fr/087684659</idno>
+              <orgName ref="#struct-577435"/>
+              <affiliation ref="#struct-138970"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Aurélie</forename>
+                <surname>Escande</surname>
+              </persName>
+              <email type="md5">cefd25bd762bcab70eedffd7f2d86644</email>
+              <email type="domain">umontpellier.fr</email>
+              <idno type="idhal" notation="string">aurelie-escande</idno>
+              <idno type="idhal" notation="numeric">180608</idno>
+              <idno type="halauthorid" notation="string">5585-180608</idno>
+              <idno type="IDREF">https://www.idref.fr/075102870</idno>
+              <idno type="ORCID">https://orcid.org/0000-0002-9085-3642</idno>
+              <affiliation ref="#struct-114"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Bernadette</forename>
+                <surname>Picot</surname>
+              </persName>
+              <idno type="halauthorid">555004-0</idno>
+              <affiliation ref="#struct-114"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Anne-Marie</forename>
+                <surname>Pourcher</surname>
+              </persName>
+              <idno type="halauthorid">123149-0</idno>
+              <affiliation ref="#struct-300005"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Qiu</forename>
+                <surname>Jiangping</surname>
+              </persName>
+              <idno type="halauthorid">2220067-0</idno>
+              <affiliation ref="#struct-233961"/>
+              <affiliation ref="#struct-1075811"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Yinsheng</forename>
+                <surname>Li</surname>
+              </persName>
+              <idno type="halauthorid">606566-0</idno>
+              <affiliation ref="#struct-233961"/>
+              <affiliation ref="#struct-1075811"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Gwenn</forename>
+                <surname>Hamon</surname>
+              </persName>
+              <idno type="halauthorid">123273-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Charlotte</forename>
+                <surname>Amblard</surname>
+              </persName>
+              <idno type="halauthorid">628735-0</idno>
+              <affiliation ref="#struct-1075838"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Luth</forename>
+                <surname>Luth</surname>
+              </persName>
+              <idno type="halauthorid">429620-0</idno>
+              <affiliation ref="#struct-928"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Sébastien</forename>
+                <surname>Fievet</surname>
+              </persName>
+              <idno type="halauthorid">555002-0</idno>
+              <affiliation ref="#struct-1075838"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Didier</forename>
+                <surname>Oudart</surname>
+              </persName>
+              <idno type="halauthorid">555001-0</idno>
+              <affiliation ref="#struct-1075838"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Camille</forename>
+                <surname>Pain Le Quéré</surname>
+              </persName>
+              <idno type="halauthorid">628736-0</idno>
+              <affiliation ref="#struct-1075838"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Daniel</forename>
+                <surname>Cluzeau</surname>
+              </persName>
+              <email type="md5">a0202f51f25b79fae1b179656fabf05c</email>
+              <email type="domain">univ-rennes1.fr</email>
+              <idno type="idhal" notation="numeric">926024</idno>
+              <idno type="halauthorid" notation="string">640172-926024</idno>
+              <affiliation ref="#struct-928"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Brigitte</forename>
+                <surname>Landrain</surname>
+              </persName>
+              <idno type="halauthorid">447935-0</idno>
+              <affiliation ref="#struct-1075838"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Valerie</forename>
+                <surname>Briand</surname>
+              </persName>
+              <email type="md5">844d9a57abdb59130fc2cad9545ea813</email>
+              <email type="domain">univ-rennes1.fr</email>
+            </editor>
+            <funder>Projet Franco-chinois PRA, P2R-Water et ARCUS ; Région Bretagne ; Union Européenne (FEOGA 8089) ; Porcherie verte PITE-Eau ; Ingénierie Ecologique</funder>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2021-06-01 10:53:09</date>
+              <date type="whenModified">2023-07-01 04:58:52</date>
+              <date type="whenReleased">2021-06-01 17:45:32</date>
+              <date type="whenProduced">2009-12-02</date>
+              <date type="whenEndEmbargoed">2021-06-01</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="103421">
+                <persName>
+                  <forename>Valerie</forename>
+                  <surname>Briand</surname>
+                </persName>
+                <email type="md5">844d9a57abdb59130fc2cad9545ea813</email>
+                <email type="domain">univ-rennes1.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <availability status="restricted">
+              <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="IRD">IRD - Institut de recherche pour le développement</idno>
+            <idno type="stamp" n="SDE">Sciences De l'Environnement</idno>
+            <idno type="stamp" n="INSU">INSU - Institut National des Sciences de l'Univers</idno>
+            <idno type="stamp" n="UNIV-RENNES1">Université de Rennes 1</idno>
+            <idno type="stamp" n="UR2-HB">Université Rennes 2 - Haute Bretagne</idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="UNIV-MONTP2">Université Montpellier II - Sciences et Techniques du Languedoc</idno>
+            <idno type="stamp" n="IRSTEA">IRSTEA - Institut national de recherche en sciences et technologies pour l'environnement et l'agriculture (&lt;b&gt;anciennement Cemagref&lt;/b&gt;)</idno>
+            <idno type="stamp" n="INRA">INRA - Institut national de la recherche agronomique</idno>
+            <idno type="stamp" n="HSM">Hydrosciences Montpellier</idno>
+            <idno type="stamp" n="OSUR">Observatoire des Sciences de l'Univers de Rennes</idno>
+            <idno type="stamp" n="GIP-BE">GIP Bretagne Environnement</idno>
+            <idno type="stamp" n="UNAM">l'unam - université nantes angers le mans</idno>
+            <idno type="stamp" n="ECOBIO">Ecosystèmes, Biodiversité, Evolution</idno>
+            <idno type="stamp" n="ECOBIO-RBPE" corresp="ECOBIO">Rôle de la Biodiversité dans les Processus Ecologiques</idno>
+            <idno type="stamp" n="AGROPOLIS">Agropolis</idno>
+            <idno type="stamp" n="UR1-UFR-SVE">UFR SVE Sciences de la vie et de l'environnement</idno>
+            <idno type="stamp" n="UR1-HAL">Publications labos UR1 dans HAL-Rennes 1</idno>
+            <idno type="stamp" n="UR1-SDV">UR1 - publications SDV</idno>
+            <idno type="stamp" n="ECOBIO-RITME">RITME : Réseaux, Interactions Biotiques, Transferts De Matières, Ecosystèmes</idno>
+            <idno type="stamp" n="AGREENIUM">Archive ouverte en agrobiosciences</idno>
+            <idno type="stamp" n="UNIV-RENNES2">Université Rennes 2</idno>
+            <idno type="stamp" n="B3ESTE">Biologie, Ecologie, Evolution, Environnement, Sciences de la Terre et de l'Eau</idno>
+            <idno type="stamp" n="UNIV-MONTPELLIER">Université de Montpellier</idno>
+            <idno type="stamp" n="TEST-UNIV-RENNES">TEST Université de Rennes</idno>
+            <idno type="stamp" n="TEST-UR-CSS">TEST Université de Rennes CSS</idno>
+            <idno type="stamp" n="UNIV-RENNES">Université de Rennes</idno>
+            <idno type="stamp" n="INRAE">Institut National de Recherche en Agriculture, Alimentation et Environnement</idno>
+            <idno type="stamp" n="UR1-ENV">Pôle Rennes 1 - Environnement</idno>
+            <idno type="stamp" n="UMR-SAS">Sol Agro et hydrosystème Spatialisation </idno>
+            <idno type="stamp" n="INSTITUT-AGRO">Institut Agro</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="commentary">communication orale</note>
+            <note type="audience" n="2">International</note>
+            <note type="invited" n="0">No</note>
+            <note type="popular" n="0">No</note>
+            <note type="peer" n="1">Yes</note>
+            <note type="proceedings" n="1">Yes</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Biomass production and water purification from fresh liquid manure - Use of vermiculture, macrophytes ponds and constructed wetlands to recover nutrients and recycle water for flushing in pig housing</title>
+                <author role="crp">
+                  <persName>
+                    <forename type="first">Philippe</forename>
+                    <surname>Morand</surname>
+                  </persName>
+                  <email type="md5">190c885090f5165fc77e3c2964d0b797</email>
+                  <email type="domain">univ-rennes1.fr</email>
+                  <idno type="idhal" notation="numeric">831463</idno>
+                  <idno type="halauthorid" notation="string">123146-831463</idno>
+                  <affiliation ref="#struct-928"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Paul</forename>
+                    <surname>Robin</surname>
+                  </persName>
+                  <email type="md5">4c82cce9012f78ede1e784b30a26207b</email>
+                  <email type="domain">inrae.fr</email>
+                  <idno type="idhal" notation="string">paul-robin</idno>
+                  <idno type="idhal" notation="numeric">740751</idno>
+                  <idno type="halauthorid" notation="string">52062-740751</idno>
+                  <idno type="RESEARCHERID">http://www.researcherid.com/rid/B-2623-2009</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0002-7265-6776</idno>
+                  <idno type="GOOGLE SCHOLAR">https://scholar.google.fr/citations?user=i9XhpEEAAAAJ&amp;hl=fr</idno>
+                  <idno type="IDREF">https://www.idref.fr/087684659</idno>
+                  <orgName ref="#struct-577435"/>
+                  <affiliation ref="#struct-138970"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Aurélie</forename>
+                    <surname>Escande</surname>
+                  </persName>
+                  <email type="md5">cefd25bd762bcab70eedffd7f2d86644</email>
+                  <email type="domain">umontpellier.fr</email>
+                  <idno type="idhal" notation="string">aurelie-escande</idno>
+                  <idno type="idhal" notation="numeric">180608</idno>
+                  <idno type="halauthorid" notation="string">5585-180608</idno>
+                  <idno type="IDREF">https://www.idref.fr/075102870</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0002-9085-3642</idno>
+                  <affiliation ref="#struct-114"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Bernadette</forename>
+                    <surname>Picot</surname>
+                  </persName>
+                  <idno type="halauthorid">555004-0</idno>
+                  <affiliation ref="#struct-114"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Anne-Marie</forename>
+                    <surname>Pourcher</surname>
+                  </persName>
+                  <idno type="halauthorid">123149-0</idno>
+                  <affiliation ref="#struct-300005"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Qiu</forename>
+                    <surname>Jiangping</surname>
+                  </persName>
+                  <idno type="halauthorid">2220067-0</idno>
+                  <affiliation ref="#struct-233961"/>
+                  <affiliation ref="#struct-1075811"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Yinsheng</forename>
+                    <surname>Li</surname>
+                  </persName>
+                  <idno type="halauthorid">606566-0</idno>
+                  <affiliation ref="#struct-233961"/>
+                  <affiliation ref="#struct-1075811"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Gwenn</forename>
+                    <surname>Hamon</surname>
+                  </persName>
+                  <idno type="halauthorid">123273-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Charlotte</forename>
+                    <surname>Amblard</surname>
+                  </persName>
+                  <idno type="halauthorid">628735-0</idno>
+                  <affiliation ref="#struct-1075838"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Luth</forename>
+                    <surname>Luth</surname>
+                  </persName>
+                  <idno type="halauthorid">429620-0</idno>
+                  <affiliation ref="#struct-928"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Sébastien</forename>
+                    <surname>Fievet</surname>
+                  </persName>
+                  <idno type="halauthorid">555002-0</idno>
+                  <affiliation ref="#struct-1075838"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Didier</forename>
+                    <surname>Oudart</surname>
+                  </persName>
+                  <idno type="halauthorid">555001-0</idno>
+                  <affiliation ref="#struct-1075838"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Camille</forename>
+                    <surname>Pain Le Quéré</surname>
+                  </persName>
+                  <idno type="halauthorid">628736-0</idno>
+                  <affiliation ref="#struct-1075838"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Daniel</forename>
+                    <surname>Cluzeau</surname>
+                  </persName>
+                  <email type="md5">a0202f51f25b79fae1b179656fabf05c</email>
+                  <email type="domain">univ-rennes1.fr</email>
+                  <idno type="idhal" notation="numeric">926024</idno>
+                  <idno type="halauthorid" notation="string">640172-926024</idno>
+                  <affiliation ref="#struct-928"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Brigitte</forename>
+                    <surname>Landrain</surname>
+                  </persName>
+                  <idno type="halauthorid">447935-0</idno>
+                  <affiliation ref="#struct-1075838"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="localRef">FR2116</idno>
+                <idno type="halJournalId" status="VALID">107033</idno>
+                <idno type="issn">1878-0296</idno>
+                <idno type="eissn">1878-0296</idno>
+                <title level="j">Procedia Environmental Sciences</title>
+                <title level="m">Procedia Environmental Sciences</title>
+                <meeting>
+                  <title>Ecological Engineering: from Concepts to Applications</title>
+                  <date type="start">2009-12-02</date>
+                  <date type="end">2009-12-04</date>
+                  <settlement>Paris</settlement>
+                  <country key="FR">France</country>
+                </meeting>
+                <respStmt>
+                  <resp>conferenceOrganizer</resp>
+                  <name>CNRS</name>
+                </respStmt>
+                <imprint>
+                  <publisher>Elsevier</publisher>
+                  <biblScope unit="serie">Ecological Engineering: from Concepts to Applications, Paris 2009</biblScope>
+                  <biblScope unit="volume">9</biblScope>
+                  <biblScope unit="pp">130-139</biblScope>
+                  <date type="datePub">2011</date>
+                </imprint>
+              </monogr>
+              <ref target="https://www.sciencedirect.com/science/article/pii/S1878029611007833" type="seeAlso"/>
+              <ref type="publisher">https://www.sciencedirect.com/journal/procedia-environmental-sciences/vol/9/suppl/C</ref>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">lagooning</term>
+                <term xml:lang="en">macrophytes ponds</term>
+                <term xml:lang="en">pig manure</term>
+                <term xml:lang="en">recycling</term>
+                <term xml:lang="en">vermifiltration</term>
+              </keywords>
+              <classCode scheme="halDomain" n="sde.ie">Environmental Sciences/Environmental Engineering</classCode>
+              <classCode scheme="halDomain" n="sdv.bio">Life Sciences [q-bio]/Biotechnology</classCode>
+              <classCode scheme="halTypology" n="COMM">Conference papers</classCode>
+              <classCode scheme="halOldTypology" n="COMM">Conference papers</classCode>
+              <classCode scheme="halTreeTypology" n="COMM">Conference papers</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>A wastewater treatment system including a screen, a vermifilter, macrophytes ponds, and constructed wetlands has been built after a pig housing on slatted-floor. The aims were, all at once, to recycle water for excretion washing and to produce, from the nutrients contained in the effluent, organic matter and plants that can be either sold or reused on the farm to reduce inputs. Analyses, made on the effluent at different steps of the treatment plant, show that the concentrations of the nitrogen, microorganisms and endocrine disruptors are drastically reduced, while the phosphorus and potassium removal go through the by products harvesting.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-928" status="VALID">
+          <idno type="IdRef">151300046</idno>
+          <idno type="ISNI">0000 0004 0609 866X</idno>
+          <idno type="RNSR">199612339J</idno>
+          <idno type="ROR">005fjj927</idno>
+          <orgName>Ecosystèmes, biodiversité, évolution [Rennes]</orgName>
+          <orgName type="acronym">ECOBIO</orgName>
+          <date type="start">1996-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Bâtiment 14 - Université de Rennes 1 - Campus de Beaulieu - CS 74205 - 35042 Rennes Cedex - France</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://ecobio.univ-rennes1.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-105160" type="direct"/>
+            <relation active="#struct-166355" type="direct"/>
+            <relation active="#struct-441569" type="direct"/>
+            <relation active="#struct-302058" type="direct"/>
+            <relation name="UAR3343 / UMS3343" active="#struct-300045" type="indirect"/>
+            <relation active="#struct-406201" type="indirect"/>
+            <relation name="UAR3343 / UMS3343" active="#struct-441569" type="direct"/>
+            <relation active="#struct-577435" type="indirect"/>
+            <relation name="UMR6553" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-138970" status="OLD">
+          <orgName>Sol Agro et hydrosystème Spatialisation</orgName>
+          <orgName type="acronym">SAS</orgName>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>UMR 1069, Sol Agro et Hydrosystème Spatialisation, Batiment 13, Agrocampus Ouest,  65 rue de Saint Brieuc CS 84215 35042 Rennes CEDEX </addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation name="UMR1069" active="#struct-92114" type="direct"/>
+            <relation active="#struct-108028" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-114" status="OLD">
+          <idno type="ISNI">0000000122959747</idno>
+          <idno type="RNSR">199512007C</idno>
+          <idno type="ROR">05bz1tw26</idno>
+          <orgName>Hydrosciences Montpellier</orgName>
+          <orgName type="acronym">HSM</orgName>
+          <date type="start">1995-01-01</date>
+          <date type="end">2014-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Univ. Montpellier - Case MSE Place Eugène Bataillon 34095 MONTPELLIER CEDEX 5</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.hydrosciences.org</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-67872" type="direct"/>
+            <relation active="#struct-92690" type="direct"/>
+            <relation name="UMR5151" active="#struct-300045" type="direct"/>
+            <relation name="UMR5151 / UMR5569" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300005" status="OLD">
+          <orgName>Centre national du machinisme agricole, du génie rural, des eaux et forêts</orgName>
+          <orgName type="acronym">CEMAGREF</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-233961" status="VALID">
+          <orgName>Shanghai Jiao Tong University [Shanghai]</orgName>
+          <desc>
+            <address>
+              <addrLine>800 Dongchuan Road, Shanghai, 200240</addrLine>
+              <country key="CN"/>
+            </address>
+            <ref type="url">http://en.sjtu.edu.cn/</ref>
+          </desc>
+        </org>
+        <org type="laboratory" xml:id="struct-1075811" status="INCOMING">
+          <orgName>Institute for Environmental Agriculture</orgName>
+          <desc>
+            <address>
+              <addrLine>2678 QiXin road Shanghai 201101</addrLine>
+              <country key="CN"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-233961" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-1075838" status="OLD">
+          <orgName>Station Expérimentale de Guernévez</orgName>
+          <desc>
+            <address>
+              <addrLine> 29520 Saint Goazec</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-437638" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-105160" status="VALID">
+          <idno type="ROR">https://ror.org/015m7wh34</idno>
+          <orgName>Université de Rennes</orgName>
+          <orgName type="acronym">UR</orgName>
+          <desc>
+            <address>
+              <addrLine>Campus de Beaulieu, 263 avenue Général Leclerc, CS 74205, 35042 RENNES CEDEX</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.univ-rennes.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-166355" status="VALID">
+          <idno type="ISNI">0000 0001 0253 7563</idno>
+          <idno type="ROR">01q76b368</idno>
+          <orgName>Institut Ecologie et Environnement</orgName>
+          <orgName type="acronym">INEE</orgName>
+          <desc>
+            <address>
+              <addrLine>3 rue Michel-Ange, 75794, Paris cedex 16, France</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.inee.cnrs.fr/fr</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+        <org type="regrouplaboratory" xml:id="struct-302058" status="VALID">
+          <idno type="RNSR">201220716V</idno>
+          <orgName>Observatoire des Sciences de l'Univers de Rennes</orgName>
+          <orgName type="acronym">OSUR</orgName>
+          <date type="start">2010-01-01</date>
+          <desc>
+            <address>
+              <addrLine>263 avenue du Général Leclerc - 35042 Rennes cedex</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-105160" type="direct"/>
+            <relation name="UAR3343 / UMS3343" active="#struct-300045" type="direct"/>
+            <relation active="#struct-406201" type="direct"/>
+            <relation name="UAR3343 / UMS3343" active="#struct-441569" type="direct"/>
+            <relation active="#struct-577435" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300045" status="VALID">
+          <idno type="IdRef">029349265</idno>
+          <idno type="ISNI">0000 0001 2154 1736</idno>
+          <idno type="ROR">04kdfz702</idno>
+          <orgName>Institut national des sciences de l'Univers</orgName>
+          <orgName type="acronym">INSU - CNRS</orgName>
+          <date type="start">2007-04-19</date>
+          <desc>
+            <address>
+              <addrLine>INSU-CNRS3 rue Michel-Ange, 75794 Paris Cedex 16</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.insu.cnrs.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-406201" status="VALID">
+          <idno type="IdRef">054447658</idno>
+          <idno type="ISNI">0000000121522279</idno>
+          <idno type="ROR">01m84wm78</idno>
+          <orgName>Université de Rennes 2</orgName>
+          <orgName type="acronym">UR2</orgName>
+          <desc>
+            <address>
+              <addrLine>Place du recteur Henri Le Moal - CS 24307 - 35043 Rennes cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-rennes2.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-577435" status="VALID">
+          <idno type="ROR">https://ror.org/003vg9w96</idno>
+          <orgName>Institut National de Recherche pour l’Agriculture, l’Alimentation et l’Environnement</orgName>
+          <orgName type="acronym">INRAE</orgName>
+          <date type="start">2020-01-01</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-92114" status="OLD">
+          <orgName>Institut National de la Recherche Agronomique</orgName>
+          <orgName type="acronym">INRA</orgName>
+          <date type="start">1946-05-18</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inra.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-108028" status="OLD">
+          <orgName>AGROCAMPUS OUEST</orgName>
+          <date type="start">2008-01-01</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Institut Supérieur des Sciences Agronomiques, Agroalimentaires, Horticoles et du Paysage - 65, rue de St Brieuc - CS 84215 - 35042 Rennes cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.agrocampus-ouest.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-67872" status="VALID">
+          <idno type="ROR">https://ror.org/05q3vnk25</idno>
+          <orgName>Institut de Recherche pour le Développement</orgName>
+          <orgName type="acronym">IRD</orgName>
+          <desc>
+            <address>
+              <addrLine>SiègeLe Sextant 44, bd de DunkerqueCS 9000913572 Marseille cedex 02</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.ird.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-92690" status="OLD">
+          <orgName>Université Montpellier 2 - Sciences et Techniques</orgName>
+          <orgName type="acronym">UM2</orgName>
+          <date type="end">2014-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Place Eugène Bataillon - 34095 Montpellier cedex 5</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-montp2.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-437638" status="OLD">
+          <orgName>Chambre d'Agriculture du Finistère</orgName>
+          <orgName type="acronym">CA 29</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

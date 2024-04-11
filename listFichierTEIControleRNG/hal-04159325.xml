@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04159325</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-15T03:58:55+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Convention DGPR - Université Gustave Eiffel 2021 - Action 8.1: Comparaison des performances des approches Cartino2D-Telemac et Floodos 2D pour la cartographie automatisée des débordements de petits cours d'eau</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Olivier</forename>
+                <surname>Payrastre</surname>
+              </persName>
+              <email type="md5">7cef19a0f3408af2d1ab2cd817b3be19</email>
+              <email type="domain">univ-eiffel.fr</email>
+              <idno type="idhal" notation="string">olivier-payrastre</idno>
+              <idno type="idhal" notation="numeric">177501</idno>
+              <idno type="halauthorid" notation="string">10971-177501</idno>
+              <idno type="RESEARCHERID">http://www.researcherid.com/rid/V-3548-2019</idno>
+              <idno type="ORCID">https://orcid.org/0000-0002-8396-5873</idno>
+              <idno type="IDREF">https://www.idref.fr/116365447</idno>
+              <affiliation ref="#struct-580957"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Pierre</forename>
+                <surname>Nicolle</surname>
+              </persName>
+              <idno type="halauthorid">833255-0</idno>
+              <affiliation ref="#struct-580957"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Frédéric</forename>
+                <surname>Pons</surname>
+              </persName>
+              <idno type="halauthorid">483715-0</idno>
+              <affiliation ref="#struct-520128"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Ifsttar</forename>
+                <surname>Cadic</surname>
+              </persName>
+              <email type="md5">18a1562551cddfcafeb8c52f77718d16</email>
+              <email type="domain">listes.ifsttar.fr</email>
+            </editor>
+            <funder>Convention DGPR - Université Gustave Eiffel 2021 n°2201285435 du 30 mars 2021 - Référence ex-IFSTTAR RP3-J21052</funder>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-07-11 17:47:47</date>
+              <date type="whenModified">2023-07-15 03:57:55</date>
+              <date type="whenReleased">2023-07-11 17:47:47</date>
+              <date type="whenProduced">2022-06-29</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="128222">
+                <persName>
+                  <forename>Ifsttar</forename>
+                  <surname>Cadic</surname>
+                </persName>
+                <email type="md5">18a1562551cddfcafeb8c52f77718d16</email>
+                <email type="domain">listes.ifsttar.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04159325</idno>
+            <idno type="halUri">https://hal.science/hal-04159325</idno>
+            <idno type="halBibtex">payrastre:hal-04159325</idno>
+            <idno type="halRefHtml">[Rapport de recherche] Université Gustave Eiffeil; DGPR (Direction Générale de la Prévention des Risques - Ministère de la Transition Ecologique et Solidaire). 2022, 23p</idno>
+            <idno type="halRef">[Rapport de recherche] Université Gustave Eiffeil; DGPR (Direction Générale de la Prévention des Risques - Ministère de la Transition Ecologique et Solidaire). 2022, 23p</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="GIP-BE">GIP Bretagne Environnement</idno>
+            <idno type="stamp" n="IFSTTAR">Ifsttar</idno>
+            <idno type="stamp" n="LARA">LARA</idno>
+            <idno type="stamp" n="CEREMA">Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement</idno>
+            <idno type="stamp" n="UNIV-EIFFEL">Université Gustave Eiffel</idno>
+            <idno type="stamp" n="U-EIFFEL" corresp="UNIV-EIFFEL">Université Gustave Eiffel</idno>
+            <idno type="stamp" n="PARTENARIATS-APP">Veille Partenariale Expertise et appui aux politiques publiques</idno>
+            <idno type="stamp" n="GERS" corresp="UNIV-EIFFEL">Géotechnique, environnement, risques naturels et sciences de la terre</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="1">Not set</note>
+            <note type="report" n="6">Research Report</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Convention DGPR - Université Gustave Eiffel 2021 - Action 8.1: Comparaison des performances des approches Cartino2D-Telemac et Floodos 2D pour la cartographie automatisée des débordements de petits cours d'eau</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Olivier</forename>
+                    <surname>Payrastre</surname>
+                  </persName>
+                  <email type="md5">7cef19a0f3408af2d1ab2cd817b3be19</email>
+                  <email type="domain">univ-eiffel.fr</email>
+                  <idno type="idhal" notation="string">olivier-payrastre</idno>
+                  <idno type="idhal" notation="numeric">177501</idno>
+                  <idno type="halauthorid" notation="string">10971-177501</idno>
+                  <idno type="RESEARCHERID">http://www.researcherid.com/rid/V-3548-2019</idno>
+                  <idno type="ORCID">https://orcid.org/0000-0002-8396-5873</idno>
+                  <idno type="IDREF">https://www.idref.fr/116365447</idno>
+                  <affiliation ref="#struct-580957"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Pierre</forename>
+                    <surname>Nicolle</surname>
+                  </persName>
+                  <idno type="halauthorid">833255-0</idno>
+                  <affiliation ref="#struct-580957"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Frédéric</forename>
+                    <surname>Pons</surname>
+                  </persName>
+                  <idno type="halauthorid">483715-0</idno>
+                  <affiliation ref="#struct-520128"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="localRef">DOC00035836</idno>
+                <imprint>
+                  <biblScope unit="pp">23p.</biblScope>
+                  <date type="datePub">2022-06-29</date>
+                </imprint>
+                <authority type="institution">Université Gustave Eiffeil</authority>
+                <authority type="institution">DGPR (Direction Générale de la Prévention des Risques - Ministère de la Transition Ecologique et Solidaire)</authority>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">CRUE</term>
+                <term xml:lang="fr">INONDATION</term>
+                <term xml:lang="fr">CARTOGRAPHIE</term>
+                <term xml:lang="fr">HYDRAULIQUE</term>
+                <term xml:lang="fr">CARTINO 2D</term>
+                <term xml:lang="fr">TELEMAC 2D</term>
+                <term xml:lang="fr">FLOODOS 2D</term>
+                <term xml:lang="fr">ARGENS</term>
+                <term xml:lang="fr">AUDE</term>
+                <term xml:lang="fr">BRAGUE</term>
+                <term xml:lang="fr">RIOU DE L'ARGENTIERE</term>
+                <term xml:lang="fr">GRANDE FRAYERE</term>
+              </keywords>
+              <classCode scheme="halDomain" n="sdu.stu.hy">Sciences of the Universe [physics]/Earth Sciences/Hydrology</classCode>
+              <classCode scheme="halTypology" n="REPORT">Reports</classCode>
+              <classCode scheme="halOldTypology" n="REPORT">Reports</classCode>
+              <classCode scheme="halTreeTypology" n="REPORT.RESREPORT">Reports - Research report</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>Ce rapport a été établi dans le cadre de la convention DGPR - Université Gustave Eiffel 2021 n°2201285435 du 30 mars 2021 - action 8: appui au SCHAPI. Il présente un travail de comparaison des performances des approches 2D Floodos et Telemac 2D (via Cartino 2D) pour la cartographie automatisée des zones inondables, en régime permanent. Ces deux approches ont été appliquées et comparées en reprenant les trois études de cas utilisées dans la thèse de Nabil Hocini (2022), qui correspondent à trois crues majeures survenues durant la dernière décennie dans le sud de la France : crues de l'Aude en octobre 2018, de l'Argens en juin 2010 et des Alpes Maritimes en octobre 2015. Les deux méthodes ont été appliquées en utilisant les mêmes données d'entrées (MNT, débits, découpage des secteurs) et paramétrages (Strickler), de façon à identifier les différences de résultats liées au code de calcul utilisé.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-580957" status="VALID">
+          <orgName>Eau et Environnement </orgName>
+          <orgName type="acronym">GERS-LEE </orgName>
+          <date type="start">2020-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Allée des Ponts et ChausséesRoute de Bouaye 44344 Bouguenais Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.ifsttar.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-580722" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-520128" status="VALID">
+          <orgName>Centre d'Etudes et d'Expertise sur les Risques, l'Environnement, la Mobilité et l'Aménagement - Direction Méditerranée</orgName>
+          <orgName type="acronym">Cerema Direction Méditerranée</orgName>
+          <date type="start">2017-10-16</date>
+          <desc>
+            <address>
+              <addrLine>105 rue Guglielmo Marconi - 34000 MONTPELLIER</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-422961" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-580722" status="VALID">
+          <idno type="ROR">https://ror.org/03x42jk29</idno>
+          <orgName>Université Gustave Eiffel</orgName>
+          <date type="start">2020-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Cité Descartes, 5 Boulevard Descartes • Champs-sur-Marne, 77454 Marne-la-Vallée Cedex 2</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.univ-gustave-eiffel.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-422961" status="VALID">
+          <orgName>Centre d'Etudes et d'Expertise sur les Risques, l'Environnement, la Mobilité et l'Aménagement</orgName>
+          <orgName type="acronym">Cerema</orgName>
+          <date type="start">2017-10-16</date>
+          <desc>
+            <address>
+              <addrLine>Siège : Cités des Mobilités - 25 avenue François Mitterrand - CS 92803 -  69674 BRON Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cerema.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

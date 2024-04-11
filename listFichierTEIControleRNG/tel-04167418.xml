@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of tel-04167418</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-20T16:42:16+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">Study and development of an odor treatment process by ozone oxidation : application to gaseous effluents from superphosphate production plants</title>
+            <title xml:lang="fr">Étude et développement d'un procédé de traitement des odeurs par oxydation à l'ozone : application aux effluents gazeux d'usines de production de superphosphate</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Leticia</forename>
+                <surname>Vitola Pasetto</surname>
+              </persName>
+              <idno type="idhal" notation="numeric">1271835</idno>
+              <idno type="halauthorid" notation="string">1611990-1271835</idno>
+              <idno type="IDREF">https://www.idref.fr/233835660</idno>
+              <affiliation ref="#struct-437012"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>ABES</forename>
+                <surname>STAR</surname>
+              </persName>
+              <email type="md5">f5aa7f563b02bb6adbba7496989af39a</email>
+              <email type="domain">abes.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-07-20 16:42:00</date>
+              <date type="whenModified">2023-07-20 16:42:02</date>
+              <date type="whenReleased">2023-07-20 16:42:02</date>
+              <date type="whenProduced">2019-07-18</date>
+              <date type="whenEndEmbargoed">2023-07-20</date>
+              <ref type="file" target="https://theses.hal.science/tel-04167418/document">
+                <date notBefore="2023-07-20"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://theses.hal.science/tel-04167418/file/Vitola_leticia.pdf">
+                <date notBefore="2023-07-20"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="131274">
+                <persName>
+                  <forename>ABES</forename>
+                  <surname>STAR</surname>
+                </persName>
+                <email type="md5">f5aa7f563b02bb6adbba7496989af39a</email>
+                <email type="domain">abes.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">tel-04167418</idno>
+            <idno type="halUri">https://theses.hal.science/tel-04167418</idno>
+            <idno type="halBibtex">vitolapasetto:tel-04167418</idno>
+            <idno type="halRefHtml">Génie des procédés. Institut National Polytechnique de Toulouse - INPT, 2019. Français. &lt;a target="_blank" href="https://www.theses.fr/2019INPT0061"&gt;&amp;#x27E8;NNT : 2019INPT0061&amp;#x27E9;&lt;/a&gt;</idno>
+            <idno type="halRef">Génie des procédés. Institut National Polytechnique de Toulouse - INPT, 2019. Français. &amp;#x27E8;NNT : 2019INPT0061&amp;#x27E9;</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="STAR">STAR - Dépôt national des thèses électroniques</idno>
+          </seriesStmt>
+          <notesStmt/>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">Study and development of an odor treatment process by ozone oxidation : application to gaseous effluents from superphosphate production plants</title>
+                <title xml:lang="fr">Étude et développement d'un procédé de traitement des odeurs par oxydation à l'ozone : application aux effluents gazeux d'usines de production de superphosphate</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Leticia</forename>
+                    <surname>Vitola Pasetto</surname>
+                  </persName>
+                  <idno type="idhal" notation="numeric">1271835</idno>
+                  <idno type="halauthorid" notation="string">1611990-1271835</idno>
+                  <idno type="IDREF">https://www.idref.fr/233835660</idno>
+                  <affiliation ref="#struct-437012"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="nnt">2019INPT0061</idno>
+                <imprint>
+                  <date type="dateDefended">2019-07-18</date>
+                </imprint>
+                <authority type="institution">Institut National Polytechnique de Toulouse - INPT</authority>
+                <authority type="school">École doctorale Mécanique, énergétique, génie civil et procédés (Toulouse)</authority>
+                <authority type="supervisor">Marie-Hélène Manero</authority>
+                <authority type="supervisor">Valérie Simon</authority>
+                <authority type="jury">Jean-Michel Guillot [Président]</authority>
+                <authority type="jury">Dominique Wolbert [Rapporteur]</authority>
+                <authority type="jury">Frédéric Thévenet [Rapporteur]</authority>
+                <authority type="jury">Frédéric Violleau</authority>
+                <authority type="jury">Isabelle Polaert</authority>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">SIFT/MS</term>
+                <term xml:lang="en">Treatment of odor gas effluent</term>
+                <term xml:lang="en">Reduced sulfur compounds</term>
+                <term xml:lang="en">Ozone</term>
+                <term xml:lang="en">VOC</term>
+                <term xml:lang="en">Oxidation</term>
+                <term xml:lang="fr">Traitement des effluents gazeux malodorants</term>
+                <term xml:lang="fr">Composés soufrés</term>
+                <term xml:lang="fr">Ozone</term>
+                <term xml:lang="fr">COV</term>
+                <term xml:lang="fr">Oxydation</term>
+                <term xml:lang="fr">SIFT/MS</term>
+              </keywords>
+              <classCode scheme="halDomain" n="spi.gproc">Engineering Sciences [physics]/Chemical and Process Engineering</classCode>
+              <classCode scheme="halTypology" n="THESE">Theses</classCode>
+              <classCode scheme="halOldTypology" n="THESE">Theses</classCode>
+              <classCode scheme="halTreeTypology" n="THESE">Theses</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>In the superphosphate-based fertilizers production process, the attack of phosphate rock by sulfuric acid generates odorous gaseous by-products. Although their emissions are within regulatory limits, superphosphate fertilizer plants are likely to cause odor nuisance to residents. This thesis proposes to study the feasibility of a process of odor treatment by ozonation in homogeneous gas phase. A first step of prioritization of the chemical compounds with the most important odorous potential has been realized. This ranking was established from a technical report provided by our industrial partner based on a campaign of olfactometric measurement and chemical characterization of the gases emitted by the chimney of a superphosphate fertilizer production plant. From the calculation of the odor activity value (OAV), two families of compounds were targeted: sulfur compounds - represented by hydrogen sulphide (H2S), ethylmethyl sulphide (MES) and dimethyl disulfide (DMDS) - and aldehydes (represented by propanal and butanal). Two analytical techniques (GC/FID and SIFT/MS) were applied in order to evaluate the elimination performance of these compounds, the difficulty of analyzing a gaseous matrix containing ozone having been demonstrated. Thus, ozone interference on GC/FID analysis of aldehydes has been identified. The SIFT/MS technique, in turn, required significant development. The ozonation of model gaseous effluents was carried out following the elimination of the target compounds under different operating conditions (residence time, reactor temperature, ozone concentration and moisture) in an experimental field compatible with the industrial constraints. The sulfur compounds exhibited high removal rates, particularly in the case of H2S, whose conversions reached about 80%. Organic monosulfides (MES) and disulfides (DMDS) were less reactive to ozone, as conversions remained quite low (around 30% for the same level of O3/sulfur ratio). In the range of operating conditions used, neither the moisture nor the residence time in the reactor showed considerable influence. The ozone concentration is the most influential process parameter, having a positive effect on the conversion rates of the three sulfur compounds studied. Meanwhile, for DMDS, an increase in reactor temperature also improved the conversion. Overall, the highest conversion rates were obtained for the highest O3/sulfur ratios and reactor temperature. Conversely, even when the most favorable reaction conditions have been applied (highest temperature and ozone concentration), the aldehydes have been inert to ozone. Despite the low conversions obtained, the use of SIFT/MS has identified the main by-products of the ozone-sulfur compounds gas phase reaction as methylethylsulfoxide (MESO), methylethylsulfone (MESO2), dimethyl thiosulfinate (DMSOS), isomers of dimethyl thiosulfonate (DMSO2S), dimethyldisulfoxide (DM(SO)2) and also sulfur dioxide (SO2) and trioxide (SO3). The odors treatment process by direct ozonation of the gases at the outlet of industrial chimney thus appears difficult to envisage because of the low efficiency of malodorous compounds elimination demonstrated in our tests. On the other hand, this technique coupled with chemical absorption could be interesting to eliminate the olfactory nuisances with a good efficiency</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>Dans le procédé de production d’engrais à base de superphosphate, l’attaque de la roche phosphatée par l’acide sulfurique génère des sous-produits gazeux odorants. Bien que leurs émissions se situent dans les limites réglementaires, les usines d’engrais à base de superphosphate sont susceptibles de causer des nuisances olfactives pour les riverains. Cette thèse propose d’étudier la faisabilité d’un procédé de traitement des odeurs par l’ozonation en phase gazeuse homogène. Une première étape de priorisation des composés chimiques ayant le potentiel odorant le plus important a été réalisée. Ce classement a été effectué à partir d’un rapport technique fourni par notre partenaire industriel basé sur une campagne de mesure olfactométrique et de caractérisation chimique des gaz émis par la cheminée d’une usine de production des engrais superphosphate. À partir du calcul de la valeur d’activité odorante (OAV), deux familles de composés ont été ciblées : les composés soufrés – représentés par le sulfure d’hydrogène (H2S), le sulfure d’éthylméthyle (MES) et le disulfure de diméthyle (DMDS) – et les aldéhydes (représentés par le propanal et le butanal). Deux techniques analytiques (GC/FID et SIFT/MS) ont été mises en œuvre afin d’évaluer les performances d’élimination de ces composés, la difficulté d'analyser une matrice gazeuse contenant de l'ozone ayant été mise en évidence. Ainsi, une interférence de l'ozone sur l'analyse des aldéhydes par GC/FID a été identifiée. La technique SIFT/MS a, quant à elle, nécessité un développement important. L’ozonation d’effluents gazeux modèles a été réalisée en suivant l’élimination des composés cibles dans différentes conditions de fonctionnement (temps de résidence, température du réacteur, concentration en ozone et taux d’humidité) dans un domaine expérimental compatible avec les contraintes industrielles. Les composés soufrés ont présenté des taux d’élimination élevés, particulièrement dans le cas de H2S, dont les conversions ont atteint environ 80%. Les monosulfures (MES) et disulfures organiques (DMDS) se sont montrés moins réactifs à l’ozone, puisque les conversions sont restées assez faibles (de l’ordre de 30% pour un ratio O3/soufrés similaire). Dans la gamme de conditions opératoires utilisées, ni l'humidité, ni le temps de résidence dans le réacteur n’ont montré d'influence considérable. La concentration d'ozone s’avère être le paramètre du procédé le plus influant, ayant un effet positif sur les taux de conversion des trois composés soufrés étudiés. Parallèlement, pour le DMDS, une augmentation de la température du réacteur a aussi amélioré la conversion. De manière globale, les taux de conversion les plus importants ont été obtenus pour les ratio O3/soufrés et la température du réacteur les plus élevés. A l’inverse, même lorsque les conditions de réaction les plus favorables ont été appliquées (température et concentration d’ozone les plus élevées), les aldéhydes se sont montrés non réactifs vis-à-vis de l’ozone. Malgré les faibles conversions obtenues, l’utilisation du SIFT/MS a permis d’identifier les principaux sousproduits de la réaction ozone-composés soufrés en phase gazeuse comme étant le méthyléthylsulfoxyde (MESO), le méthyléthylsulfone (MESO2), le diméthyl thiosulfinate (DMSOS), les isomères de diméthyl thiosulfonate (DMSO2S), le diméthyldisulfoxyde (DM(SO)2) et également le dioxyde (SO2) et le trioxyde de soufre (SO3). Le procédé de traitement des odeurs par ozonation directe des gaz en sortie de cheminée industrielle apparaît donc difficilement envisageable en raison de la faible efficacité d’élimination des composés malodorants démontrée dans nos essais. En revanche, cette technique couplée avec une absorption chimique pourrait s’avérer intéressante pour éliminer les nuisances olfactives avec une bonne efficacité</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-437012" status="VALID">
+          <idno type="IdRef">085790605</idno>
+          <idno type="ISNI">0000 0000 8797 4983</idno>
+          <idno type="RNSR">199511947M</idno>
+          <idno type="ROR">003jnac13</idno>
+          <orgName>Laboratoire de Génie Chimique</orgName>
+          <orgName type="acronym">LGC</orgName>
+          <date type="start">1992-01-01</date>
+          <desc>
+            <address>
+              <addrLine>4 allee Emile Monso 31432 Toulouse </addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://lgc.cnrs.fr</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-217752" type="direct"/>
+            <relation active="#struct-443875" type="indirect"/>
+            <relation name="UMR5503" active="#struct-441569" type="direct"/>
+            <relation active="#struct-448187" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-217752" status="VALID">
+          <idno type="IdRef">026404672</idno>
+          <idno type="ISNI">0000000121617331</idno>
+          <idno type="ROR">https://ror.org/02v6kpv12</idno>
+          <orgName>Université Toulouse III - Paul Sabatier</orgName>
+          <orgName type="acronym">UT3</orgName>
+          <desc>
+            <address>
+              <addrLine>118 route de Narbonne - 31062 Toulouse</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-tlse3.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-443875" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-443875" status="VALID">
+          <idno type="ROR">https://ror.org/017tgbk05</idno>
+          <orgName>Université de Toulouse</orgName>
+          <orgName type="acronym">UT</orgName>
+          <desc>
+            <address>
+              <addrLine>41 Allée Jules Guesde, 31000 Toulouse</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.univ-toulouse.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-448187" status="VALID">
+          <idno type="IdRef">026388820</idno>
+          <idno type="ISNI">0000000121766169</idno>
+          <idno type="ROR">033p9g875</idno>
+          <orgName>Institut National Polytechnique (Toulouse)</orgName>
+          <orgName type="acronym">Toulouse INP</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.inp-toulouse.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-443875" type="direct"/>
+          </listRelation>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

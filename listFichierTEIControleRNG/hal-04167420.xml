@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04167420</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-21T03:50:32+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">L’hyperinflation ou le rejet de la monnaie domestique</title>
+            <title xml:lang="en" type="sub">Hyperinflation or the rejection of domestic currency</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Jonathan</forename>
+                <surname>Marie</surname>
+              </persName>
+              <email type="md5">66a357e7ce15225b2feb2194c91a0f57</email>
+              <email type="domain">univ-paris13.fr</email>
+              <idno type="idhal" notation="string">jonathan-marie</idno>
+              <idno type="idhal" notation="numeric">179749</idno>
+              <idno type="halauthorid" notation="string">47304-179749</idno>
+              <affiliation ref="#struct-147976"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Jonathan</forename>
+                <surname>Marie</surname>
+              </persName>
+              <email type="md5">66a357e7ce15225b2feb2194c91a0f57</email>
+              <email type="domain">univ-paris13.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-07-20 16:43:17</date>
+              <date type="whenModified">2023-07-21 03:49:10</date>
+              <date type="whenReleased">2023-07-20 16:43:17</date>
+              <date type="whenProduced">2023</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="164842">
+                <persName>
+                  <forename>Jonathan</forename>
+                  <surname>Marie</surname>
+                </persName>
+                <email type="md5">66a357e7ce15225b2feb2194c91a0f57</email>
+                <email type="domain">univ-paris13.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04167420</idno>
+            <idno type="halUri">https://hal.science/hal-04167420</idno>
+            <idno type="halBibtex">marie:hal-04167420</idno>
+            <idno type="halRefHtml">&lt;i&gt;Regards croisés sur l'économie&lt;/i&gt;, 2023, 32, p. 210-219</idno>
+            <idno type="halRef">Regards croisés sur l'économie, 2023, 32, p. 210-219</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="UNIV-PARIS13">Université Paris-Nord - Paris XIII </idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="AO-ECONOMIE">Archives ouvertes de l'Economie</idno>
+            <idno type="stamp" n="CEPN" corresp="UNIV-PARIS13">Centre d'Economie de l'Université Paris Nord</idno>
+            <idno type="stamp" n="CONDORCET3" corresp="CAMPUS-CONDORCET">CONDORCET3</idno>
+            <idno type="stamp" n="SORBONNE-PARIS-NORD">Université Sorbonne Paris Nord</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="2">International</note>
+            <note type="popular" n="0">No</note>
+            <note type="peer" n="1">Yes</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">L’hyperinflation ou le rejet de la monnaie domestique</title>
+                <title xml:lang="en" type="sub">Hyperinflation or the rejection of domestic currency</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Jonathan</forename>
+                    <surname>Marie</surname>
+                  </persName>
+                  <email type="md5">66a357e7ce15225b2feb2194c91a0f57</email>
+                  <email type="domain">univ-paris13.fr</email>
+                  <idno type="idhal" notation="string">jonathan-marie</idno>
+                  <idno type="idhal" notation="numeric">179749</idno>
+                  <idno type="halauthorid" notation="string">47304-179749</idno>
+                  <affiliation ref="#struct-147976"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="halJournalId" status="VALID">115653</idno>
+                <idno type="issn">1956-7413</idno>
+                <title level="j">Regards croisés sur l'économie</title>
+                <imprint>
+                  <publisher>Association Regards Croisés sur l'Économie</publisher>
+                  <biblScope unit="volume">32</biblScope>
+                  <biblScope unit="pp">p. 210-219</biblScope>
+                  <date type="datePub">2023</date>
+                </imprint>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">hyperinflation</term>
+                <term xml:lang="fr">hyperinflation</term>
+                <term xml:lang="fr">crise monétaire</term>
+                <term xml:lang="fr">crise de change</term>
+              </keywords>
+              <classCode scheme="jel" n="E">E - Macroeconomics and Monetary Economics</classCode>
+              <classCode scheme="halDomain" n="shs.eco">Humanities and Social Sciences/Economics and Finance</classCode>
+              <classCode scheme="halTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halOldTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halTreeTypology" n="ART">Journal articles</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>The article proposes to define hyperinflation as the rejection of domestic currency in favour of a foreign currency in a context of high inflation. This rejection explains why these crises are also major political and institutional crises. Based on Post-Keynesian and structuralist theories, the analysis highlights the role played by distributional conflict, indexation, and external instability.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>L’article propose de définir l’hyperinflation comme le rejet de la monnaie domestique au profit d’une devise dans un contexte de forte inflation. Ce rejet explique pourquoi ces crises sont aussi des crises politiques et institutionnelles majeures. Basée sur les théories post-keynésienne et structuraliste, l’analyse met en avant le rôle joué par le conflit de répartition, l’indexation généralisée et l’instabilité externe.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-147976" status="OLD">
+          <orgName>Centre d'Economie de l'Université Paris Nord</orgName>
+          <orgName type="acronym">CEPN</orgName>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>UFR de Sciences Economiques, Université Paris 13, 99 avenue Jean-Baptiste Clément, F-93430, Villetaneuse.</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris13.fr/CEPN/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-15786" type="direct"/>
+            <relation active="#struct-303171" type="direct"/>
+            <relation name="UMR7234" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-15786" status="VALID">
+          <idno type="ROR">https://ror.org/05f82e368</idno>
+          <orgName>Université Paris 13</orgName>
+          <orgName type="acronym">UP13</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-paris13.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-303171" status="VALID">
+          <orgName>Université Sorbonne Paris Cité</orgName>
+          <orgName type="acronym">USPC</orgName>
+          <date type="start">2010-01-01</date>
+          <desc>
+            <address>
+              <addrLine>Université Sorbonne Paris Cité | 100-104, avenue de France | 75013 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.sorbonne-paris-cite.fr/fr</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

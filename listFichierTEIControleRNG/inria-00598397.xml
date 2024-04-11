@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of inria-00598397</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-19T15:47:53+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Étude et développement d'un système multi-échelle pour la visualisation réaliste et interactive de végétaux (rendu volumique)</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Vincent</forename>
+                <surname>Vidal</surname>
+              </persName>
+              <email type="md5">14e9bb7e2e307ade01538fbcc4a18fe7</email>
+              <email type="domain">liris.cnrs.fr</email>
+              <idno type="idhal" notation="string">vincent-vidal-liris</idno>
+              <idno type="idhal" notation="numeric">4136</idno>
+              <idno type="halauthorid" notation="string">25750-4136</idno>
+              <idno type="IDREF">https://www.idref.fr/161696821</idno>
+              <affiliation ref="#struct-44938"/>
+              <affiliation ref="#struct-25361"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Team</forename>
+                <surname>Evasion</surname>
+              </persName>
+              <email type="md5">2de038ea992c7626760f773b03b826ca</email>
+              <email type="domain">inria.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2011-06-06 14:10:49</date>
+              <date type="whenModified">2023-06-27 15:50:32</date>
+              <date type="whenReleased">2011-06-06 16:46:25</date>
+              <date type="whenProduced">2007-09</date>
+              <date type="whenEndEmbargoed">2011-06-06</date>
+              <ref type="file" target="https://inria.hal.science/inria-00598397/document">
+                <date notBefore="2011-06-06"/>
+              </ref>
+              <ref type="annex" subtype="figure" n="1" target="https://inria.hal.science/inria-00598397/file/0RapportPFE.jpg">
+                <date notBefore="2011-06-06"/>
+              </ref>
+              <ref type="file" subtype="author" n="1" target="https://inria.hal.science/inria-00598397/file/VVidal_PFE_ENSIMAG_3A_IRV.pdf">
+                <date notBefore="2011-06-06"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="156913">
+                <persName>
+                  <forename>Team</forename>
+                  <surname>Evasion</surname>
+                </persName>
+                <email type="md5">2de038ea992c7626760f773b03b826ca</email>
+                <email type="domain">inria.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">inria-00598397</idno>
+            <idno type="halUri">https://inria.hal.science/inria-00598397</idno>
+            <idno type="halBibtex">vidal:inria-00598397</idno>
+            <idno type="halRefHtml">Synthèse d'image et réalité virtuelle [cs.GR]. 2007</idno>
+            <idno type="halRef">Synthèse d'image et réalité virtuelle [cs.GR]. 2007</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="CIRAD">CIRAD - Centre de coopération internationale en recherche agronomique pour le développement</idno>
+            <idno type="stamp" n="UGA">HAL Grenoble Alpes</idno>
+            <idno type="stamp" n="CNRS">CNRS - Centre national de la recherche scientifique</idno>
+            <idno type="stamp" n="INRIA">INRIA - Institut National de Recherche en Informatique et en Automatique</idno>
+            <idno type="stamp" n="UNIV-GRENOBLE1" corresp="UGA">Université Joseph Fourier - Grenoble I</idno>
+            <idno type="stamp" n="UNIV-PMF_GRENOBLE" corresp="UGA">Université Pierre-Mendès-France - Grenoble II</idno>
+            <idno type="stamp" n="INPG" corresp="UGA">Institut polytechnique de Grenoble</idno>
+            <idno type="stamp" n="INRA">INRA - Institut national de la recherche agronomique</idno>
+            <idno type="stamp" n="INRIA-RHA">INRIA Grenoble - Rhône-Alpes</idno>
+            <idno type="stamp" n="LIAMA">Laboratoire Franco-Chinois d'Informatique, d'Automatique et de Mathématiques Appliquées</idno>
+            <idno type="stamp" n="INRIA_TEST">INRIA - Institut National de Recherche en Informatique et en Automatique</idno>
+            <idno type="stamp" n="LJK">Laboratoire Jean Kuntzmann</idno>
+            <idno type="stamp" n="LJK_GI" corresp="LJK">Département Géométrie et Images</idno>
+            <idno type="stamp" n="LJK_GI_EVASION" corresp="LJK_GI">EVASION</idno>
+            <idno type="stamp" n="TESTALAIN1">TESTALAIN1</idno>
+            <idno type="stamp" n="UGA-TEST-QUATER">UGA-TEST-QUATER</idno>
+            <idno type="stamp" n="INRIA2">INRIA 2</idno>
+            <idno type="stamp" n="AGREENIUM">Archive ouverte en agrobiosciences</idno>
+            <idno type="stamp" n="INRIA-RENGRE">INRIA-RENGRE</idno>
+            <idno type="stamp" n="INRAE">Institut National de Recherche en Agriculture, Alimentation et Environnement</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="3">National</note>
+            <note type="degree" n="26">Final report of studies end</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Étude et développement d'un système multi-échelle pour la visualisation réaliste et interactive de végétaux (rendu volumique)</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Vincent</forename>
+                    <surname>Vidal</surname>
+                  </persName>
+                  <email type="md5">14e9bb7e2e307ade01538fbcc4a18fe7</email>
+                  <email type="domain">liris.cnrs.fr</email>
+                  <idno type="idhal" notation="string">vincent-vidal-liris</idno>
+                  <idno type="idhal" notation="numeric">4136</idno>
+                  <idno type="halauthorid" notation="string">25750-4136</idno>
+                  <idno type="IDREF">https://www.idref.fr/161696821</idno>
+                  <affiliation ref="#struct-44938"/>
+                  <affiliation ref="#struct-25361"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint>
+                  <biblScope unit="pp">91</biblScope>
+                  <date type="dateDefended">2007-09</date>
+                </imprint>
+                <authority type="institution">Ecole Nationale Superieure d'Informatique et de Mathematiques Appliquees de Grenoble (ENSIMAG)</authority>
+                <authority type="supervisor">Philippe Decaudin</authority>
+                <authority type="supervisorEmail">Antoine.Bouthors@imag.fr</authority>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">volume rendering</term>
+                <term xml:lang="en">KD-tree</term>
+                <term xml:lang="en">empty-space removing</term>
+              </keywords>
+              <classCode scheme="halDomain" n="info.info-gr">Computer Science [cs]/Graphics [cs.GR]</classCode>
+              <classCode scheme="halTypology" n="MEM">Master thesis</classCode>
+              <classCode scheme="halOldTypology" n="MEM">Master thesis</classCode>
+              <classCode scheme="halTreeTypology" n="MEM">Master thesis</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>Ce rapport introduit une approche intéressante pour le rendu volumique basé sur des textures 3D. En utilisant une structure de KD-Tree, construite à partir d'un maillage 3D ou d'une représentation volumique d'arbre ou de plante, une liste de sous-volumes englobants les parties nonvide est générée. Un nombre relativement petit de sous-volumes suffit à englober finement les espaces non-vides. La liste est ensuite utilisée pour ne rendre que les parties correspondantes de la représentation volumique associée. Ce qui permet un gain important au niveau de la vitesse d'affichage. Après avoir introduit le rendu volumique basé sur des textures 3D, ainsi que la construction et l'intérêt de l'utilisation des KD-Trees, une présentation des différentes heuristiques utilisées pour la construction est faite. Elle met en avant les possibilités et limites de chaque approche. Les points techniques les plus intéressants sont détaillés. Les résultats obtenus ainsi que les perspectives résultantes montrent l'intérêt de notre méthode.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="researchteam" xml:id="struct-44938" status="OLD">
+          <idno type="RNSR">200218264Y</idno>
+          <orgName>Virtual environments for animation and image synthesis of natural objects</orgName>
+          <orgName type="acronym">EVASION</orgName>
+          <date type="start">2007-01-01</date>
+          <date type="end">2011-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Inria Grenoble - Rhône-Alpes 655 avenue de l'Europe - Montbonnot 38334 Saint Ismier Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inria.fr/equipes/evasion</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-2497" type="direct"/>
+            <relation active="#struct-300009" type="indirect"/>
+            <relation active="#struct-24474" type="direct"/>
+            <relation active="#struct-3886" type="indirect"/>
+            <relation active="#struct-51016" type="indirect"/>
+            <relation active="#struct-89889" type="direct"/>
+            <relation name="UMR5224" active="#struct-441569" type="indirect"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-25361" status="OLD">
+          <orgName>Laboratoire Franco-Chinois d'Informatique, d'Automatique et de Mathématiques Appliquées</orgName>
+          <orgName type="acronym">LIAMA</orgName>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Institut d'Automatique - Académie des Sciences de Chine PO Box 2728 - Beijing 100080 R. P. Chine Tél. : (+ 86 10) 62 64 74 59 Fax : (+ 86 10) 62 64 74 58</addrLine>
+              <country key="CN"/>
+            </address>
+            <ref type="url">http://liama.ia.ac.cn/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-11574" type="direct"/>
+            <relation active="#struct-92114" type="direct"/>
+            <relation active="#struct-239582" type="direct"/>
+            <relation active="#struct-300009" type="direct"/>
+            <relation active="#struct-300168" type="direct"/>
+            <relation active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="laboratory" xml:id="struct-2497" status="VALID">
+          <idno type="RNSR">199218244V</idno>
+          <idno type="ROR">00n8d6z93</idno>
+          <orgName>Inria Grenoble - Rhône-Alpes</orgName>
+          <desc>
+            <address>
+              <addrLine>Inovallée655 avenue de l'Europe38330 Montbonnot</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inria.fr/centre/grenoble</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-300009" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300009" status="VALID">
+          <idno type="ROR">https://ror.org/02kvxyf05</idno>
+          <orgName>Institut National de Recherche en Informatique et en Automatique</orgName>
+          <orgName type="acronym">Inria</orgName>
+          <desc>
+            <address>
+              <addrLine>Domaine de VoluceauRocquencourt - BP 10578153 Le Chesnay Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inria.fr/en/</ref>
+          </desc>
+        </org>
+        <org type="laboratory" xml:id="struct-24474" status="OLD">
+          <idno type="IdRef">184945011</idno>
+          <idno type="ISNI">0000 0004 0383 676X</idno>
+          <idno type="RNSR">200711891Z</idno>
+          <idno type="ROR">04ett5b41</idno>
+          <orgName>Laboratoire Jean Kuntzmann</orgName>
+          <orgName type="acronym">LJK</orgName>
+          <date type="start">2007-01-01</date>
+          <date type="end">2015-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Bâtiment IMAG, CS 40700, F-38058 Grenoble Cedex 9</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://ljk.imag.fr</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-3886" type="direct"/>
+            <relation active="#struct-51016" type="direct"/>
+            <relation active="#struct-89889" type="direct"/>
+            <relation name="UMR5224" active="#struct-441569" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-3886" status="OLD">
+          <idno type="IdRef">02640432X</idno>
+          <idno type="ROR">02f7wz369</idno>
+          <orgName>Université Pierre Mendès France - Grenoble 2</orgName>
+          <orgName type="acronym">UPMF</orgName>
+          <date type="end">2015-12-31</date>
+          <desc>
+            <address>
+              <addrLine>BP 47 - 38040 Grenoble Cedex 9</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.upmf-grenoble.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-51016" status="OLD">
+          <idno type="IdRef">026404796</idno>
+          <idno type="ROR">https://ror.org/02aj0kh94</idno>
+          <orgName>Université Joseph Fourier - Grenoble 1</orgName>
+          <orgName type="acronym">UJF</orgName>
+          <date type="end">2015-12-31</date>
+          <desc>
+            <address>
+              <addrLine>BP 53 - 38041 Grenoble Cedex 9</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.ujf-grenoble.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-89889" status="OLD">
+          <idno type="IdRef">026388804</idno>
+          <idno type="ROR">https://ror.org/05sbt2524</idno>
+          <orgName>Institut polytechnique de Grenoble - Grenoble Institute of Technology</orgName>
+          <orgName type="acronym">Grenoble INP </orgName>
+          <date type="start">2007-01-01</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <addrLine>46 avenue Félix Viallet 38031 Grenoble Cedex 1</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.grenoble-inp.fr/</ref>
+          </desc>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-441569" status="VALID">
+          <idno type="IdRef">02636817X</idno>
+          <idno type="ISNI">0000000122597504</idno>
+          <idno type="ROR">02feahw73</idno>
+          <orgName>Centre National de la Recherche Scientifique</orgName>
+          <orgName type="acronym">CNRS</orgName>
+          <date type="start">1939-10-19</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.cnrs.fr/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-11574" status="VALID">
+          <idno type="ISNI">0000000121539871</idno>
+          <idno type="ROR">https://ror.org/05kpkpg04</idno>
+          <orgName>Centre de Coopération Internationale en Recherche Agronomique pour le Développement</orgName>
+          <orgName type="acronym">Cirad</orgName>
+          <date type="start">1984-06-01</date>
+          <desc>
+            <address>
+              <addrLine>Siège 42, rue Scheffer 75116 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cirad.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-92114" status="OLD">
+          <orgName>Institut National de la Recherche Agronomique</orgName>
+          <orgName type="acronym">INRA</orgName>
+          <date type="start">1946-05-18</date>
+          <date type="end">2019-12-31</date>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.inra.fr</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-239582" status="VALID">
+          <orgName>Chinese Academy of Sciences [Changchun Branch]</orgName>
+          <orgName type="acronym">CAS</orgName>
+          <desc>
+            <address>
+              <addrLine>Dong Nanhu Road 3888 Changchun Jilin</addrLine>
+              <country key="CN"/>
+            </address>
+            <ref type="url">http://english.cas.cn/</ref>
+          </desc>
+        </org>
+        <org type="institution" xml:id="struct-300168" status="VALID">
+          <orgName>Institute of Automation - Chinese Academy of Sciences</orgName>
+          <desc>
+            <address>
+              <addrLine>No. 95 Zhongguancun East Road,Haidian District, Beijing 100190, China </addrLine>
+              <country key="CN"/>
+            </address>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

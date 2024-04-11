@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-04168081</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-21T12:45:14+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">ImmUniverse Consortium: Multi-omics integrative approach in personalized medicine for immune-mediated inflammatory diseases</title>
+            <title xml:lang="eng">ImmUniverse Consortium: Multi-omics integrative approach in personalized medicine for immune-mediated inflammatory diseases.</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Stefania</forename>
+                <surname>Vetrano</surname>
+              </persName>
+              <idno type="halauthorid">1302325-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Gerben</forename>
+                <surname>Bouma</surname>
+              </persName>
+              <idno type="halauthorid">2866667-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Robert</forename>
+                <surname>Benschop</surname>
+              </persName>
+              <idno type="halauthorid">2201571-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Thomas</forename>
+                <surname>Birngruber</surname>
+              </persName>
+              <idno type="halauthorid">2866668-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Antonio</forename>
+                <surname>Costanzo</surname>
+              </persName>
+              <idno type="halauthorid">795232-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">G</forename>
+                <surname>d'Haens</surname>
+              </persName>
+              <idno type="halauthorid">1295321-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Loredana</forename>
+                <surname>Frasca</surname>
+              </persName>
+              <idno type="halauthorid">2866669-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Rainer</forename>
+                <surname>Hillenbrand</surname>
+              </persName>
+              <idno type="halauthorid">662304-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Lars</forename>
+                <surname>Iversen</surname>
+              </persName>
+              <idno type="halauthorid">417345-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Claus</forename>
+                <surname>Johansen</surname>
+              </persName>
+              <idno type="halauthorid">417344-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Arthur</forename>
+                <surname>Kaser</surname>
+              </persName>
+              <idno type="halauthorid">1758106-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Hans</forename>
+                <surname>Koenen</surname>
+              </persName>
+              <idno type="halauthorid">1604515-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Christa</forename>
+                <surname>Noehammer</surname>
+              </persName>
+              <idno type="halauthorid">2866670-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Laurent</forename>
+                <surname>Peyrin-Biroulet</surname>
+              </persName>
+              <idno type="halauthorid">520641-0</idno>
+              <affiliation ref="#struct-487464"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Jeroen</forename>
+                <surname>Raes</surname>
+              </persName>
+              <idno type="halauthorid">631585-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Leonardo</forename>
+                <surname>Ricotti</surname>
+              </persName>
+              <idno type="halauthorid">2687544-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Philip</forename>
+                <surname>Rosenstiel</surname>
+              </persName>
+              <idno type="halauthorid">519985-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Venkata</forename>
+                <surname>Satagopam</surname>
+              </persName>
+              <idno type="halauthorid">908091-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Stefan</forename>
+                <surname>Schreiber</surname>
+              </persName>
+              <idno type="halauthorid">495876-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Severine</forename>
+                <surname>Vermeire</surname>
+              </persName>
+              <idno type="halauthorid">578979-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Andreas</forename>
+                <surname>Wollenberg</surname>
+              </persName>
+              <idno type="halauthorid">1871568-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Stephan</forename>
+                <surname>Weidinger</surname>
+              </persName>
+              <idno type="halauthorid">2323697-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Daniel</forename>
+                <surname>Ziemek</surname>
+              </persName>
+              <idno type="halauthorid">1466781-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Silvio</forename>
+                <surname>Danese</surname>
+              </persName>
+              <idno type="halauthorid">561027-0</idno>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">G.</forename>
+                <surname>D’haens</surname>
+              </persName>
+              <idno type="halauthorid">2866671-0</idno>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Benjamin</forename>
+                <surname>GROSJEAN</surname>
+              </persName>
+              <email type="md5">ad98404bae99942b09bab8ac05f6ebd9</email>
+              <email type="domain">chru-nancy.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2023-07-21 12:00:59</date>
+              <date type="whenModified">2023-07-21 12:01:02</date>
+              <date type="whenReleased">2023-07-21 12:00:59</date>
+              <date type="whenProduced">2022-11-09</date>
+              <ref type="externalLink" target="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9682955/pdf"/>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="1440655">
+                <persName>
+                  <forename>Benjamin</forename>
+                  <surname>GROSJEAN</surname>
+                </persName>
+                <email type="md5">ad98404bae99942b09bab8ac05f6ebd9</email>
+                <email type="domain">chru-nancy.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-04168081</idno>
+            <idno type="halUri">https://hal.univ-lorraine.fr/hal-04168081</idno>
+            <idno type="halBibtex">vetrano:hal-04168081</idno>
+            <idno type="halRefHtml">&lt;i&gt;Frontiers in Immunology&lt;/i&gt;, 2022, 13, pp.1002629. &lt;a target="_blank" href="https://dx.doi.org/10.3389/fimmu.2022.1002629"&gt;&amp;#x27E8;10.3389/fimmu.2022.1002629&amp;#x27E9;&lt;/a&gt;</idno>
+            <idno type="halRef">Frontiers in Immunology, 2022, 13, pp.1002629. &amp;#x27E8;10.3389/fimmu.2022.1002629&amp;#x27E9;</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="UNIV-LORRAINE">Université de Lorraine</idno>
+          </seriesStmt>
+          <notesStmt/>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">ImmUniverse Consortium: Multi-omics integrative approach in personalized medicine for immune-mediated inflammatory diseases</title>
+                <title xml:lang="eng">ImmUniverse Consortium: Multi-omics integrative approach in personalized medicine for immune-mediated inflammatory diseases.</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Stefania</forename>
+                    <surname>Vetrano</surname>
+                  </persName>
+                  <idno type="halauthorid">1302325-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Gerben</forename>
+                    <surname>Bouma</surname>
+                  </persName>
+                  <idno type="halauthorid">2866667-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Robert</forename>
+                    <surname>Benschop</surname>
+                  </persName>
+                  <idno type="halauthorid">2201571-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Thomas</forename>
+                    <surname>Birngruber</surname>
+                  </persName>
+                  <idno type="halauthorid">2866668-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Antonio</forename>
+                    <surname>Costanzo</surname>
+                  </persName>
+                  <idno type="halauthorid">795232-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">G</forename>
+                    <surname>d'Haens</surname>
+                  </persName>
+                  <idno type="halauthorid">1295321-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Loredana</forename>
+                    <surname>Frasca</surname>
+                  </persName>
+                  <idno type="halauthorid">2866669-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Rainer</forename>
+                    <surname>Hillenbrand</surname>
+                  </persName>
+                  <idno type="halauthorid">662304-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Lars</forename>
+                    <surname>Iversen</surname>
+                  </persName>
+                  <idno type="halauthorid">417345-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Claus</forename>
+                    <surname>Johansen</surname>
+                  </persName>
+                  <idno type="halauthorid">417344-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Arthur</forename>
+                    <surname>Kaser</surname>
+                  </persName>
+                  <idno type="halauthorid">1758106-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Hans</forename>
+                    <surname>Koenen</surname>
+                  </persName>
+                  <idno type="halauthorid">1604515-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Christa</forename>
+                    <surname>Noehammer</surname>
+                  </persName>
+                  <idno type="halauthorid">2866670-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Laurent</forename>
+                    <surname>Peyrin-Biroulet</surname>
+                  </persName>
+                  <idno type="halauthorid">520641-0</idno>
+                  <affiliation ref="#struct-487464"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Jeroen</forename>
+                    <surname>Raes</surname>
+                  </persName>
+                  <idno type="halauthorid">631585-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Leonardo</forename>
+                    <surname>Ricotti</surname>
+                  </persName>
+                  <idno type="halauthorid">2687544-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Philip</forename>
+                    <surname>Rosenstiel</surname>
+                  </persName>
+                  <idno type="halauthorid">519985-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Venkata</forename>
+                    <surname>Satagopam</surname>
+                  </persName>
+                  <idno type="halauthorid">908091-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Stefan</forename>
+                    <surname>Schreiber</surname>
+                  </persName>
+                  <idno type="halauthorid">495876-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Severine</forename>
+                    <surname>Vermeire</surname>
+                  </persName>
+                  <idno type="halauthorid">578979-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Andreas</forename>
+                    <surname>Wollenberg</surname>
+                  </persName>
+                  <idno type="halauthorid">1871568-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Stephan</forename>
+                    <surname>Weidinger</surname>
+                  </persName>
+                  <idno type="halauthorid">2323697-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Daniel</forename>
+                    <surname>Ziemek</surname>
+                  </persName>
+                  <idno type="halauthorid">1466781-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Silvio</forename>
+                    <surname>Danese</surname>
+                  </persName>
+                  <idno type="halauthorid">561027-0</idno>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">G.</forename>
+                    <surname>D’haens</surname>
+                  </persName>
+                  <idno type="halauthorid">2866671-0</idno>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="halJournalId" status="VALID">73691</idno>
+                <idno type="issn">1664-3224</idno>
+                <idno type="eissn">1664-3224</idno>
+                <title level="j">Frontiers in Immunology</title>
+                <imprint>
+                  <publisher>Frontiers</publisher>
+                  <biblScope unit="volume">13</biblScope>
+                  <biblScope unit="pp">1002629</biblScope>
+                  <date type="datePub">2022-11-09</date>
+                </imprint>
+              </monogr>
+              <idno type="doi">10.3389/fimmu.2022.1002629</idno>
+              <idno type="pubmed">36439150</idno>
+              <idno type="pubmedcentral">PMC9682955</idno>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="en">English</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="en">LIPUS</term>
+                <term xml:lang="en">atopic dermatitis</term>
+                <term xml:lang="en">dOFM</term>
+                <term xml:lang="en">immunomediated diseases</term>
+                <term xml:lang="en">liquid biopsy</term>
+                <term xml:lang="en">omic analyses</term>
+                <term xml:lang="en">ulcerative colitis</term>
+              </keywords>
+              <classCode scheme="mesh">Humans</classCode>
+              <classCode scheme="mesh">Precision Medicine</classCode>
+              <classCode scheme="mesh">Dermatitis, Atopic</classCode>
+              <classCode scheme="mesh">Quality of Life</classCode>
+              <classCode scheme="mesh">Biomarkers</classCode>
+              <classCode scheme="mesh">Disease Progression</classCode>
+              <classCode scheme="halDomain" n="sdv">Life Sciences [q-bio]</classCode>
+              <classCode scheme="halTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halOldTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halTreeTypology" n="ART">Journal articles</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>Immune mediated inflammatory diseases (IMIDs) are a heterogeneous group of debilitating, multifactorial and unrelated conditions featured by a dysregulated immune response leading to destructive chronic inflammation. The immune dysregulation can affect various organ systems: gut (e.g., inflammatory bowel disease), joints (e.g., rheumatoid arthritis), skin (e.g., psoriasis, atopic dermatitis), resulting in significant morbidity, reduced quality of life, increased risk for comorbidities, and premature death. As there are no reliable disease progression and therapy response biomarkers currently available, it is very hard to predict how the disease will develop and which treatments will be effective in a given patient. In addition, a considerable proportion of patients do not respond sufficiently to the treatment. ImmUniverse is a large collaborative consortium of 27 partners funded by the Innovative Medicine Initiative (IMI), which is sponsored by the European Union (Horizon 2020) and in-kind contributions of participating pharmaceutical companies within the European Federation of Pharmaceutical Industries and Associations (EFPIA). ImmUniverse aims to advance our understanding of the molecular mechanisms underlying two immune-mediated diseases, ulcerative colitis (UC) and atopic dermatitis (AD), by pursuing an integrative multi-omics approach. As a consequence of the heterogeneity among IMIDs patients, a comprehensive, evidence-based identification of novel biomarkers is necessary to enable appropriate patient stratification that would account for the inter-individual differences in disease severity, drug efficacy, side effects or prognosis. This would guide clinicians in the management of patients and represent a major step towards personalized medicine. ImmUniverse will combine the existing and novel advanced technologies, including multi-omics, to characterize both the tissue microenvironment and blood. This comprehensive, systems biology-oriented approach will allow for identification and validation of tissue and circulating biomarker signatures as well as mechanistic principles, which will provide information about disease severity and future disease progression. This truly makes the ImmUniverse Consortium an unparalleled approach.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-487464" status="VALID">
+          <orgName>Service d'Hépato-gastro-entérologie [CHRU Nancy]</orgName>
+          <desc>
+            <address>
+              <addrLine>Vandoeuvre-les-Nancy</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-300157" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300157" status="VALID">
+          <orgName>Centre Hospitalier Régional Universitaire de Nancy</orgName>
+          <orgName type="acronym">CHRU Nancy</orgName>
+          <desc>
+            <address>
+              <addrLine>Siège social : 29 avenue du Maréchal de Lattre de Tassigny, CO 60034, 54035 NANCY CEDEXHôpital Central : 29 Avenue du Maréchal de Lattre de Tassigny, 54035 NancyHôpitaux de Brabois / Enfants : Rue du Morvan, 54500 Vandœuvre-lès-NancyMaternité régionale :10 Avenue Dr Heydenreich, 54000 Nancy</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.chu-nancy.fr</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

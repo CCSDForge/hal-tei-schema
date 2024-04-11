@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of halshs-00300756</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-21T16:11:25+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="de">Friedrich Nietzsche. Le Service divin des Grecs</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Emmanuel</forename>
+                <surname>Cattin</surname>
+              </persName>
+              <email type="md5">c65a4e93fb8b0a418f08b5d4958c9d2e</email>
+              <email type="domain">orange.fr</email>
+              <idno type="idhal" notation="numeric">851752</idno>
+              <idno type="halauthorid" notation="string">230093-851752</idno>
+              <affiliation ref="#struct-44512"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Emmanuel</forename>
+                <surname>Cattin</surname>
+              </persName>
+              <email type="md5">c65a4e93fb8b0a418f08b5d4958c9d2e</email>
+              <email type="domain">orange.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2008-07-19 08:43:28</date>
+              <date type="whenModified">2021-02-24 15:36:11</date>
+              <date type="whenReleased">2008-07-19 08:43:28</date>
+              <date type="whenProduced">1992</date>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="130219">
+                <persName>
+                  <forename>Emmanuel</forename>
+                  <surname>Cattin</surname>
+                </persName>
+                <email type="md5">c65a4e93fb8b0a418f08b5d4958c9d2e</email>
+                <email type="domain">orange.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">halshs-00300756</idno>
+            <idno type="halUri">https://shs.hal.science/halshs-00300756</idno>
+            <idno type="halBibtex">cattin:halshs-00300756</idno>
+            <idno type="halRefHtml">Editions de L'Herne. Editions de L'Herne, pp.220, 1992, Michel Haar</idno>
+            <idno type="halRef">Editions de L'Herne. Editions de L'Herne, pp.220, 1992, Michel Haar</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="SHS">Sciences de l'Homme et de la Société</idno>
+            <idno type="stamp" n="PRES_CLERMONT">Université de Clermont</idno>
+            <idno type="stamp" n="UNIV-BPCLERMONT" corresp="PRES_CLERMONT">Université Blaise Pascal - Clermont-Ferrand II</idno>
+            <idno type="stamp" n="PHIER" corresp="PRES_CLERMONT">Philosophies et Rationalités</idno>
+            <idno type="stamp" n="AO-PHILOSOPHIE">Archives ouvertes de la Philosophie</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="1">Not set</note>
+            <note type="popular" n="0">No</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="de">Friedrich Nietzsche. Le Service divin des Grecs</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Emmanuel</forename>
+                    <surname>Cattin</surname>
+                  </persName>
+                  <email type="md5">c65a4e93fb8b0a418f08b5d4958c9d2e</email>
+                  <email type="domain">orange.fr</email>
+                  <idno type="idhal" notation="numeric">851752</idno>
+                  <idno type="halauthorid" notation="string">230093-851752</idno>
+                  <affiliation ref="#struct-44512"/>
+                </author>
+              </analytic>
+              <monogr>
+                <editor>Editions de L'Herne</editor>
+                <imprint>
+                  <publisher>Editions de L'Herne</publisher>
+                  <biblScope unit="pp">220</biblScope>
+                  <date type="datePub">1992</date>
+                </imprint>
+              </monogr>
+              <series>
+                <editor>Michel Haar</editor>
+              </series>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">Grecs</term>
+                <term xml:lang="fr">culte</term>
+                <term xml:lang="fr">religion</term>
+                <term xml:lang="fr">philologie</term>
+              </keywords>
+              <classCode scheme="halDomain" n="shs.phil">Humanities and Social Sciences/Philosophy</classCode>
+              <classCode scheme="halTypology" n="OUV">Books</classCode>
+              <classCode scheme="halOldTypology" n="OUV">Books</classCode>
+              <classCode scheme="halTreeTypology" n="OUV">Books</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>Traduction, introduction et notes d'un cours de Nietzsche à l'Université de Bâle</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="laboratory" xml:id="struct-44512" status="OLD">
+          <idno type="IdRef">157796620</idno>
+          <idno type="RNSR">200014595U</idno>
+          <orgName>Laboratoire Philosophies et Rationalités</orgName>
+          <orgName type="acronym">PHIER</orgName>
+          <date type="end">2016-12-31</date>
+          <desc>
+            <address>
+              <addrLine>Maison des Sciences de l’Homme, 4 rue Ledru, 63000 Clermont-Ferrand </addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-bpclermont.fr/LABOS/phier/</ref>
+          </desc>
+          <listRelation>
+            <relation name="EA3297" active="#struct-205618" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-205618" status="OLD">
+          <orgName>Université Blaise Pascal - Clermont-Ferrand 2</orgName>
+          <orgName type="acronym">UBP</orgName>
+          <date type="end">2016-12-31</date>
+          <desc>
+            <address>
+              <addrLine>34, avenue Carnot - BP 185 / 63006 Clermont-Ferrand cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.univ-bpclermont.fr/</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>

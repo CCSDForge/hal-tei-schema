@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../TEIHEADER/HAL/schema/out/HALSpecification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of dumas-00306216</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons Attribution 4.0 International License</licence>
+        </availability>
+        <date when="2023-07-18T13:46:38+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="fr">Réalisation d'un système de gestion de fichiers en langage Pascal pour MODULECO</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Robert</forename>
+                <surname>Gardien</surname>
+              </persName>
+              <idno type="halauthorid">335558-0</idno>
+              <affiliation ref="#struct-60199"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Grenoble</forename>
+                <surname>CNAM</surname>
+              </persName>
+              <email type="md5">4b0c107d8844353426226d1e4f370c08</email>
+              <email type="domain">univ-grenoble-alpes.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2008-07-25 14:04:07</date>
+              <date type="whenModified">2023-02-03 04:33:13</date>
+              <date type="whenReleased">2008-07-25 14:45:12</date>
+              <date type="whenProduced">1982-01-02</date>
+              <date type="whenEndEmbargoed">2008-07-25</date>
+              <ref type="file" target="https://dumas.ccsd.cnrs.fr/dumas-00306216/document">
+                <date notBefore="2008-07-25"/>
+              </ref>
+              <ref type="file" n="1" target="https://dumas.ccsd.cnrs.fr/dumas-00306216/file/Gardien.Robert_1982_ing.pdf">
+                <date notBefore="2008-07-25"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="1376670">
+                <persName>
+                  <forename>Grenoble</forename>
+                  <surname>CNAM</surname>
+                </persName>
+                <email type="md5">4b0c107d8844353426226d1e4f370c08</email>
+                <email type="domain">univ-grenoble-alpes.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">dumas-00306216</idno>
+            <idno type="halUri">https://dumas.ccsd.cnrs.fr/dumas-00306216</idno>
+            <idno type="halBibtex">gardien:dumas-00306216</idno>
+            <idno type="halRefHtml">Ordinateur et société [cs.CY]. 1982</idno>
+            <idno type="halRef">Ordinateur et société [cs.CY]. 1982</idno>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="TDS-MACS">Réseau de recherche en Théorie des Systèmes Distribués, Modélisation, Analyse et Contrôle des Systèmes</idno>
+            <idno type="stamp" n="DUMAS">DUMAS</idno>
+            <idno type="stamp" n="TEST3-HALCNRS">TEST3-HALCNRS</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="1">Not set</note>
+            <note type="degree" n="3">dumas_degreeType_3</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="fr">Réalisation d'un système de gestion de fichiers en langage Pascal pour MODULECO</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Robert</forename>
+                    <surname>Gardien</surname>
+                  </persName>
+                  <idno type="halauthorid">335558-0</idno>
+                  <affiliation ref="#struct-60199"/>
+                </author>
+              </analytic>
+              <monogr>
+                <imprint>
+                  <biblScope unit="pp">120</biblScope>
+                  <date type="dateDefended">1982-01-02</date>
+                </imprint>
+                <authority type="jury">Louis Bolliet</authority>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">Économie</term>
+                <term xml:lang="fr">Économétrie</term>
+                <term xml:lang="fr">Gestion</term>
+                <term xml:lang="fr">MODULECO</term>
+                <term xml:lang="fr">Pascal</term>
+                <term xml:lang="fr">Fichiers</term>
+                <term xml:lang="fr">Portabilité</term>
+                <term xml:lang="fr">Programmation</term>
+                <term xml:lang="fr">Programme</term>
+              </keywords>
+              <classCode scheme="halDomain" n="info.info-cy">Computer Science [cs]/Computers and Society [cs.CY]</classCode>
+              <classCode scheme="halDomain" n="info.info-se">Computer Science [cs]/Software Engineering [cs.SE]</classCode>
+              <classCode scheme="halTypology" n="MEM">Master Thesis</classCode>
+              <classCode scheme="halOldTypology" n="MEM">Master Thesis</classCode>
+              <classCode scheme="halTreeTypology" n="MEM">Master Thesis</classCode>
+            </textClass>
+            <abstract xml:lang="fr">
+              <p>MODULECO est un logiciel de construction et d'utilisation de modèles macroéconomiques. Il a été développé dans le cadre d'une Association loi 1901 à but non lucratif : le Club MODULECO. L'association créée en février 1979 regroupe à l'heure actuelle, des représentants des Laboratoires de recherche INRIA et IMAG, des représentants de l'INSEE, de la Direction de la Prévention, du Parlement (Assemblée Nationale et Sénat), du Centre Interuniversitaire de Calcul de Grenoble et de l'Agence de l'Informatique. MODULECO offre un ensemble intégré de fonction qui permettent à l'économiste d'effectuer les différentes tâches de la modélisation : gestion de séries chronologiques, entrée et modification du texte des équations d'un modèle, estimation des coefficients, impression ou visualisation des résultats. Les logiciels de modélisation économétrique existants ont été étudiés dans plusieurs publications. MODULECO s'en distingue par le fait qu'il est disponible sur plusieurs machines et systèmes d'exploitation : HB68 (Multics), IBM série 370, 3 03 2 (OS/MVS) Le travail décrit dans ce mémoire s'est déroulé dans le cadre du projet MODULECO. Il s'agissait de fournir un module de gestion de fichier à l'équipe chargée de l'implémentation du logiciel. Deux problèmes principaux se posaient pour la gestion des fichier MODULECO : éviter la multiplicité de ceux-ci dans le système hôte; ce qui pouvait provoquer une saturation des tables du système ; résoudre les problème posés par Pascal ; avoir un ensemble de méthodes d'accès qui sont nécessaires au projet et qui ne sont pas standard sur tous les systèmes.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="regrouplaboratory" xml:id="struct-60199" status="VALID">
+          <orgName>Centre d'enseignement Cnam Grenoble</orgName>
+          <orgName type="acronym">CNAM Grenoble</orgName>
+          <desc>
+            <address>
+              <addrLine>Domaine universitaire - 701 rue de la piscine - BP 81 - 38402 Saint Martin d'Hères Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cnam-grenoble.org</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-300351" type="direct"/>
+            <relation active="#struct-302628" type="indirect"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-300351" status="VALID">
+          <idno type="IdRef">027404978</idno>
+          <idno type="ISNI">0000000121690459</idno>
+          <idno type="ROR">0175hh227</idno>
+          <orgName>Conservatoire National des Arts et Métiers [CNAM]</orgName>
+          <orgName type="acronym">CNAM</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.cnam.fr/</ref>
+          </desc>
+          <listRelation>
+            <relation active="#struct-302628" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="regroupinstitution" xml:id="struct-302628" status="VALID">
+          <idno type="IdRef">238277429</idno>
+          <orgName>HESAM Université - Communauté d'universités et d'établissements Hautes écoles Sorbonne Arts et métiers université</orgName>
+          <orgName type="acronym">HESAM</orgName>
+          <date type="start">2010-01-01</date>
+          <desc>
+            <address>
+              <addrLine>15, rue Soufflot75005 Paris</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">https://www.hesam.eu</ref>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>
