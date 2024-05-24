@@ -606,7 +606,8 @@
                      <attDef ident="nymRef" mode="delete"/>
                      <attDef ident="ref" mode="delete"/>
                      <attDef ident="role" mode="change" usage="req">
-                        <desc>La liste des valeurs possibles pour l'attribute est disponible à cette <ref target="http://api-preprod.archives-ouvertes.fr/ref/metadataList/?q=metaName_s:relator&amp;fl=*&amp;wt=xml">addresse</ref>. Il s'agit des valeurs présentes dans l'élément qui a pour attribut name="metaValue_s"</desc>
+                        <desc>La liste des valeurs possibles pour l'attribute est disponible à cette <ref target="http://api-preprod.archives-ouvertes.fr/ref/metadataList/?q=metaName_s:relator&amp;fl=*&amp;wt=xml">addresse</ref>. Il s'agit des valeurs présentes dans l'élément qui a pour attribut name="metaValue_s".
+                        Les rôles sont disponibles en fonction du type de documents </desc>
                      </attDef>
                   </attList>
                   <exemplum>
@@ -838,9 +839,13 @@
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <orgName ref="#struct-300009"/>
+                        <orgName ref="#localStruct-1"></orgName>
                      </egXML>
                   </exemplum>
-                  <remarks><p>La forme de la structure doit être #struct-XXXXX. XXXXX correspond au numéro de la structure.</p></remarks>
+                  <remarks><p>La structure peut-être nommée de deux facons : <list><item>#struct-%%ID pour une structure présent sur HAL</item>
+                     <item>localStruct-%%ID pour une structure non présente dans le référentiel de HAL</item>
+                  </list>
+                     %%ID  correspond au numéro de la structure.</p></remarks>
                </elementSpec>
 
                <elementSpec ident="affiliation" mode="change">
@@ -863,10 +868,14 @@
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <orgName ref="#struct-300009"/>
+                        <affiliation ref="#struct-300009"/>
+                        <affiliation ref="#localStruct-1"/>
                      </egXML>
                   </exemplum>
-                  <remarks><p>La forme de la structure doit être #struct-%%ID. %%ID correspond au numéro de la structure.</p></remarks>
+                  <remarks><p>L'affiliation peut-être nommée de deux facons : <list><item>#struct-%%ID pour une structure présent sur HAL</item>
+                     <item>localStruct-%%ID pour une structure non présente dans le référentiel de HAL</item>
+                  </list>
+                     %%ID  correspond au numéro de la structure.</p></remarks>
                </elementSpec>
                
                <elementSpec ident="editor" mode="change">
@@ -909,7 +918,6 @@
                            Pour #projanr-%%ID, %%ID correspond à l'identifiant du projet de financement de l'ANR. Vous pouvez allez cherchez l'identifiant correspondant sur <ref target="https://aurehal.archives-ouvertes.fr/anrproject/index">AuréHal</ref>.
                            Pour ##projeurop-%%ID, %%ID correspond à l'identifiant du projet de financement européen. Vous pouvez allez cherchez l'identifiant correspondant sur <ref target="https://aurehal.archives-ouvertes.fr/europeanproject/index">AuréHal</ref>.
                            <!-- On discutait de la suppression de l'ajout des projets ANR qui ne sont pas référencés donc ça peut-être utile de ne pas la conserver-->
-                           Pour #localProjanr-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <gi>back</gi>.
                            Pour #localProjeur-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <gi>back</gi>.
                         </desc>
                      </attDef>
@@ -918,13 +926,18 @@
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <funder ref="#localProjanr-1"/>
                         <funder ref="#projanr-1"/>
                         <funder ref="#projeurop-1"/>
                         <funder ref="#localProjeurop-1"/>
                      </egXML>
                   </exemplum>
-                  <remarks><p>La forme de la structure doit être #struct-XXXXX. XXXXX correspond au numéro de la structure.</p></remarks>
+                  <remarks><p>Les projets ANR doivent forcément être présent dans AuréHal si votre projet n'est pas présent, veuillez-contacter le support si le votre n'est pas présent en base. Il doivent se nommer #projanr-%%ID.<lb/>
+                     Les projets européens peuvent être nommées de deux façons :
+                     <list><item>projeurop-%%ID pour une financeur présent sur HAL</item>
+                        <item>localProjeur-%%ID pour une structure non présente dans le référentiel de HAL</item>
+                     </list>
+                     
+                     %%ID correspond au numéro de la structure.</p></remarks>
                </elementSpec>
                
                <elementSpec ident="editionStmt" mode="change">
