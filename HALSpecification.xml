@@ -662,7 +662,7 @@
                <elementSpec ident="persName" mode="change">
                   <content>
                      <sequence preserveOrder="false">
-                        <elementRef key="forename" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="forename" maxOccurs="unbounded"/>
                         <elementRef key="surname"/>
                      </sequence>
                   </content>
@@ -948,7 +948,7 @@
                      <!-- CF : Obligation d'avoir un titre dans les TEI guidelines mais pas dans HAL Sword, est-ce qu'il y a des cas de transfert d'article sans titre ?
                      <elementRef key="title" minOccurs="1" maxOccurs="unbounded"/>
                      -->
-                     <elementRef key="edition" minOccurs="0" maxOccurs="unbounded"/>
+                     <elementRef key="edition" maxOccurs="unbounded"/>
                      <elementRef key="respStmt" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
                   <!-- Reprise Exemple -->
@@ -1102,6 +1102,7 @@
                      <elementRef key="numeric" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
                   <attList>
+                     <attDef ident="n" usage="opt" mode="change"></attDef>
                      <attDef ident="name" usage="req" mode="change"/>
                      <attDef ident="notation" usage="opt" mode="change">
                         <valList mode="change" type="closed">
@@ -2586,7 +2587,7 @@
                   </classes>
                   <content>
                      <sequence preserveOrder="false">
-                        <elementRef key="org" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="org" maxOccurs="unbounded"/>
                      </sequence>
                   </content>
                </elementSpec>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-05-24T14:16:08Z. .
+Schema generated from ODD source 2024-10-16T13:58:19Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -2825,9 +2825,9 @@ Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] re
    <define name="editionStmt">
       <element name="editionStmt">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition statement) groups information relating to one edition of a text. [2.2.2. The Edition Statement 2.2. The File Description]</a:documentation>
-         <zeroOrMore>
+         <oneOrMore>
             <ref name="edition"/>
-         </zeroOrMore>
+         </oneOrMore>
          <zeroOrMore>
             <ref name="respStmt"/>
          </zeroOrMore>
@@ -3421,7 +3421,24 @@ Feature Value]</a:documentation>
          <zeroOrMore>
             <ref name="numeric"/>
          </zeroOrMore>
-         <ref name="att.global.attributes"/>
+         <ref name="att.global.attribute.xmlid"/>
+         <ref name="att.global.attribute.xmllang"/>
+         <ref name="att.global.attribute.xmlbase"/>
+         <ref name="att.global.attribute.xmlspace"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
+         <ref name="att.global.linking.attribute.corresp"/>
+         <ref name="att.global.linking.attribute.synch"/>
+         <ref name="att.global.linking.attribute.sameAs"/>
+         <ref name="att.global.linking.attribute.copyOf"/>
+         <ref name="att.global.linking.attribute.next"/>
+         <ref name="att.global.linking.attribute.prev"/>
+         <ref name="att.global.linking.attribute.exclude"/>
+         <ref name="att.global.linking.attribute.select"/>
+         <ref name="att.global.responsibility.attribute.cert"/>
+         <ref name="att.global.responsibility.attribute.resp"/>
+         <ref name="att.global.source.attribute.source"/>
          <ref name="att.datcat.attributes"/>
          <optional>
             <attribute name="notation">
@@ -3432,6 +3449,12 @@ Feature Value]</a:documentation>
                   <value>numeric</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="n">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+               <data type="string"/>
             </attribute>
          </optional>
          <attribute name="name">
@@ -3742,9 +3765,9 @@ Feature Value]</a:documentation>
       <element name="persName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <interleave>
-            <zeroOrMore>
+            <oneOrMore>
                <ref name="forename"/>
-            </zeroOrMore>
+            </oneOrMore>
             <ref name="surname"/>
          </interleave>
          <ref name="att.global.attributes"/>
@@ -4138,9 +4161,9 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       <element name="particDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(participation description) describes the identifiable speakers, voices, or other participants in any kind of text or other persons named or otherwise referred to in a text, edition, or metadata. [15.2. Contextual Information]</a:documentation>
          <interleave>
-            <zeroOrMore>
+            <oneOrMore>
                <ref name="org"/>
-            </zeroOrMore>
+            </oneOrMore>
          </interleave>
       </element>
    </define>
