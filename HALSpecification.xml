@@ -338,7 +338,7 @@
                <moduleRef key="canonical" include="ref"/>
                <moduleRef key="att.datable" except="from-iso to-iso"/>
                <!-- CF :Ajout de validUntil -->
-               <moduleRef key="tagdocs" include="validUntil"/>
+               <moduleRef key="tagdocs"/>
                
                <elementSpec ident="TEI" mode="change">
                   <!-- LR :Comment utiliser @validUntil? -->
@@ -1091,6 +1091,7 @@
                <!-- CF: pas dans l'exemple est-il toujours utilisé -->
                <elementSpec ident="f" mode="change">
                   <classes mode="change">
+                     <memberOf key="att.datcat" mode="delete"/>
                      <memberOf key="att.duration" mode="delete"/>
                      <memberOf key="att.editLike" mode="delete"/>
                      <memberOf key="att.ranging" mode="delete"/>
@@ -1102,9 +1103,28 @@
                      <elementRef key="numeric" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
                   <attList>
+                     <attDef ident="xml:id" mode="delete"/>
+                     <attDef ident="xml:lang" mode="delete"/>
+                     <attDef ident="xml:base" mode="delete"/>
+                     <attDef ident="xml:space" mode="delete"/>
+                     <attDef ident="rend" mode="delete"/>
+                     <attDef ident="style" mode="delete"/>
+                     <attDef ident="rendition" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="synch" mode="delete"/>
+                     <attDef ident="sameAs" mode="delete"/>
+                     <attDef ident="copyOf" mode="delete"/>
+                     <attDef ident="next" mode="delete"/>
+                     <attDef ident="prev" mode="delete"/>
+                     <attDef ident="exclude" mode="delete"/>
+                     <attDef ident="select" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="resp" mode="delete"/>
+                     <attDef ident="source" mode="delete"/>
                      <attDef ident="n" usage="opt" mode="change"></attDef>
                      <attDef ident="name" usage="req" mode="change"/>
-                     <attDef ident="notation" usage="opt" mode="change">
+                     <attDef ident="notation" usage="opt" mode="change" validUntil="2026-01-01">
+                        <desc type="deprecationInfo">L'attribut @notation a pour but d'être remplacé par l'attribut N</desc>
                         <valList mode="change" type="closed">
                            <valItem ident="string"/>
                            <valItem ident="numeric"/>
@@ -1113,12 +1133,12 @@
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <f name="inra_etatDocument_local" notation="numeric">
-                           <numeric>0</numeric>
-                        </f>
-                        <f name="inra_etatDocument_local" notation="string">
-                           <string>inra_etatDocument_local_0</string>
-                        </f>
+<f name="inra_etatDocument_local" n="VE">
+   <string>version éditeur</string>
+</f>
+<f name="inra_publicVise_local" n="SC">
+   <string>Scientifique</string>
+</f>
                      </egXML>
                   </exemplum>
                </elementSpec>
