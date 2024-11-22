@@ -1124,7 +1124,8 @@
                      <attDef ident="n" usage="opt" mode="change"></attDef>
                      <attDef ident="name" usage="req" mode="change"/>
                      <attDef ident="notation" usage="opt" mode="change" validUntil="2026-01-01">
-                        <desc type="deprecationInfo">L'attribut @notation a pour but d'être remplacé par l'attribut N</desc>
+                        <desc type="deprecationInfo">L'attribut @notation a pour but d'être remplacé par l'attribut n</desc>
+                        <desc>L'attribut @notation a pour but d'être remplacé par l'attribut n à partir du 2026-01-01</desc>
                         <valList mode="change" type="closed">
                            <valItem ident="string"/>
                            <valItem ident="numeric"/>
@@ -2147,6 +2148,7 @@
                   <attList>
                      <attDef ident="type" mode="change" usage="req">
                         <valList  mode="change" type="open">
+                           <!-- DublinCoreTerms à supprimer au passage Datacite -->
                            <valItem ident="illustrate">
                            </valItem>
                            <valItem ident="isIllustratedBy"/>
@@ -2161,10 +2163,303 @@
                            <valItem ident="conformsTo"/>
                            <valItem ident="isVersionOf"/>
                            <valItem ident="hasVersion"/>
+                           <!--Datacite -->
+                           <valItem ident="IsOriginalFormOf">
+                           </valItem>
+                           <valItem ident="HasPart"/>
+                           <valItem ident="HasVersion"/>
+                           <valItem ident="Describes"/>
+                           <valItem ident="isVariantFormatOf"/>
+                           <valItem ident="IsDescribedBy"/>
+                           <valItem ident="IsPartOf"/>
+                           <valItem ident="IsReferencedBy"/>
+                           <valItem ident="IsRequiredBy"/>
+                           <valItem ident="IsVersionOf"/>
+                           <valItem ident="References"/>
+                           <valItem ident="Requires"/>
                         </valList>
                      </attDef>
                      <attDef ident="target" mode="change" usage="req"/>
-                     <attDef ident="subtype" mode="delete"/>
+                     <attDef ident="subtype" mode="change" usage="req">
+                        <valList  mode="change" type="open">
+                           <valItem ident="http://purl.org/coar/resource_type/c_12cc">
+                              <desc>Resource Types: cartographic material</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_c513">
+                              <desc>Resource Types: map</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_ddb1">
+                              <desc>Resource Types: dataset</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/ACF7-8YT9">
+                              <desc>Resource Types: aggregated data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_cb28">
+                              <desc>Resource Types: clinical trial data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/FXF3-D3G7">
+                              <desc>Resource Types: compiled data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/AM6W-6QAW">
+                              <desc>Resource Types: encoded data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/63NG-B465">
+                              <desc>Resource Types: experimental data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/A8F1-NPV9">
+                              <desc>Resource Types: genomic data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/2H0M-X761">
+                              <desc>Resource Types: geospatial data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/H41Y-FW7B">
+                              <desc>Resource Types: laboratory notebook</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/DD58-GFSX">
+                              <desc>Resource Types: measurement and test data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/FF4C-28RK">
+                              <desc>Resource Types: observational data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/CQMR-7K63">
+                              <desc>Resource Types: recorded data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/W2XT-7017">
+                              <desc>Resource Types: simulation data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/NHD0-W6SY">
+                              <desc>Resource Types: survey data</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/542X-3S04">
+                              <desc>Resource Types: design</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/JBNF-DYAD">
+                              <desc>Resource Types: industrial design</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/BW7T-YM2G">
+                              <desc>Resource Types: layout design</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_c513">
+                              <desc>Resource Types: image</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_8a7e">
+                              <desc>Resource Types: moving image</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_12ce">
+                              <desc>Resource Types: video</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_ecc8">
+                              <desc>Resource Types: still image</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_e9a0">
+                              <desc>Resource Types: interactive resource</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_7ad9">
+                              <desc>Resource Types: website</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_e059">
+                              <desc>Resource Types: learning object</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_1843">
+                              <desc>Resource Types: other</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_15cd">
+                              <desc>Resource Types: patent</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/SB3Y-W4EH">
+                              <desc>Resource Types: PCT application</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/C53B-JCY5">
+                              <desc>Resource Types: design patent</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/Z907-YMBB">
+                              <desc>Resource Types: plant patent</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/GPQ7-G5VE">
+                              <desc>Resource Types: plant variety protection</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/MW8G-3CR8">
+                              <desc>Resource Types: software patent</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/9DKX-KSAF">
+                              <desc>Resource Types: utility model</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_5ce6">
+                              <desc>Resource Types: software</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_c950">
+                              <desc>Resource Types: research software</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/QH80-2R4E">
+                              <desc>Resource Types: source code</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18cc">
+                              <desc>Resource Types: sound</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18cd">
+                              <desc>Resource Types: musical composition</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18cf">
+                              <desc>Resource Types: text</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_1162">
+                              <desc>Resource Types: annotation</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_86bc">
+                              <desc>Resource Types: bibliography</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_6947">
+                              <desc>Resource Types: blog post</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_2f33">
+                              <desc>Resource Types: book</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_3248">
+                              <desc>Resource Types: book part</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_c94f">
+                              <desc>Resource Types: conference output</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18cp">
+                              <desc>Resource Types: conference paper not in proceedings</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18co">
+                              <desc>Resource Types: conference poster not in proceedings</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/R60J-J5BD">
+                              <desc>Resource Types: conference presentation</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_f744">
+                              <desc>Resource Types: conference proceedings</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_5794">
+                              <desc>Resource Types: conference paper</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_6670">
+                              <desc>Resource Types: conference poster</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_0640">
+                              <desc>Resource Types: journal</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_b239">
+                              <desc>Resource Types: editorial</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_6501">
+                              <desc>Resource Types: journal article</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_7acd">
+                              <desc>Resource Types: corrigendum</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_beb9">
+                              <desc>Resource Types: data paper</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_2df8fbb1">
+                              <desc>Resource Types: research article</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_dcae04bc">
+                              <desc>Resource Types: review article</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_7bab">
+                              <desc>Resource Types: software paper</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_545b">
+                              <desc>Resource Types: letter to the editor</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_8544">
+                              <desc>Resource Types: lecture</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_0857">
+                              <desc>Resource Types: letter</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_2cd9">
+                              <desc>Resource Types: magazine</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_0040">
+                              <desc>Resource Types: manuscript</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18cw">
+                              <desc>Resource Types: musical notation</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_2fe3">
+                              <desc>Resource Types: newspaper</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_998f">
+                              <desc>Resource Types: newspaper article</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/QX5C-AR31">
+                              <desc>Resource Types: other periodical</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_93fc">
+                              <desc>Resource Types: report</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_7877">
+                              <desc>Resource Types: clinical study</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_ab20">
+                              <desc>Resource Types: data management plan</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18wz">
+                              <desc>Resource Types: memorandum</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_186u">
+                              <desc>Resource Types: policy report</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18op">
+                              <desc>Resource Types: project deliverable</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/YZ1N-ZFT9">
+                              <desc>Resource Types: research protocol</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18ws">
+                              <desc>Resource Types: research report</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_18gh">
+                              <desc>Resource Types: technical report</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_baaf">
+                              <desc>Resource Types: research proposal</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_efa0">
+                              <desc>Resource Types: review</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_ba08">
+                              <desc>Resource Types: book review</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/D97F-VB57">
+                              <desc>Resource Types: commentary</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/H9BQ-739P">
+                              <desc>Resource Types: peer review</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_71bd">
+                              <desc>Resource Types: technical documentation</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_46ec">
+                              <desc>Resource Types: thesis</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_7a1f">
+                              <desc>Resource Types: bachelor thesis</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_db06">
+                              <desc>Resource Types: doctoral thesis</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_bdcc">
+                              <desc>Resource Types: master thesis</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/6NC7-GK9S">
+                              <desc>Resource Types: transcription</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_8042">
+                              <desc>Resource Types: working paper</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/H6QP-SC1X">
+                              <desc>Resource Types: trademark</desc>
+                           </valItem>
+                           <valItem ident="http://purl.org/coar/resource_type/c_393c">
+                              <desc>Resource Types: workflow</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
                   </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">

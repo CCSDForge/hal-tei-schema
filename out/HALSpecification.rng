@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-10-22T13:52:57Z. .
+Schema generated from ODD source 2024-11-22T15:20:12Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -100,7 +100,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34181-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34687-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -149,7 +149,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e35488-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e35994-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -3095,7 +3095,14 @@ relatedItem element must be empty</sch:report>
          </pattern>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] requires; 5] isPartOf; 6] hasPart; 7] isReferencedBy; 8] references; 9] isFormatOf; 10] hasFormat; 11] conformsTo; 12] isVersionOf; 13] hasVersion</a:documentation>
+Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] requires; 5] isPartOf; 6] hasPart; 7] isReferencedBy; 8] references; 9] isFormatOf; 10] hasFormat; 11] conformsTo; 12] isVersionOf; 13] hasVersion; 14] IsOriginalFormOf; 15] HasPart; 16] HasVersion; 17] Describes; 18] isVariantFormatOf; 19] IsDescribedBy; 20] IsPartOf; 21] IsReferencedBy; 22] IsRequiredBy; 23] IsVersionOf; 24] References; 25] Requires</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+         <attribute name="subtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed
+Sample values include: 1] http://purl.org/coar/resource_type/c_12cc; 2] http://purl.org/coar/resource_type/c_c513; 3] http://purl.org/coar/resource_type/c_ddb1; 4] http://purl.org/coar/resource_type/ACF7-8YT9; 5] http://purl.org/coar/resource_type/c_cb28; 6] http://purl.org/coar/resource_type/FXF3-D3G7; 7] http://purl.org/coar/resource_type/AM6W-6QAW; 8] http://purl.org/coar/resource_type/63NG-B465; 9] http://purl.org/coar/resource_type/A8F1-NPV9; 10] http://purl.org/coar/resource_type/2H0M-X761; 11] http://purl.org/coar/resource_type/H41Y-FW7B; 12] http://purl.org/coar/resource_type/DD58-GFSX; 13] http://purl.org/coar/resource_type/FF4C-28RK; 14] http://purl.org/coar/resource_type/CQMR-7K63; 15] http://purl.org/coar/resource_type/W2XT-7017; 16] http://purl.org/coar/resource_type/NHD0-W6SY; 17] http://purl.org/coar/resource_type/542X-3S04; 18] http://purl.org/coar/resource_type/JBNF-DYAD; 19] http://purl.org/coar/resource_type/BW7T-YM2G; 20] http://purl.org/coar/resource_type/c_c513; 21] http://purl.org/coar/resource_type/c_8a7e; 22] http://purl.org/coar/resource_type/c_12ce; 23] http://purl.org/coar/resource_type/c_ecc8; 24] http://purl.org/coar/resource_type/c_e9a0; 25] http://purl.org/coar/resource_type/c_7ad9; 26] http://purl.org/coar/resource_type/c_e059; 27] http://purl.org/coar/resource_type/c_1843; 28] http://purl.org/coar/resource_type/c_15cd; 29] http://purl.org/coar/resource_type/SB3Y-W4EH; 30] http://purl.org/coar/resource_type/C53B-JCY5; 31] http://purl.org/coar/resource_type/Z907-YMBB; 32] http://purl.org/coar/resource_type/GPQ7-G5VE; 33] http://purl.org/coar/resource_type/MW8G-3CR8; 34] http://purl.org/coar/resource_type/9DKX-KSAF; 35] http://purl.org/coar/resource_type/c_5ce6; 36] http://purl.org/coar/resource_type/c_c950; 37] http://purl.org/coar/resource_type/QH80-2R4E; 38] http://purl.org/coar/resource_type/c_18cc; 39] http://purl.org/coar/resource_type/c_18cd; 40] http://purl.org/coar/resource_type/c_18cf; 41] http://purl.org/coar/resource_type/c_1162; 42] http://purl.org/coar/resource_type/c_86bc; 43] http://purl.org/coar/resource_type/c_6947; 44] http://purl.org/coar/resource_type/c_2f33; 45] http://purl.org/coar/resource_type/c_3248; 46] http://purl.org/coar/resource_type/c_c94f; 47] http://purl.org/coar/resource_type/c_18cp; 48] http://purl.org/coar/resource_type/c_18co; 49] http://purl.org/coar/resource_type/R60J-J5BD; 50] http://purl.org/coar/resource_type/c_f744; 51] http://purl.org/coar/resource_type/c_5794; 52] http://purl.org/coar/resource_type/c_6670; 53] http://purl.org/coar/resource_type/c_0640; 54] http://purl.org/coar/resource_type/c_b239; 55] http://purl.org/coar/resource_type/c_6501; 56] http://purl.org/coar/resource_type/c_7acd; 57] http://purl.org/coar/resource_type/c_beb9; 58] http://purl.org/coar/resource_type/c_2df8fbb1; 59] http://purl.org/coar/resource_type/c_dcae04bc; 60] http://purl.org/coar/resource_type/c_7bab; 61] http://purl.org/coar/resource_type/c_545b; 62] http://purl.org/coar/resource_type/c_8544; 63] http://purl.org/coar/resource_type/c_0857; 64] http://purl.org/coar/resource_type/c_2cd9; 65] http://purl.org/coar/resource_type/c_0040; 66] http://purl.org/coar/resource_type/c_18cw; 67] http://purl.org/coar/resource_type/c_2fe3; 68] http://purl.org/coar/resource_type/c_998f; 69] http://purl.org/coar/resource_type/QX5C-AR31; 70] http://purl.org/coar/resource_type/c_93fc; 71] http://purl.org/coar/resource_type/c_7877; 72] http://purl.org/coar/resource_type/c_ab20; 73] http://purl.org/coar/resource_type/c_18wz; 74] http://purl.org/coar/resource_type/c_186u; 75] http://purl.org/coar/resource_type/c_18op; 76] http://purl.org/coar/resource_type/YZ1N-ZFT9; 77] http://purl.org/coar/resource_type/c_18ws; 78] http://purl.org/coar/resource_type/c_18gh; 79] http://purl.org/coar/resource_type/c_baaf; 80] http://purl.org/coar/resource_type/c_efa0; 81] http://purl.org/coar/resource_type/c_ba08; 82] http://purl.org/coar/resource_type/D97F-VB57; 83] http://purl.org/coar/resource_type/H9BQ-739P; 84] http://purl.org/coar/resource_type/c_71bd; 85] http://purl.org/coar/resource_type/c_46ec; 86] http://purl.org/coar/resource_type/c_7a1f; 87] http://purl.org/coar/resource_type/c_db06; 88] http://purl.org/coar/resource_type/c_bdcc; 89] http://purl.org/coar/resource_type/6NC7-GK9S; 90] http://purl.org/coar/resource_type/c_8042; 91] http://purl.org/coar/resource_type/H6QP-SC1X; 92] http://purl.org/coar/resource_type/c_393c</a:documentation>
             <data type="token">
                <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
@@ -3788,7 +3795,7 @@ Feature Value]</a:documentation>
          </zeroOrMore>
          <optional>
             <attribute name="notation">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">L'attribut notation a pour but d'être remplacé par l'attribut N</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">L'attribut @notation a pour but d'être remplacé par l'attribut n à partir du 2026-01-01</a:documentation>
                <choice>
                   <value>string</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
