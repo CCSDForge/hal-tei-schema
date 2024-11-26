@@ -19,9 +19,15 @@
       <schemaSpec ident="SPM"
         source="HALSpecification.compiled.xml" start="TEI">
         <moduleRef key="tei"/>
-        <moduleRef key="header" except="funder"/>
-        <moduleRef key="core"/>
+        <moduleRef key="header" except="funder authority"/>
+        <moduleRef key="core" except="editor respStmt resp note meeting biblScope publisher pubPlace series relatedItem measure email ptr"/>
         <moduleRef key="textstructure"/>
+        <moduleRef key="namesdates" except="location geo"/>
+        <moduleRef key="corpus"/>
+        <moduleRef key="linking"/>
+        <moduleRef key="canonical"/>
+        <!-- CF :Ajout de validUntil -->
+        <moduleRef key="tagdocs"/>
       </schemaSpec>
     </body>
   </text>
