@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-11-26T15:01:21Z. .
-TEI Edition: 
-TEI Edition Location: https://www.tei-c.org/Vault/P5//
+Schema generated from ODD source 2025-01-30T15:58:07Z. . 
+TEI Edition:  
+TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
 --><!---->
+   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
    <define name="macro.paraContent">
       <zeroOrMore>
          <choice>
@@ -46,7 +49,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </choice>
       </zeroOrMore>
    </define>
-   <define name="anyElement-egXML">
+   <define name="anyElement_egXML_1">
       <element>
          <anyName>
             <except>
@@ -62,12 +65,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-egXML"/>
+               <ref name="anyElement_egXML_1"/>
             </choice>
          </zeroOrMore>
       </element>
    </define>
-   <define name="anyElement-content">
+   <define name="anyElement_content_2">
       <element>
          <anyName>
             <except>
@@ -83,11 +86,11 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-content"/>
+               <ref name="anyElement_content_2"/>
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e28041-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e28171-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -95,7 +98,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          </rule>
       </pattern>
    </define>
-   <define name="anyElement-constraint">
+   <define name="anyElement_constraintDecl_3">
       <element>
          <anyName>
             <except>
@@ -111,12 +114,12 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-constraint"/>
+               <ref name="anyElement_constraintDecl_3"/>
             </choice>
          </zeroOrMore>
       </element>
    </define>
-   <define name="anyElement-datatype">
+   <define name="anyElement_constraint_4">
       <element>
          <anyName>
             <except>
@@ -132,11 +135,32 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-datatype"/>
+               <ref name="anyElement_constraint_4"/>
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e29423-constraint">
+   </define>
+   <define name="anyElement_datatype_5">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.tei-c.org/ns/1.0"/>
+               <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="anyElement_datatype_5"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e29730-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -167,86 +191,6 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
                   </data>
                </oneOrMore>
             </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.ranging.attribute.atLeast">
-      <optional>
-         <attribute name="atLeast">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a minimum estimated value for the approximate measurement.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <data type="token">
-                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-               </data>
-               <data type="decimal"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.ranging.attribute.atMost">
-      <optional>
-         <attribute name="atMost">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a maximum estimated value for the approximate measurement.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <data type="token">
-                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-               </data>
-               <data type="decimal"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.ranging.attribute.min">
-      <optional>
-         <attribute name="min">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <data type="token">
-                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-               </data>
-               <data type="decimal"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.ranging.attribute.max">
-      <optional>
-         <attribute name="max">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</a:documentation>
-            <choice>
-               <data type="double"/>
-               <data type="token">
-                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-               </data>
-               <data type="decimal"/>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.ranging.attribute.confidence">
-      <optional>
-         <attribute name="confidence">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by <code xmlns="http://www.w3.org/1999/xhtml">@min</code> and <code xmlns="http://www.w3.org/1999/xhtml">@max</code>, or the proportion of observed values that fall within that range.</a:documentation>
-            <data type="double">
-               <param name="minInclusive">0</param>
-               <param name="maxInclusive">1</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.written.attributes">
-      <ref name="att.written.attribute.hand"/>
-   </define>
-   <define name="att.written.attribute.hand">
-      <optional>
-         <attribute name="hand">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;handNote&gt;</code> element describing the hand considered responsible for the content of the element concerned.</a:documentation>
-            <data type="anyURI">
-               <param name="pattern">\S+</param>
-            </data>
          </attribute>
       </optional>
    </define>
@@ -416,26 +360,6 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
          <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
-   <define name="att.datable.attributes">
-      <ref name="att.datable.w3c.attributes"/>
-      <ref name="att.datable.iso.attributes"/>
-      <ref name="att.datable.custom.attributes"/>
-      <ref name="att.datable.attribute.period"/>
-   </define>
-   <define name="att.datable.attribute.period">
-      <optional>
-         <attribute name="period">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies pointers to one or more definitions of named periods of time (typically <code xmlns="http://www.w3.org/1999/xhtml">&lt;category&gt;</code>s, <code xmlns="http://www.w3.org/1999/xhtml">&lt;date&gt;</code>s or <code xmlns="http://www.w3.org/1999/xhtml">&lt;event&gt;</code>s) within which the datable item is understood to have occurred.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI">
-                     <param name="pattern">\S+</param>
-                  </data>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
-   </define>
    <define name="att.declarable.attributes">
       <ref name="att.declarable.attribute.default"/>
    </define>
@@ -471,30 +395,6 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
          </attribute>
       </optional>
    </define>
-   <define name="att.fragmentable.attributes">
-      <ref name="att.fragmentable.attribute.part"/>
-   </define>
-   <define name="att.fragmentable.attribute.part">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="part"
-                    a:defaultValue="N">
-            <a:documentation>specifies whether or not its parent element is fragmented in some way, typically by some other overlapping structure: for example a speech which is divided between two or more verse stanzas, a paragraph which is split across a page division, a verse line which is divided between two speakers.</a:documentation>
-            <choice>
-               <value>Y</value>
-               <a:documentation>(yes) the element is fragmented in some (unspecified) respect</a:documentation>
-               <value>N</value>
-               <a:documentation>(no) the element is not fragmented, or no claim is made as to its completeness</a:documentation>
-               <value>I</value>
-               <a:documentation>(initial) this is the initial part of a fragmented element</a:documentation>
-               <value>M</value>
-               <a:documentation>(medial) this is a medial part of a fragmented element</a:documentation>
-               <value>F</value>
-               <a:documentation>(final) this is the final part of a fragmented element</a:documentation>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
    <define name="att.docStatus.attributes">
       <ref name="att.docStatus.attribute.status"/>
    </define>
@@ -508,47 +408,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
             <data type="token">
                <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.global.responsibility.attributes">
-      <ref name="att.global.responsibility.attribute.cert"/>
-      <ref name="att.global.responsibility.attribute.resp"/>
-   </define>
-   <define name="att.global.responsibility.attribute.cert">
-      <optional>
-         <attribute name="cert">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
-            <choice>
-               <data type="double">
-                  <param name="minInclusive">0</param>
-                  <param name="maxInclusive">1</param>
-               </data>
-               <choice>
-                  <value>high</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>medium</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>low</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.global.responsibility.attribute.resp">
-      <optional>
-         <attribute name="resp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI">
-                     <param name="pattern">\S+</param>
-                  </data>
-               </oneOrMore>
-            </list>
          </attribute>
       </optional>
    </define>
@@ -597,6 +456,30 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
+   <define name="att.fragmentable.attributes">
+      <ref name="att.fragmentable.attribute.part"/>
+   </define>
+   <define name="att.fragmentable.attribute.part">
+      <optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="part"
+                    a:defaultValue="N">
+            <a:documentation>specifies whether or not its parent element is fragmented in some way, typically by some other overlapping structure: for example a speech which is divided between two or more verse stanzas, a paragraph which is split across a page division, a verse line which is divided between two speakers.</a:documentation>
+            <choice>
+               <value>Y</value>
+               <a:documentation>(yes) the element is fragmented in some (unspecified) respect</a:documentation>
+               <value>N</value>
+               <a:documentation>(no) the element is not fragmented, or no claim is made as to its completeness</a:documentation>
+               <value>I</value>
+               <a:documentation>(initial) this is the initial part of a fragmented element</a:documentation>
+               <value>M</value>
+               <a:documentation>(medial) this is a medial part of a fragmented element</a:documentation>
+               <value>F</value>
+               <a:documentation>(final) this is the final part of a fragmented element</a:documentation>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.global.rendition.attributes">
       <ref name="att.global.rendition.attribute.rend"/>
       <ref name="att.global.rendition.attribute.style"/>
@@ -619,7 +502,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
    <define name="att.global.rendition.attribute.style">
       <optional>
          <attribute name="style">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text.</a:documentation>
             <data type="string"/>
          </attribute>
       </optional>
@@ -628,6 +511,47 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <optional>
          <attribute name="rendition">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a description of the rendering or presentation used for this element in the source text.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.responsibility.attributes">
+      <ref name="att.global.responsibility.attribute.cert"/>
+      <ref name="att.global.responsibility.attribute.resp"/>
+   </define>
+   <define name="att.global.responsibility.attribute.cert">
+      <optional>
+         <attribute name="cert">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(certainty) signifies the degree of certainty associated with the intervention or interpretation.</a:documentation>
+            <choice>
+               <data type="double">
+                  <param name="minInclusive">0</param>
+                  <param name="maxInclusive">1</param>
+               </data>
+               <choice>
+                  <value>high</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>medium</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>low</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>unknown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.global.responsibility.attribute.resp">
+      <optional>
+         <attribute name="resp">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.</a:documentation>
             <list>
                <oneOrMore>
                   <data type="anyURI">
@@ -665,16 +589,263 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@source]">
          <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
-         <sch:report test="( self::tei:classRef               | self::tei:dataRef               | self::tei:elementRef               | self::tei:macroRef               | self::tei:moduleRef               | self::tei:schemaSpec )               and               $srcs[2]">
+         <sch:report test="(   self::tei:classRef                                 | self::tei:dataRef                                 | self::tei:elementRef                                 | self::tei:macroRef                                 | self::tei:moduleRef                                 | self::tei:schemaSpec )                                   and                                   $srcs[2]">
               When used on a schema description element (like
               <sch:value-of select="name(.)"/>), the @source attribute
               should have only 1 value. (This one has <sch:value-of select="count($srcs)"/>.)
             </sch:report>
       </sch:rule>
    </pattern>
+   <define name="att.internetMedia.attributes">
+      <ref name="att.internetMedia.attribute.mimeType"/>
+   </define>
+   <define name="att.internetMedia.attribute.mimeType">
+      <optional>
+         <attribute name="mimeType">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.placement.attribute.place">
+      <optional>
+         <attribute name="place">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies where this item is placed.
+Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf; 6] above; 7] right; 8] below; 9] left; 10] end; 11] inline; 12] inspace</a:documentation>
+            <list>
+               <oneOrMore>
+                  <choice>
+                     <value>top</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the top of the page</a:documentation>
+                     <value>bottom</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the foot of the page</a:documentation>
+                     <value>margin</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in the margin (left, right, or both)</a:documentation>
+                     <value>opposite</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">on the opposite, i.e. facing, page</a:documentation>
+                     <value>overleaf</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">on the other side of the leaf</a:documentation>
+                     <value>above</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">above the line</a:documentation>
+                     <value>right</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the right, e.g. to the right of a vertical line of text, or to the right of a figure</a:documentation>
+                     <value>below</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">below the line</a:documentation>
+                     <value>left</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the left, e.g. to the left of a vertical line of text, or to the left of a figure</a:documentation>
+                     <value>end</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">at the end of e.g. chapter or volume.</a:documentation>
+                     <value>inline</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">within the body of the text.</a:documentation>
+                     <value>inspace</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in a predefined space, for example left by an earlier scribe.</a:documentation>
+                     <data type="token">
+                        <param name="pattern">[^\p{C}\p{Z}]+</param>
+                     </data>
+                  </choice>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="SPM-att.pointing-targetLang-targetLang-constraint-rule-6">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:math="http://www.w3.org/1998/Math/MathML"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
+         <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
+      </sch:rule>
+   </pattern>
+   <define name="att.ranging.attribute.atLeast">
+      <optional>
+         <attribute name="atLeast">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a minimum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.atMost">
+      <optional>
+         <attribute name="atMost">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a maximum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.min">
+      <optional>
+         <attribute name="min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.max">
+      <optional>
+         <attribute name="max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.confidence">
+      <optional>
+         <attribute name="confidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@min</code> and <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@max</code>, or the proportion of observed values that fall within that range.</a:documentation>
+            <data type="double">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">1</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.scope.attributes">
+      <ref name="att.scope.attribute.scope"/>
+   </define>
+   <define name="att.scope.attribute.scope">
+      <optional>
+         <attribute name="scope">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the scope of application of the element
+Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
+            <choice>
+               <value>sole</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">only this particular feature is used throughout the document</a:documentation>
+               <value>major</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this feature is used through most of the document</a:documentation>
+               <value>minor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this feature is used occasionally through the document</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.sortable.attributes">
+      <ref name="att.sortable.attribute.sortKey"/>
+   </define>
+   <define name="att.sortable.attribute.sortKey">
+      <optional>
+         <attribute name="sortKey">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.typed.attributes">
+      <ref name="att.typed.attribute.type"/>
+      <ref name="att.typed.attribute.subtype"/>
+   </define>
+   <define name="att.typed.attribute.type">
+      <optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.typed.attribute.subtype">
+      <optional>
+         <attribute name="subtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed.</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="SPM-att.typed-subtypeTyped-constraint-rule-7">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:math="http://www.w3.org/1998/Math/MathML"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                context="tei:*[@subtype]">
+         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
+      </sch:rule>
+   </pattern>
+   <define name="att.written.attributes">
+      <ref name="att.written.attribute.hand"/>
+   </define>
+   <define name="att.written.attribute.hand">
+      <optional>
+         <attribute name="hand">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;handNote&gt;</code> element describing the hand considered responsible for the content of the element concerned.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.datable.attributes">
+      <ref name="att.datable.custom.attributes"/>
+      <ref name="att.datable.iso.attributes"/>
+      <ref name="att.datable.w3c.attributes"/>
+      <ref name="att.datable.attribute.period"/>
+   </define>
+   <define name="att.datable.attribute.period">
+      <optional>
+         <attribute name="period">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies pointers to one or more definitions of named periods of time (typically <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;category&gt;</code>s, <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;date&gt;</code>s, or <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;event&gt;</code>s) within which the datable item is understood to have occurred.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.global.attributes">
-      <ref name="att.global.rendition.attributes"/>
       <ref name="att.global.linking.attributes"/>
+      <ref name="att.global.rendition.attributes"/>
       <ref name="att.global.responsibility.attributes"/>
       <ref name="att.global.source.attributes"/>
       <ref name="att.global.attribute.xmlid"/>
@@ -703,6 +874,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <optional>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
             <choice>
                <data type="language"/>
@@ -737,20 +909,23 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </attribute>
       </optional>
    </define>
-   <define name="att.internetMedia.attributes">
-      <ref name="att.internetMedia.attribute.mimeType"/>
-   </define>
-   <define name="att.internetMedia.attribute.mimeType">
+   <define name="att.media.attribute.width">
       <optional>
-         <attribute name="mimeType">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="token">
-                     <param name="pattern">[^\p{C}\p{Z}]+</param>
-                  </data>
-               </oneOrMore>
-            </list>
+         <attribute name="width">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the media are displayed, indicates the display width.</a:documentation>
+            <data type="token">
+               <param name="pattern">[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|ch|rem|vw|vh|vmin|vmax)</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.media.attribute.height">
+      <optional>
+         <attribute name="height">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the media are displayed, indicates the display height.</a:documentation>
+            <data type="token">
+               <param name="pattern">[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|ch|rem|vw|vh|vmin|vmax)</param>
+            </data>
          </attribute>
       </optional>
    </define>
@@ -784,67 +959,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
                   </data>
                </oneOrMore>
             </list>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.typed.attributes">
-      <ref name="att.typed.attribute.type"/>
-      <ref name="att.typed.attribute.subtype"/>
-   </define>
-   <define name="att.typed.attribute.type">
-      <optional>
-         <attribute name="type">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
-   <define name="att.typed.attribute.subtype">
-      <optional>
-         <attribute name="subtype">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
-         </attribute>
-      </optional>
-   </define>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.typed-subtypeTyped-constraint-rule-6">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://www.w3.org/1998/Math/MathML"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                context="tei:*[@subtype]">
-         <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
-      </sch:rule>
-   </pattern>
-   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.pointing-targetLang-targetLang-constraint-rule-7">
-      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:math="http://www.w3.org/1998/Math/MathML"
-                xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns:svg="http://www.w3.org/2000/svg"
-                xmlns:xi="http://www.w3.org/2001/XInclude"
-                context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
-         <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
-      </sch:rule>
-   </pattern>
-   <define name="att.sortable.attributes">
-      <ref name="att.sortable.attribute.sortKey"/>
-   </define>
-   <define name="att.sortable.attribute.sortKey">
-      <optional>
-         <attribute name="sortKey">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
          </attribute>
       </optional>
    </define>
@@ -1127,22 +1241,32 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </oneOrMore>
    </define>
    <define name="model.graphicLike">
-      <notAllowed/>
+      <choice>
+         <ref name="media"/>
+      </choice>
    </define>
    <define name="model.graphicLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="media"/>
+      </choice>
    </define>
    <define name="model.graphicLike_sequence">
-      <empty/>
+      <ref name="media"/>
    </define>
    <define name="model.graphicLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="media"/>
+      </optional>
    </define>
    <define name="model.graphicLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="media"/>
+      </zeroOrMore>
    </define>
    <define name="model.graphicLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="media"/>
+      </oneOrMore>
    </define>
    <define name="model.offsetLike">
       <notAllowed/>
@@ -2188,10 +2312,10 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="SPM-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-9">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -2202,24 +2326,24 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-p-abstractModel-structure-p-in-l-or-lg-constraint-rule-10">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-p-abstractModel-structure-p-in-l-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:p">
-               <sch:report test="( ancestor::tei:l  or  ancestor::tei:lg ) and                        not( ancestor::tei:floatingText                           | parent::tei:figure                           | parent::tei:note )">
-          Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
-        </sch:report>
+                      context="tei:l//tei:p">
+               <sch:assert test="ancestor::tei:floatingText | parent::tei:figure | parent::tei:note">
+          Abstract model violation: Metrical lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
+        </sch:assert>
             </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.fragmentable.attributes"/>
          <ref name="att.written.attributes"/>
-         <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
    </define>
@@ -2236,10 +2360,10 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             <text/>
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   id="SPM-desc-deprecationInfo-only-in-deprecated-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -2260,6 +2384,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          <ref name="att.cmc.attributes"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
             <choice>
                <data type="language"/>
@@ -2281,62 +2406,22 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             </zeroOrMore>
             <text/>
          </interleave>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-name-calendar-check-name-constraint-rule-12">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.editLike.attributes"/>
          <ref name="att.personal.attribute.full"/>
          <ref name="att.personal.attribute.sort"/>
          <ref name="att.naming.attribute.role"/>
          <ref name="att.naming.attribute.nymRef"/>
          <ref name="att.canonical.attribute.ref"/>
-         <ref name="att.datable.attributes"/>
-         <ref name="att.editLike.attributes"/>
          <ref name="att.typed.attributes"/>
-         <ref name="att.cmc.attributes"/>
          <optional>
             <attribute name="key">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <data type="string"/>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-name-calendar-calendar-check-name-constraint-rule-13">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -2412,14 +2497,8 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             <attribute name="precision">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the precision of the values specified by the other attributes.</a:documentation>
                <choice>
-                  <value>high</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>medium</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>low</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pour les versons à paraitre</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -2454,7 +2533,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
          </optional>
          <optional>
             <attribute name="subtype">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed.</a:documentation>
                <choice>
                   <value>inPress</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pour les versons à paraitre</a:documentation>
@@ -2477,16 +2556,15 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             </zeroOrMore>
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-ref-refAtts-constraint-rule-14">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-ref-refAtts-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:ref">
-               <sch:report test="@target and @cRef">Only one of the attributes @target' and @cRef' may be supplied on <sch:name/>
-               </sch:report>
+               <sch:report test="@target and @cRef">Only one of the attributes @target and @cRef may be supplied on <sch:name/>.</sch:report>
             </sch:rule>
          </pattern>
          <ref name="att.cmc.attributes"/>
@@ -2517,7 +2595,8 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          </attribute>
          <optional>
             <attribute name="subtype">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) Spécifie plus précisement le fichier lié, sa valeur dépend si celle de <code xmlns="http://www.w3.org/1999/xhtml">@type</code> est égale à file ou annex.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) Spécifie plus précisement le fichier lié, sa valeur dépend si celle de <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@type</code> est égale à file ou annex.</a:documentation>
                <choice>
                   <value>author</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">file : Les fichiers que je dépose sont des fichiers produits par l'(les) auteur(s)</a:documentation>
@@ -2547,6 +2626,64 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">annex : Guest Editorial</a:documentation>
                   <value>other</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">annex : Autre</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="media">
+      <element name="media">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of any form of external media such as an audio or video clip etc. [3.10. Graphics and Other Non-textual Components]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="desc"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.media.attribute.width"/>
+         <ref name="att.media.attribute.height"/>
+         <ref name="att.typed.attributes"/>
+         <optional>
+            <attribute name="scale">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie l'échelle d'une carte
+Suggested values include: 1] 1; 2] 0.5; 3] 0.2; 4] 0.1; 5] 0.05; 6] 0.02; 7] 0.01; 8] 0.005; 9] 0.002; 10] 0.001; 11] 0.0002; 12] 4e-05; 13] 2e-05; 14] 1e-05</a:documentation>
+               <choice>
+                  <value>1</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:1 (taille réelle)</a:documentation>
+                  <value>0.5</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:2 (20cm par m)</a:documentation>
+                  <value>0.2</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:5 (20cm par m)</a:documentation>
+                  <value>0.1</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:10 (10cm par m)</a:documentation>
+                  <value>0.05</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:20 (5 cm par m)</a:documentation>
+                  <value>0.02</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:50 (2 cm par m)</a:documentation>
+                  <value>0.01</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:100 (1 cm par m)</a:documentation>
+                  <value>0.005</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:200 (5 mm par m)</a:documentation>
+                  <value>0.002</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:500 (2 mm par m)</a:documentation>
+                  <value>0.001</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:1000 (1 mm par m)</a:documentation>
+                  <value>0.0002</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:5000 (0.2 mm par m)</a:documentation>
+                  <value>4e-05</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:25000 (1 cm = 250 m)</a:documentation>
+                  <value>2e-05</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:50000 (2 cm = 1km)</a:documentation>
+                  <value>1e-05</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:100000 (1 cm = 1 km)</a:documentation>
+                  <choice>
+                     <data type="double"/>
+                     <data type="token">
+                        <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+                     </data>
+                     <data type="decimal"/>
+                  </choice>
                </choice>
             </attribute>
          </optional>
@@ -2603,22 +2740,9 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          <zeroOrMore>
             <ref name="affiliation"/>
          </zeroOrMore>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-author-calendar-check-author-constraint-rule-15">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <attribute name="role">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">La liste des valeurs possibles pour l'attribute est disponible à cette <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   href="http://api-preprod.archives-ouvertes.fr/ref/metadataList/?q=metaName_s:relator&amp;fl=*&amp;wt=xml">addresse</a>. Il s'agit des valeurs présentes dans l'élément qui a pour attribut name="metaValue_s". Les rôles sont disponibles en fonction du type de documents</a:documentation>
             <list>
                <oneOrMore>
@@ -2628,32 +2752,6 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
                </oneOrMore>
             </list>
          </attribute>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-author-calendar-calendar-check-author-constraint-rule-16">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -2661,24 +2759,11 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(title) contains a title for any kind of work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="macro.paraContent"/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-title-calendar-check-title-constraint-rule-17">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.cmc.attributes"/>
          <optional>
             <attribute name="xml:lang">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
                      href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
                <choice>
                   <data type="language"/>
@@ -2691,38 +2776,13 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          </optional>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title according to some convenient typology.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title according to some convenient typology.
+Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)</a:documentation>
                <data type="token">
                   <param name="pattern">[^\p{C}\p{Z}]+</param>
                </data>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-title-calendar-calendar-check-title-constraint-rule-18">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <optional>
             <attribute name="level">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.</a:documentation>
@@ -2770,6 +2830,7 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
                <ref name="ref"/>
             </zeroOrMore>
          </interleave>
+         <ref name="att.canonical.attributes"/>
          <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
@@ -2844,12 +2905,14 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
    <define name="edition">
       <element name="edition">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) Contient chaque version du document déposé sur HAL, la version est noté dans l'attribut @n et la plus ancienne a pour valeur 1 et la version actuelle est précisé actuellement dans l'attribut @type et avec pour valeur current. [2.2.2. The Edition Statement]</a:documentation>
-         <zeroOrMore>
-            <ref name="date"/>
-         </zeroOrMore>
-         <zeroOrMore>
-            <ref name="ref"/>
-         </zeroOrMore>
+         <interleave>
+            <zeroOrMore>
+               <ref name="date"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="ref"/>
+            </zeroOrMore>
+         </interleave>
          <ref name="att.docStatus.attributes"/>
          <optional>
             <attribute name="type">
@@ -2900,20 +2963,7 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          <interleave>
             <text/>
          </interleave>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-idno-calendar-check-idno-constraint-rule-19">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
+         <ref name="att.placement.attribute.place"/>
          <ref name="att.cmc.attributes"/>
          <optional>
             <attribute name="notation">
@@ -2961,32 +3011,6 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
                <data type="string"/>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-idno-calendar-calendar-check-idno-constraint-rule-20">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3016,20 +3040,6 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <element name="licence">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <text/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-licence-calendar-check-licence-constraint-rule-21">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <optional>
             <attribute name="target">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence
@@ -3069,32 +3079,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                </list>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-licence-calendar-calendar-check-licence-constraint-rule-22">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3165,6 +3149,7 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="profileDesc"/>
             </group>
          </choice>
+         <ref name="att.canonical.attributes"/>
          <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
@@ -3188,6 +3173,9 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
             <optional>
                <ref name="creation"/>
             </optional>
+            <optional>
+               <ref name="settingDesc"/>
+            </optional>
          </interleave>
       </element>
    </define>
@@ -3205,9 +3193,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <ref name="att.global.attribute.n"/>
          <ref name="att.global.attribute.xmlbase"/>
          <ref name="att.global.attribute.xmlspace"/>
-         <ref name="att.global.rendition.attribute.rend"/>
-         <ref name="att.global.rendition.attribute.style"/>
-         <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.linking.attribute.corresp"/>
          <ref name="att.global.linking.attribute.synch"/>
          <ref name="att.global.linking.attribute.sameAs"/>
@@ -3216,11 +3201,15 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <ref name="att.global.linking.attribute.prev"/>
          <ref name="att.global.linking.attribute.exclude"/>
          <ref name="att.global.linking.attribute.select"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
          <attribute name="xml:lang">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) indicates the language of the element content using a tag generated according to <a xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                   href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>.</a:documentation>
             <choice>
                <data type="language"/>
@@ -3236,48 +3225,8 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
    <define name="creation">
       <element name="creation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(creation) contains information about the creation of a text. [2.4.1. Creation 2.4. The Profile Description]</a:documentation>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-creation-calendar-check-creation-constraint-rule-23">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-creation-calendar-calendar-check-creation-constraint-rule-24">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3295,9 +3244,12 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="language">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(language) characterizes a single language or sublanguage used within a text. [2.4.2. Language Usage]</a:documentation>
          <ref name="macro.phraseSeq.limited"/>
+         <ref name="att.scope.attributes"/>
          <attribute name="ident">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) Supplies a language code constructed as defined in <a xmlns="http://www.w3.org/1999/xhtml"
-                  href="https://tools.ietf.org/html/bcp47">BCP 47</a> which is used to identify the language documented by this element, and which may be referenced by the global <code xmlns="http://www.w3.org/1999/xhtml">@xml:lang</code> attribute.</a:documentation>
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  href="https://tools.ietf.org/html/bcp47">BCP 47</a> which is used to identify the language documented by this element, and which may be referenced by the global <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@xml:lang</code> attribute.</a:documentation>
             <choice>
                <data type="language"/>
                <choice>
@@ -3331,7 +3283,8 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
             </zeroOrMore>
          </interleave>
          <attribute name="scheme">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the controlled vocabulary within which the set of keywords concerned is defined, for example by a <code xmlns="http://www.w3.org/1999/xhtml">&lt;taxonomy&gt;</code> element, or by some other resource.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the controlled vocabulary within which the set of keywords concerned is defined, for example by a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;taxonomy&gt;</code> element, or by some other resource.</a:documentation>
             <choice>
                <value>author</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mot-clé ajouter par l'auteur</a:documentation>
@@ -3348,7 +3301,8 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          </interleave>
          <ref name="att.global.attributes"/>
          <attribute name="scheme">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the classification system in use, as defined by, e.g. a <code xmlns="http://www.w3.org/1999/xhtml">&lt;taxonomy&gt;</code> element, or some other resource.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the classification system in use, as defined by, e.g. a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;taxonomy&gt;</code> element, or some other resource.</a:documentation>
             <choice>
                <value>classification</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -3364,15 +3318,33 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Thesaurus VOCINRAE</a:documentation>
                <value>halDomain</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">La liste des domain Hal est disponible sur l'<a xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
                      href="http://api.archives-ouvertes.fr/ref/domain/?wt=xml">api</a>
                </a:documentation>
                <value>halTypology</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">La liste des types Hal est disponible sur l'<a xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
                      href="https://api.archives-ouvertes.fr/ref/doctype/?wt=xml">api</a>
                </a:documentation>
                <value>halOldTypology</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>halTreeTypology</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>dl.acm.org/ccs</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/afssa_thematique</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/baseMap</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/bioemco_team</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/campusaar_classaar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/campusaar_context</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/campusaar_genre</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>https://hal.science/metadata/historicalPeriod</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
@@ -3381,7 +3353,10 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
    </define>
    <define name="TEI">
       <element name="TEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple <code xmlns="http://www.w3.org/1999/xhtml">&lt;TEI&gt;</code> elements may be combined within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;TEI&gt;</code> (or <code xmlns="http://www.w3.org/1999/xhtml">&lt;teiCorpus&gt;</code>) element. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> elements may be combined within a <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;TEI&gt;</code> (or <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;teiCorpus&gt;</code>) element. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
          <group>
             <optional>
                <ref name="teiHeader"/>
@@ -3390,54 +3365,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="model.resource"/>
             </zeroOrMore>
          </group>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="tei"
-                 uri="http://www.tei-c.org/ns/1.0"/>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="xs"
-                 uri="http://www.w3.org/2001/XMLSchema"/>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="rng"
-                 uri="http://relaxng.org/ns/structure/1.0"/>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="rna"
-                 uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="sch"
-                 uri="http://purl.oclc.org/dsdl/schematron"/>
-         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:math="http://www.w3.org/1998/Math/MathML"
-                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns:svg="http://www.w3.org/2000/svg"
-                 xmlns:xi="http://www.w3.org/2001/XInclude"
-                 prefix="sch1x"
-                 uri="http://www.ascc.net/xml/schematron"/>
          <optional>
             <attribute name="schemaLocation" ns="http://www.w3.org/2001/XMLSchema-instance">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -3457,23 +3384,23 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="text">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(text) contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
          <group>
-            <zeroOrMore>
-               <ref name="model.global"/>
-            </zeroOrMore>
+            <rng:zeroOrMore xmlns:rng="http://relaxng.org/ns/structure/1.0">
+               <rng:ref name="model.global"/>
+            </rng:zeroOrMore>
             <choice>
                <ref name="body"/>
             </choice>
             <zeroOrMore>
                <ref name="model.global"/>
             </zeroOrMore>
-            <optional>
-               <group>
-                  <ref name="back"/>
-                  <zeroOrMore>
-                     <ref name="model.global"/>
-                  </zeroOrMore>
-               </group>
-            </optional>
+            <rng:optional xmlns:rng="http://relaxng.org/ns/structure/1.0">
+               <rng:group>
+                  <rng:ref name="back"/>
+                  <rng:zeroOrMore>
+                     <rng:ref name="model.global"/>
+                  </rng:zeroOrMore>
+               </rng:group>
+            </rng:optional>
          </group>
          <ref name="att.global.attributes"/>
          <ref name="att.declaring.attributes"/>
@@ -3581,7 +3508,7 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
    <define name="att.datable.custom.attribute.datingPoint">
       <optional>
          <attribute name="datingPoint">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred.</a:documentation>
             <data type="anyURI">
                <param name="pattern">\S+</param>
             </data>
@@ -3591,7 +3518,8 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
    <define name="att.datable.custom.attribute.datingMethod">
       <optional>
          <attribute name="datingMethod">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;calendar&gt;</code> element or other means of interpreting the values of the custom dating attributes.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a pointer to a <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;calendar&gt;</code> element or other means of interpreting the values of the custom dating attributes.</a:documentation>
             <data type="anyURI">
                <param name="pattern">\S+</param>
             </data>
@@ -3749,25 +3677,13 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="orgName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(organization name) orgName correspond à l'institution ou au regroupement d'institution qui paye l'auteur au moment de la publication du document. Il doit se situer sous la forme dans l'attribut ref #struct-%%ID ou #localStruct-%%ID.  [14.2.2. Organizational Names]</a:documentation>
          <ref name="macro.phraseSeq"/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-orgName-calendar-check-orgName-constraint-rule-25">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.cmc.attributes"/>
          <optional>
             <attribute name="ref">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Pour struct-%%ID, %%ID correspond à l'identifiant de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié et qui est connu dans la base de Réferentiel <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://aurehal.archives-ouvertes.fr/structure/index">AuréHal</a>. Pour localStruct-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <code xmlns="http://www.w3.org/1999/xhtml">&lt;back&gt;</code> voir </a:documentation>
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                     href="https://aurehal.archives-ouvertes.fr/structure/index">AuréHal</a>. Pour localStruct-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;back&gt;</code> voir </a:documentation>
                <list>
                   <oneOrMore>
                      <data type="anyURI">
@@ -3785,32 +3701,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                </data>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-orgName-calendar-calendar-check-orgName-constraint-rule-26">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3823,52 +3713,12 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
             </oneOrMore>
             <ref name="surname"/>
          </interleave>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-persName-calendar-check-persName-constraint-rule-27">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
          <ref name="att.datable.attributes"/>
          <ref name="att.editLike.attributes"/>
          <ref name="att.personal.attributes"/>
          <ref name="att.typed.attributes"/>
-         <ref name="att.cmc.attributes"/>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-persName-calendar-calendar-check-persName-constraint-rule-28">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3877,9 +3727,9 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(surname) contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [14.2.1. Personal Names]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
          <ref name="att.personal.attributes"/>
          <ref name="att.typed.attributes"/>
-         <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3888,9 +3738,9 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(forename) contains a forename, given or baptismal name. [14.2.1. Personal Names]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
          <ref name="att.personal.attributes"/>
          <ref name="att.typed.attribute.subtype"/>
-         <ref name="att.cmc.attributes"/>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
@@ -3909,51 +3759,11 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="country">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(country) contains the name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc. [14.2.3. Place Names]</a:documentation>
          <text/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-country-calendar-check-country-constraint-rule-29">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.cmc.attributes"/>
          <attribute name="key">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</a:documentation>
             <data type="string"/>
          </attribute>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-country-calendar-calendar-check-country-constraint-rule-30">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -3961,47 +3771,7 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="settlement">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(settlement) contains the name of a settlement such as a city, town, or village identified as a single geo-political or administrative unit. [14.2.3. Place Names]</a:documentation>
          <text/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-settlement-calendar-check-settlement-constraint-rule-31">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.cmc.attributes"/>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-settlement-calendar-calendar-check-settlement-constraint-rule-32">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -4009,24 +3779,12 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
       <element name="affiliation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(affiliation) L'affiliation de l'auteur correspond aux différentes équipes, laboratoires pour lequels travaillent l'auteur au moment de la publication du document. Il doit se situer sous la forme dans l'attribut ref #struct-%%ID ou #localStruct-%%ID.  [16.2.2. The Participant Description]</a:documentation>
          <ref name="macro.phraseSeq"/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-affiliation-calendar-check-affiliation-constraint-rule-33">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.cmc.attributes"/>
          <attribute name="ref">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Pour struct-%%ID, %%ID correspond à l'identifiant de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié et qui est connu dans la base de Réferentiel <a xmlns="http://www.w3.org/1999/xhtml"
-                  href="https://aurehal.archives-ouvertes.fr/structure/index">AuréHal</a>. Pour localStruct-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <code xmlns="http://www.w3.org/1999/xhtml">&lt;back&gt;</code> voir </a:documentation>
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  href="https://aurehal.archives-ouvertes.fr/structure/index">AuréHal</a>. Pour localStruct-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;back&gt;</code> voir </a:documentation>
             <list>
                <oneOrMore>
                   <data type="anyURI">
@@ -4035,32 +3793,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                </oneOrMore>
             </list>
          </attribute>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-affiliation-calendar-calendar-check-affiliation-constraint-rule-34">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-                        systems or calendars to which the date represented by the content of this element belongs,
-                        but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <empty/>
       </element>
    </define>
@@ -4073,10 +3805,10 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
             </zeroOrMore>
          </interleave>
          <ref name="att.global.attributes"/>
-         <ref name="att.typed.attribute.subtype"/>
+         <ref name="att.cmc.attributes"/>
          <ref name="att.declarable.attributes"/>
          <ref name="att.sortable.attributes"/>
-         <ref name="att.cmc.attributes"/>
+         <ref name="att.typed.attribute.subtype"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
             <data type="token">
@@ -4107,9 +3839,9 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
             </zeroOrMore>
          </interleave>
          <ref name="att.global.attributes"/>
-         <ref name="att.typed.attributes"/>
-         <ref name="att.sortable.attributes"/>
          <ref name="att.cmc.attributes"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.typed.attributes"/>
          <empty/>
       </element>
    </define>
@@ -4143,9 +3875,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <ref name="att.global.attribute.xmllang"/>
          <ref name="att.global.attribute.xmlbase"/>
          <ref name="att.global.attribute.xmlspace"/>
-         <ref name="att.global.rendition.attribute.rend"/>
-         <ref name="att.global.rendition.attribute.style"/>
-         <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.linking.attribute.corresp"/>
          <ref name="att.global.linking.attribute.synch"/>
          <ref name="att.global.linking.attribute.sameAs"/>
@@ -4154,12 +3883,15 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <ref name="att.global.linking.attribute.prev"/>
          <ref name="att.global.linking.attribute.exclude"/>
          <ref name="att.global.linking.attribute.select"/>
+         <ref name="att.global.rendition.attribute.rend"/>
+         <ref name="att.global.rendition.attribute.style"/>
+         <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <ref name="att.typed.attribute.subtype"/>
          <ref name="att.editLike.attributes"/>
          <ref name="att.sortable.attributes"/>
+         <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="status"
@@ -4200,8 +3932,10 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
    </define>
    <define name="place">
       <element name="place">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(place) contains data about a geographic location [14.3.4. Places]</a:documentation>
-         <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(place) contains data about a geographic location. [14.3.4. Places]</a:documentation>
+         <interleave>
+            <text/>
+         </interleave>
       </element>
    </define>
    <define name="relation">
@@ -4211,10 +3945,10 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
             <ref name="desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-relation-ref-or-key-or-name-constraint-rule-35">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-relation-ref-or-key-or-name-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4223,10 +3957,10 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-relation-active-mutual-constraint-rule-36">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-relation-active-mutual-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4235,10 +3969,10 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-relation-active-passive-constraint-rule-37">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-relation-active-passive-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4246,24 +3980,10 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                <sch:report test="@passive and not(@active)">the attribute @passive may be supplied only if the attribute @active is supplied</sch:report>
             </sch:rule>
          </pattern>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-relation-calendar-check-relation-constraint-rule-38">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-              systems or calendars to which the date represented by the content of this element belongs,
-              but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
          <ref name="att.datable.attributes"/>
          <ref name="att.editLike.attributes"/>
-         <ref name="att.canonical.attributes"/>
          <ref name="att.sortable.attributes"/>
          <ref name="att.typed.attribute.subtype"/>
          <optional>
@@ -4274,32 +3994,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                </data>
             </attribute>
          </optional>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI">
-                        <param name="pattern">\S+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-relation-calendar-calendar-check-relation-constraint-rule-39">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:svg="http://www.w3.org/2000/svg"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      context="tei:*[@calendar]">
-               <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
-              systems or calendars to which the date represented by the content of this element belongs,
-              but this <sch:name/> element has no textual content.</sch:assert>
-            </sch:rule>
-         </pattern>
          <optional>
             <attribute name="name">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a name for the kind of relationship of which this is an instance.</a:documentation>
@@ -4352,6 +4046,16 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
             <oneOrMore>
                <ref name="org"/>
             </oneOrMore>
+         </interleave>
+      </element>
+   </define>
+   <define name="settingDesc">
+      <element name="settingDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(setting description) describes the setting or settings within which a language interaction takes place, or other places otherwise referred to in a text, edition, or metadata. [16.2. Contextual Information 2.4. The Profile Description]</a:documentation>
+         <interleave>
+            <optional>
+               <ref name="place"/>
+            </optional>
          </interleave>
       </element>
    </define>
@@ -4521,7 +4225,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.repeatable-MINandMAXoccurs-constraint-rule-40">
+            id="SPM-att.repeatable-MINandMAXoccurs-constraint-rule-16">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4611,7 +4315,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.identified-spec-in-module-constraint-rule-42">
+            id="SPM-att.identified-spec-in-module-constraint-rule-18">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4637,7 +4341,7 @@ should correspond to an existing module, via a moduleSpec or
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-43">
+            id="SPM-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-19">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4659,7 +4363,7 @@ should correspond to an existing module, via a moduleSpec or
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-44">
+            id="SPM-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-20">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4680,9 +4384,11 @@ should correspond to an existing module, via a moduleSpec or
                     name="ns"
                     a:defaultValue="http://www.tei-c.org/ns/1.0">
             <a:documentation>(namespace) specifies the namespace to which the element(s) being specified belongs.</a:documentation>
-            <data type="anyURI">
-               <param name="pattern">\S+</param>
-            </data>
+            <optional>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+            </optional>
          </attribute>
       </optional>
    </define>
@@ -4712,7 +4418,7 @@ Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] X
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="lang">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(formal language) a name identifying the formal language in which the code is expressed</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(formal language) a name identifying the formal language in which the code is expressed.</a:documentation>
                <data type="token">
                   <param name="pattern">[^\p{C}\p{Z}]+</param>
                </data>
@@ -4731,11 +4437,12 @@ Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] X
    </define>
    <define name="egXML">
       <element name="egXML" ns="http://www.tei-c.org/ns/Examples">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(example of XML) a single XML fragment demonstrating the use of some XML, such as elements, attributes, or processing instructions, etc., in which the <code xmlns="http://www.w3.org/1999/xhtml">&lt;egXML&gt;</code> element functions as the root element. [23.1.1. Phrase Level Terms]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(example of XML) a single XML fragment demonstrating the use of some XML, such as elements, attributes, or processing instructions, etc., in which the <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;egXML&gt;</code> element functions as the root element. [23.1.1. Phrase Level Terms]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-egXML"/>
+               <ref name="anyElement_egXML_1"/>
             </choice>
          </zeroOrMore>
          <ref name="att.global.attributes"/>
@@ -4778,7 +4485,8 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
    </define>
    <define name="ident">
       <element name="ident">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) contains an identifier or name for an object of some kind in a formal language. <code xmlns="http://www.w3.org/1999/xhtml">&lt;ident&gt;</code> is used for tokens such as variable names, class names, type names, function names etc. in formal programming languages. [23.1.1. Phrase Level Terms]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) contains an identifier or name for an object of some kind in a formal language. <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;ident&gt;</code> is used for tokens such as variable names, class names, type names, function names etc. in formal programming languages. [23.1.1. Phrase Level Terms]</a:documentation>
          <text/>
          <ref name="att.global.attributes"/>
          <ref name="att.typed.attributes"/>
@@ -4793,10 +4501,21 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
          <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of XML tag intended</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of XML tag intended.</a:documentation>
+               <choice>
+                  <value>start</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a start-tag, with delimiters &lt; and &gt; is intended</a:documentation>
+                  <value>end</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">an end-tag, with delimiters &lt;/ and &gt; is intended</a:documentation>
+                  <value>empty</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">an empty tag, with delimiters &lt; and /&gt; is intended</a:documentation>
+                  <value>pi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a pi (processing instruction), with delimiters &lt;? and ?&gt; is intended</a:documentation>
+                  <value>comment</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a comment, with delimiters &lt;!-- and --&gt; is intended</a:documentation>
+                  <value>ms</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a marked-section, with delimiters &lt;[CDATA[ and ]]&gt; is intended</a:documentation>
+               </choice>
             </attribute>
          </optional>
          <optional>
@@ -4855,7 +4574,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
    </define>
    <define name="classRef">
       <element name="classRef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for an attribute or model class which is to be included in a schema [23.6. Class Specifications]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for an attribute or model class which is to be included in a schema. [23.6. Class Specifications]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <ref name="att.repeatable.attributes"/>
@@ -4907,8 +4626,21 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
    </define>
    <define name="elementRef">
       <element name="elementRef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for some element which is to be included in a schema [23.2. Modules and Schemas]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for some element which is to be included in a schema. [23.2. Modules and Schemas]</a:documentation>
          <empty/>
+         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xi="http://www.w3.org/2001/XInclude">
+            <sch:rule context="tei:elementRef[ parent::tei:schemaSpec | parent::tei:specGrp ]">
+               <sch:report test="@minOccurs | @maxOccurs" role="error">An element reference is not repeatable when part of a schema specification (and thus this &lt;elementRef&gt; should not have @minOccurs or @maxOccurs).</sch:report>
+            </sch:rule>
+            <sch:rule context="tei:content//tei:elementRef">
+               <sch:report test="@source" role="error">An element reference within a content model must refer to a locally defined element specification (and thus this &lt;elementRef&gt; should not have @source).</sch:report>
+            </sch:rule>
+         </sch:pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.repeatable.attributes"/>
          <attribute name="key">
@@ -4920,7 +4652,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
    </define>
    <define name="macroRef">
       <element name="macroRef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for some pattern which is to be included in a schema [23.7. Macro Specifications]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the specification for some pattern which is to be included in a schema. [23.7. Macro Specifications]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <attribute name="key">
@@ -4937,10 +4669,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             <ref name="content"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-moduleRef-modref-constraint-rule-45">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-moduleRef-modref-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4953,15 +4685,17 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="prefix">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a default prefix which will be prepended to all patterns from the imported module</a:documentation>
-               <data type="NCName"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a default prefix which will be prepended to all patterns from the imported module.</a:documentation>
+               <optional>
+                  <data type="NCName"/>
+               </optional>
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-moduleRef-prefix-not-same-prefix-constraint-rule-46">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-moduleRef-prefix-not-same-prefix-constraint-rule-24">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -4972,10 +4706,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-moduleRef-prefix-not-except-and-include-constraint-rule-47">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-moduleRef-prefix-not-except-and-include-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5068,7 +4802,8 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
    </define>
    <define name="specGrpRef">
       <element name="specGrpRef">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference to a specification group) indicates that the declarations contained by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;specGrp&gt;</code> referenced should be inserted at this point. [23.2. Modules and Schemas]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference to a specification group) indicates that the declarations contained by the <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;specGrp&gt;</code> referenced should be inserted at this point. [23.2. Modules and Schemas]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <attribute name="target">
@@ -5123,10 +4858,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-elementSpec-child-constraint-based-on-mode-constraint-rule-48">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-elementSpec-child-constraint-based-on-mode-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5135,7 +4870,6 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5149,7 +4883,9 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <optional>
             <attribute name="prefix">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a default prefix which will be prepended to all patterns relating to the element, unless otherwise stated.</a:documentation>
-               <data type="NCName"/>
+               <optional>
+                  <data type="NCName"/>
+               </optional>
             </attribute>
          </optional>
          <empty/>
@@ -5189,9 +4925,12 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <ref name="att.typed.attribute.subtype"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether this is a model class or an attribute class</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
+            <choice>
+               <value>model</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(content model) members of this class appear in the same content models</a:documentation>
+               <value>atts</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attributes) members of this class share common attributes</a:documentation>
+            </choice>
          </attribute>
          <optional>
             <attribute name="generate">
@@ -5301,10 +5040,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-dataSpec-no_elements_in_data_content-constraint-rule-50">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-dataSpec-no_elements_in_data_content-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5384,10 +5123,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </oneOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-listRef-TagDocsNestinglistRef-constraint-rule-51">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-listRef-TagDocsNestinglistRef-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5396,10 +5135,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-listRef-TagDocslistRefChildren-constraint-rule-52">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-listRef-TagDocslistRefChildren-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5428,8 +5167,8 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </zeroOrMore>
          </group>
          <ref name="att.global.attributes"/>
-         <ref name="att.typed.attributes"/>
          <ref name="att.translatable.attributes"/>
+         <ref name="att.typed.attributes"/>
          <empty/>
       </element>
    </define>
@@ -5463,7 +5202,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="key">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the identifier for a class of which the documented element or class is a member or subclass</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the identifier for a class of which the documented element or class is a member or subclass.</a:documentation>
                <data type="Name"/>
             </attribute>
          </optional>
@@ -5522,7 +5261,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <optional>
             <attribute name="uri">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(uniform resource identifier) references the underlying concept of which the parent is a representation by means of some external identifier</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(uniform resource identifier) references the underlying concept of which the parent is a representation by means of some external identifier.</a:documentation>
                <data type="anyURI">
                   <param name="pattern">\S+</param>
                </data>
@@ -5530,7 +5269,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <optional>
             <attribute name="filter">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">references an external script which contains a method to transform instances of this element to canonical TEI</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">references an external script which contains a method to transform instances of this element to canonical TEI.</a:documentation>
                <data type="anyURI">
                   <param name="pattern">\S+</param>
                </data>
@@ -5566,10 +5305,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-model-no_dup_default_models-constraint-rule-53">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-model-no_dup_default_models-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5582,10 +5321,10 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-model-no_dup_models-constraint-rule-54">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-model-no_dup_models-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5692,7 +5431,8 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
    </define>
    <define name="modelSequence">
       <element name="modelSequence">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any sequence of model or <code xmlns="http://www.w3.org/1999/xhtml">&lt;modelSequence&gt;</code> elements which is to be processed as a single set of actions [23.5.4.7. Model sequence]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any sequence of model or <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;modelSequence&gt;</code> elements which is to be processed as a single set of actions. [23.5.4.7. Model sequence]</a:documentation>
          <group>
             <zeroOrMore>
                <choice>
@@ -5709,10 +5449,10 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
             </group>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-55">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5725,19 +5465,19 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="predicate">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the condition under which this model applies given as an XPath Predicate Expression</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the condition under which this model applies given as an XPath Predicate Expression.</a:documentation>
                <text/>
             </attribute>
          </optional>
          <optional>
             <attribute name="useSourceRendition">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">whether to obey any rendition attribute that is present</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">whether to obey any rendition attribute that is present.</a:documentation>
                <data type="boolean"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="output">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the intended output method
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the intended output method.
 Suggested values include: 1] web; 2] print; 3] plaintext</a:documentation>
                <choice>
                   <value>web</value>
@@ -5757,7 +5497,9 @@ Suggested values include: 1] web; 2] print; 3] plaintext</a:documentation>
    </define>
    <define name="modelGrp">
       <element name="modelGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(model group) any grouping of <code xmlns="http://www.w3.org/1999/xhtml">&lt;model&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml">&lt;modelSequence&gt;</code> elements with a common output method [23.5.4.4. Model Contexts and Outputs]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(model group) any grouping of <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;model&gt;</code> or <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;modelSequence&gt;</code> elements with a common output method. [23.5.4.4. Model Contexts and Outputs]</a:documentation>
          <group>
             <zeroOrMore>
                <choice>
@@ -5778,13 +5520,13 @@ Suggested values include: 1] web; 2] print; 3] plaintext</a:documentation>
          <ref name="att.global.attributes"/>
          <optional>
             <attribute name="useSourceRendition">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">whether to obey any rendition attribute which is present</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">whether to obey any rendition attribute which is present.</a:documentation>
                <data type="boolean"/>
             </attribute>
          </optional>
          <optional>
             <attribute name="output">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the intended output method
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the intended output method.
 Suggested values include: 1] web; 2] print; 3] plaintext</a:documentation>
                <choice>
                   <value>web</value>
@@ -5821,7 +5563,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
    </define>
    <define name="paramList">
       <element name="paramList">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of parameter specifications</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of parameter specifications.</a:documentation>
          <zeroOrMore>
             <ref name="paramSpec"/>
          </zeroOrMore>
@@ -5831,7 +5573,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
    </define>
    <define name="paramSpec">
       <element name="paramSpec">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies specification for one parameter of a model behaviour [23.5.4.8. Defining a processing model]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies specification for one parameter of a model behaviour. [23.5.4.8. Defining a processing model]</a:documentation>
          <zeroOrMore>
             <choice>
                <ref name="model.identEquiv"/>
@@ -5849,19 +5591,21 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          <empty/>
          <ref name="att.global.attributes"/>
          <attribute name="name">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a name for the parameter being supplied
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a name for the parameter being supplied.
 Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 6] level; 7] link; 8] place; 9] type; 10] url; 11] width</a:documentation>
             <choice>
                <value>alternate</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with behaviour alternate, a parameter of this name supplies one of the pair of possible values; for example the regularized form rather than the original form within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;choice&gt;</code> element.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with behaviour alternate, a parameter of this name supplies one of the pair of possible values; for example the regularized form rather than the original form within a <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;choice&gt;</code> element.</a:documentation>
                <value>default</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with behaviour alternate, a parameter of this name supplies one of the pair of possible values; for example the original form rather than the regularized form within a <code xmlns="http://www.w3.org/1999/xhtml">&lt;choice&gt;</code> element.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with behaviour alternate, a parameter of this name supplies one of the pair of possible values; for example the original form rather than the regularized form within a <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;choice&gt;</code> element.</a:documentation>
                <value>height</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with behaviour graphic, a parameter of this name supplies a value for the height of the graphic e.g. 300px, 50%.</a:documentation>
                <value>id</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a parameter of this name should supply a unique identifier for the element being processed; as for example with the anchor behaviour</a:documentation>
                <value>label</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a parameter of this name should supply an expression to be used to label something, for example `concat('Page ', @n)` for a page break or `@n` for a footnote reference; typically used with the note or break behaviours</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a parameter of this name should supply an expression to be used to label something, for example `concat('Page ', @n)` for a page beginning or `@n` for a footnote reference; typically used with the note or break behaviours</a:documentation>
                <value>level</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">when used with the heading behaviour, a parameter of this name supplies a positive integer indicating the hierarchic level of a heading.</a:documentation>
                <value>link</value>
@@ -5892,7 +5636,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <choice>
             <ref name="valList"/>
             <ref name="model.contentPart"/>
-            <ref name="anyElement-content"/>
+            <ref name="anyElement_content_2"/>
          </choice>
          <ref name="att.global.attributes"/>
          <optional>
@@ -5902,10 +5646,15 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
                <a:documentation>controls whether or not pattern names generated in the corresponding RELAX NG schema source are automatically prefixed to avoid potential nameclashes.</a:documentation>
                <choice>
                   <value>true</value>
-                  <a:documentation>Each name referenced in e.g. an <code xmlns="http://www.w3.org/1999/xhtml">&lt;rng:ref&gt;</code> element within a content model is automatically prefixed by the value of the <code xmlns="http://www.w3.org/1999/xhtml">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml">&lt;schemaSpec&gt;</code>
+                  <a:documentation>Each name referenced in e.g. an <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;rng:ref&gt;</code> element within a content model is automatically prefixed by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code>
                   </a:documentation>
                   <value>false</value>
-                  <a:documentation>No prefixes are added: any prefix required by the value of the <code xmlns="http://www.w3.org/1999/xhtml">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml">&lt;schemaSpec&gt;</code> must therefore be supplied explicitly, as appropriate.</a:documentation>
+                  <a:documentation>No prefixes are added: any prefix required by the value of the <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">@prefix</code> attribute on the current <code xmlns="http://www.w3.org/1999/xhtml"
+                           xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;schemaSpec&gt;</code> must therefore be supplied explicitly, as appropriate.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -5914,15 +5663,15 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
    </define>
    <define name="sequence">
       <element name="sequence">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the constructs referenced by its children form a sequence [23.5.1. Defining Content Models]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the constructs referenced by its children form a sequence. [23.5.1. Defining Content Models]</a:documentation>
          <oneOrMore>
             <ref name="model.contentPart"/>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-sequence-sequencechilden-constraint-rule-56">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-sequence-sequencechilden-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5943,7 +5692,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
    </define>
    <define name="alternate">
       <element name="alternate">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the constructs referenced by its children form an alternation [23.5.1. Defining Content Models]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the constructs referenced by its children form an alternation. [23.5.1. Defining Content Models]</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="valList"/>
@@ -5951,10 +5700,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-alternate-alternatechilden-constraint-rule-57">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-alternate-alternatechilden-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -5967,13 +5716,97 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <empty/>
       </element>
    </define>
+   <define name="constraintDecl">
+      <element name="constraintDecl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(constraint declaration) contains declarations pertaining to formal constraints expressed elsewhere in <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;constraintSpec&gt;</code> elements [23.5.2. Additional Constraints]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.identEquiv"/>
+                  <ref name="model.descLike"/>
+               </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="anyElement_constraintDecl_3"/>
+            </zeroOrMore>
+         </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="/*[ count( //tei:constraintDecl ) gt 1 ]">
+               <sch:let name="schemes"
+                        value="//tei:constraintDecl[ not(ancestor::*[local-name(.) eq 'egXML'] ) ]/@scheme"/>
+               <sch:let name="disctinct_schemes" value="distinct-values( $schemes )"/>
+               <sch:assert test="count( $schemes ) eq count( $disctinct_schemes )">
+          Each &lt;constraintDecl&gt; element should have a @scheme attribute that is distinct from that of all the other &lt;constraintDecl&gt;s.
+        </sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="att.global.attributes"/>
+         <attribute name="scheme">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the name of the language to which the declarations herein apply
+Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
+            <choice>
+               <value>schematron</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(ISO Schematron) </a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="queryBinding">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(query language binding) specifies the query language binding for rule-based schema expressions in <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;constraintSpec&gt;</code> elements that have a matching <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@scheme</code> attribute
+Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpath; 7] xpath2; 8] xpath3; 9] xpath31; 10] xquery; 11] xquery3; 12] xquery31</a:documentation>
+               <choice>
+                  <value>exslt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>stx</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xslt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xslt2</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xslt3</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xpath</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xpath2</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xpath3</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xpath31</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xquery</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xquery3</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>xquery31</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="constraint">
       <element name="constraint">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(constraint rules) the formal rules of a constraint [23.5. Element Specifications]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
-               <ref name="anyElement-constraint"/>
+               <ref name="anyElement_constraint_4"/>
             </choice>
          </zeroOrMore>
          <ref name="att.global.attributes"/>
@@ -5995,10 +5828,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-empty-based-on-mode-constraint-rule-59">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-empty-based-on-mode-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6007,7 +5840,6 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6016,7 +5848,6 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6025,10 +5856,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-sch_no_more-constraint-rule-62">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-sch_no_more-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6040,10 +5871,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-isosch-constraint-rule-63">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-isosch-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6054,10 +5885,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-context-required-constraint-rule-64">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-context-required-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6071,10 +5902,10 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-unique-constraintSpec-ident-constraint-rule-65">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-unique-constraintSpec-ident-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6090,7 +5921,9 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the <code xmlns="http://www.w3.org/1999/xhtml">&lt;constraintSpec&gt;</code> element in some sense; used to indicate when a <code xmlns="http://www.w3.org/1999/xhtml">&lt;constraintSpec&gt;</code> warns about a deprecated construct.
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;constraintSpec&gt;</code> element in some sense; used to indicate when a <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;constraintSpec&gt;</code> warns about a deprecated construct.
 Suggested values include: 1] deprecationWarning</a:documentation>
                <choice>
                   <value>deprecationWarning</value>
@@ -6115,15 +5948,15 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-constraintSpec-scheme-usage_based_on_mode-constraint-rule-68">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-constraintSpec-scheme-usage_based_on_mode-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
                       context="tei:constraintSpec[ @mode = ('add','replace')  or  not( @mode ) ]">
-               <sch:assert test="@scheme">The @scheme attribute of &lt;constraintSpec&gt; is required when the @mode is <sch:value-of select="if (@mode) then concat('&#34;',@mode,'&#34;') else 'not specified'"/>.</sch:assert>
+               <sch:assert test="@scheme">The @scheme attribute of &lt;constraintSpec&gt; is required when the @mode is <sch:value-of select="if (@mode) then concat('&#34;',@mode,'&#34;') else 'not specified'"/> (here on "<sch:value-of select="@ident"/>")</sch:assert>
             </sch:rule>
          </pattern>
          <empty/>
@@ -6131,7 +5964,8 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="attList">
       <element name="attList">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attribute list) contains documentation for all the attributes associated with this element, as a series of <code xmlns="http://www.w3.org/1999/xhtml">&lt;attDef&gt;</code> elements. [23.5. Element Specifications 23.6. Class Specifications]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(attribute list) contains documentation for all the attributes associated with this element, as a series of <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;attDef&gt;</code> elements. [23.5. Element Specifications 23.6. Class Specifications]</a:documentation>
          <oneOrMore>
             <choice>
                <ref name="attRef"/>
@@ -6144,7 +5978,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="org"
                        a:defaultValue="group">
-               <a:documentation>(organization) specifies whether only one (choice) or all (group) of the attributes in the list are available</a:documentation>
+               <a:documentation>(organization) specifies whether only one (choice) or all (group) of the attributes in the list are available.</a:documentation>
                <choice>
                   <value>group</value>
                   <a:documentation>grouped</a:documentation>
@@ -6199,10 +6033,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                  prefix="teix"
                  uri="http://www.tei-c.org/ns/Examples"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-attDef-attDefContents-constraint-rule-69">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-attDef-attDefContents-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6217,10 +6051,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-attDef-noDefault4Required-constraint-rule-70">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-attDef-noDefault4Required-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6229,10 +6063,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-71">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6244,10 +6078,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-attDef-defaultIsInClosedList-one-constraint-rule-72">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-attDef-defaultIsInClosedList-one-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6270,9 +6104,9 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                   <value>req</value>
                   <a:documentation>(required) </a:documentation>
                   <value>rec</value>
-                  <a:documentation>(recommended ) </a:documentation>
+                  <a:documentation>(recommended) </a:documentation>
                   <value>opt</value>
-                  <a:documentation>(optional ) </a:documentation>
+                  <a:documentation>(optional) </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -6304,14 +6138,14 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(datatype) specifies the declared value for an attribute, by referring to any datatype defined by the chosen schema language. [1.4.2. Datatype Specifications 23.5.3. Attribute List Specification]</a:documentation>
          <choice>
             <ref name="dataRef"/>
-            <ref name="anyElement-datatype"/>
+            <ref name="anyElement_datatype_5"/>
          </choice>
          <ref name="att.global.attributes"/>
          <optional>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="minOccurs"
                        a:defaultValue="1">
-               <a:documentation>(minimum number of occurences) indicates the minimum number of times this datatype may occur in an instance of the attribute being defined</a:documentation>
+               <a:documentation>(minimum number of occurences) indicates the minimum number of times this datatype may occur in an instance of the attribute being defined.</a:documentation>
                <data type="nonNegativeInteger"/>
             </attribute>
          </optional>
@@ -6319,7 +6153,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="maxOccurs"
                        a:defaultValue="1">
-               <a:documentation>(maximum number of occurences) indicates the maximum number of times this datatype may occur in an instance of the attribute being defined</a:documentation>
+               <a:documentation>(maximum number of occurences) indicates the maximum number of times this datatype may occur in an instance of the attribute being defined.</a:documentation>
                <choice>
                   <data type="nonNegativeInteger"/>
                   <choice>
@@ -6339,10 +6173,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             <ref name="dataFacet"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-dataRef-restrictDataFacet-constraint-rule-73">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-dataRef-restrictDataFacet-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6353,10 +6187,10 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="SPM-dataRef-restrictAttResctrictionName-constraint-rule-74">
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-dataRef-restrictAttResctrictionName-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:svg="http://www.w3.org/2000/svg"
                       xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -6381,7 +6215,9 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             </optional>
             <optional>
                <attribute name="name">
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the name of a datatype in the list provided by <a xmlns="http://www.w3.org/1999/xhtml" href="#XSD2">XML Schema Part 2: Datatypes Second Edition</a>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the name of a datatype in the list provided by <a xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                        href="#XSD2">XML Schema Part 2: Datatypes Second Edition</a>
                   </a:documentation>
                   <data type="NCName"/>
                </attribute>
@@ -6400,7 +6236,9 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="dataFacet">
       <element name="dataFacet">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Restricts the value of the strings used to represent values of a datatype, according to <a xmlns="http://www.w3.org/1999/xhtml" href="#XSD2">XML Schema Part 2: Datatypes Second Edition</a>. [23.5.3.1. Datatypes]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Restricts the value of the strings used to represent values of a datatype, according to <a xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               href="#XSD2">XML Schema Part 2: Datatypes Second Edition</a>. [23.5.3.1. Datatypes]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <attribute name="name">
@@ -6450,11 +6288,12 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="valDesc">
       <element name="valDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value description) specifies any semantic or syntactic constraint on the value that an attribute may take, additional to the information carried by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;datatype&gt;</code> element. [23.5.3. Attribute List Specification]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value description) specifies any semantic or syntactic constraint on the value that an attribute may take, additional to the information carried by the <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;datatype&gt;</code> element. [23.5.3. Attribute List Specification]</a:documentation>
          <ref name="macro.phraseSeq.limited"/>
          <ref name="att.global.attributes"/>
-         <ref name="att.translatable.attributes"/>
          <ref name="att.combinable.attributes"/>
+         <ref name="att.translatable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6465,24 +6304,22 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
             <zeroOrMore>
                <ref name="model.identSynonyms"/>
             </zeroOrMore>
-            <optional>
-               <group>
+            <rng:optional xmlns:rng="http://relaxng.org/ns/structure/1.0">
+               <rng:group>
                   <oneOrMore>
-                     <ref name="model.descLike"/>
+                     <rng:ref name="model.descLike"/>
                   </oneOrMore>
-                  <zeroOrMore>
-                     <group>
-                        <ref name="model.identSynonyms"/>
-                        <zeroOrMore>
-                           <ref name="model.descLike"/>
-                        </zeroOrMore>
-                     </group>
-                  </zeroOrMore>
-                  <zeroOrMore>
-                     <ref name="remarks"/>
-                  </zeroOrMore>
-               </group>
-            </optional>
+                  <rng:zeroOrMore>
+                     <rng:ref name="model.identSynonyms"/>
+                     <rng:zeroOrMore>
+                        <rng:ref name="model.descLike"/>
+                     </rng:zeroOrMore>
+                  </rng:zeroOrMore>
+                  <rng:zeroOrMore>
+                     <rng:ref name="remarks"/>
+                  </rng:zeroOrMore>
+               </rng:group>
+            </rng:optional>
             <optional>
                <ref name="paramList"/>
             </optional>
@@ -6498,7 +6335,8 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="valList">
       <element name="valList">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value list) contains one or more <code xmlns="http://www.w3.org/1999/xhtml">&lt;valItem&gt;</code> elements defining possible values. [23.5.3. Attribute List Specification]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value list) contains one or more <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;valItem&gt;</code> elements defining possible values. [23.5.3. Attribute List Specification]</a:documentation>
          <zeroOrMore>
             <ref name="valItem"/>
          </zeroOrMore>
@@ -6524,7 +6362,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="textNode">
       <element name="textNode">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of a text node in a content model [23. Documentation Elements]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of a text node in a content model. [23. Documentation Elements]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -6532,7 +6370,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="anyElement">
       <element name="anyElement">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of any elements in a content model [23. Documentation Elements]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of any elements in a content model. [23. Documentation Elements]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <ref name="att.repeatable.attributes"/>
@@ -6572,7 +6410,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="empty">
       <element name="empty">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of an empty node within a content model [23. Documentation Elements]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the presence of an empty node within a content model. [23. Documentation Elements]</a:documentation>
          <empty/>
          <ref name="att.global.attributes"/>
          <empty/>
