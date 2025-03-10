@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-01-30T15:58:07Z. . 
+Schema generated from ODD source 2025-02-10T16:05:41Z. . 
 TEI Edition:  
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -90,7 +90,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e28171-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e28181-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -160,7 +160,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e29730-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e29740-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -2685,6 +2685,12 @@ Suggested values include: 1] 1; 2] 0.5; 3] 0.2; 4] 0.1; 5] 0.05; 6] 0.02; 7] 0.0
                      <data type="decimal"/>
                   </choice>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="hasWatermark" ns="http://hal.archives-ouvertes.fr/">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether or not the example is considered to be valid</a:documentation>
+               <data type="boolean"/>
             </attribute>
          </optional>
          <empty/>

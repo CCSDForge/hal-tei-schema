@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-01-30T15:51:08Z. .
+Schema generated from ODD source 2025-03-10T15:11:41Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -100,7 +100,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e35034-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34995-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -149,7 +149,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36340-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36301-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -821,6 +821,20 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
             <data type="token">
                <param name="pattern">[\-+]?\d+(\.\d+)?(%|cm|mm|in|pt|pc|px|em|ex|ch|rem|vw|vh|vmin|vmax)</param>
             </data>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.media.attribute.scale">
+      <optional>
+         <attribute name="scale">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Where the media are displayed, indicates a scale factor to be applied when generating the desired display size</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
          </attribute>
       </optional>
    </define>
@@ -2804,57 +2818,23 @@ Sample values include: 1] commentary; 2] description; 3] audience; 4] invited; 5
    <define name="media">
       <element name="media">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of any form of external media such as an audio or video clip etc. [3.10. Graphics and Other Non-textual Components]</a:documentation>
-         <interleave>
-            <zeroOrMore>
-               <ref name="desc"/>
-            </zeroOrMore>
-         </interleave>
+         <zeroOrMore>
+            <ref name="model.descLike"/>
+         </zeroOrMore>
          <ref name="att.typed.attributes"/>
          <ref name="att.media.attribute.width"/>
          <ref name="att.media.attribute.height"/>
-         <optional>
-            <attribute name="scale">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie l'échelle d'une carte
-Suggested values include: 1] 1; 2] 0.5; 3] 0.2; 4] 0.1; 5] 0.05; 6] 0.02; 7] 0.01; 8] 0.005; 9] 0.002; 10] 0.001; 11] 0.0002; 12] 4e-05; 13] 2e-05; 14] 1e-05</a:documentation>
-               <choice>
-                  <value>1</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:1 (taille réelle)</a:documentation>
-                  <value>0.5</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:2 (20cm par m)</a:documentation>
-                  <value>0.2</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:5 (20cm par m)</a:documentation>
-                  <value>0.1</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:10 (10cm par m)</a:documentation>
-                  <value>0.05</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:20 (5 cm par m)</a:documentation>
-                  <value>0.02</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:50 (2 cm par m)</a:documentation>
-                  <value>0.01</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:100 (1 cm par m)</a:documentation>
-                  <value>0.005</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:200 (5 mm par m)</a:documentation>
-                  <value>0.002</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:500 (2 mm par m)</a:documentation>
-                  <value>0.001</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:1000 (1 mm par m)</a:documentation>
-                  <value>0.0002</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:5000 (0.2 mm par m)</a:documentation>
-                  <value>4e-05</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:25000 (1 cm = 250 m)</a:documentation>
-                  <value>2e-05</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:50000 (2 cm = 1km)</a:documentation>
-                  <value>1e-05</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1:100000 (1 cm = 1 km)</a:documentation>
-                  <choice>
-                     <data type="double"/>
-                     <data type="token">
-                        <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
-                     </data>
-                     <data type="decimal"/>
-                  </choice>
-               </choice>
-            </attribute>
-         </optional>
+         <ref name="att.media.attribute.scale"/>
+         <attribute name="mimeType">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="token">
+                     <param name="pattern">[^\p{C}\p{Z}]+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -3177,7 +3157,7 @@ relatedItem element must be empty</sch:report>
          </pattern>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] requires; 5] isPartOf; 6] hasPart; 7] isReferencedBy; 8] references; 9] isFormatOf; 10] hasFormat; 11] conformsTo; 12] isVersionOf; 13] hasVersion; 14] IsOriginalFormOf; 15] HasPart; 16] HasVersion; 17] Describes; 18] isVariantFormatOf; 19] IsDescribedBy; 20] IsPartOf; 21] IsReferencedBy; 22] IsRequiredBy; 23] IsVersionOf; 24] References; 25] Requires</a:documentation>
+Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] requires; 5] isPartOf; 6] hasPart; 7] isReferencedBy; 8] references; 9] isFormatOf; 10] hasFormat; 11] conformsTo; 12] isVersionOf; 13] hasVersion; 14] IsOriginalFormOf; 15] Describes; 16] isVariantFormatOf; 17] IsDescribedBy; 18] IsReferencedBy; 19] IsRequiredBy; 20] References; 21] Requires; 22] Cites; 23] IsCitedBy; 24] HasVersion; 25] IsVersionOf; 26] IsIdenticalTo; 27] HasPart; 28] IsPartOf; 29] Reviews; 30] IsReviewedBy; 31] Documents; 32] IsDocumentedBy; 33] IsTranslationOf; 34] HasTranslation</a:documentation>
             <data type="token">
                <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
@@ -6867,7 +6847,6 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
       <element name="exterior" ns="http://www.opengis.net/gml/3.2">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <interleave>
-            <text/>
             <oneOrMore>
                <ref name="LinearRing"/>
             </oneOrMore>
@@ -6876,6 +6855,16 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
    </define>
    <define name="LinearRing">
       <element name="LinearRing" ns="http://www.opengis.net/gml/3.2">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <interleave>
+            <oneOrMore>
+               <ref name="posList"/>
+            </oneOrMore>
+         </interleave>
+      </element>
+   </define>
+   <define name="posList">
+      <element name="posList" ns="http://www.opengis.net/gml/3.2">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <interleave>
             <text/>

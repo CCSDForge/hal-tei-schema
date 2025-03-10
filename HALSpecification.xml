@@ -1002,7 +1002,7 @@
                      <memberOf key="att.typed" mode="add"/>
                      <memberOf key="att.docStatus" mode="add"/>
                   </classes>
-                  <content preserveOrder="false">
+                  <content>
                      <sequence preserveOrder="false">
                         <elementRef key="date" minOccurs="0" maxOccurs="unbounded"/>
                         <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
@@ -1433,61 +1433,6 @@
                      <memberOf key="att.duration" mode="delete"/>
                      <memberOf key="att.internetMedia" mode="delete"/>
                   </classes>
-                  <content>
-                     <sequence preserveOrder="false">
-                        <elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/>
-                     </sequence>
-                  </content>
-                  <attList>
-                     <attDef ident="mimeType" mode="delete"/>
-                     <attDef ident="scale" mode="change" usage="rec">
-                        <desc>Spécificie l'échelle d'une carte</desc>
-                        <valList mode="change" type="semi">
-                           <valItem ident="1">
-                              <desc>1:1 (taille réelle)</desc>
-                           </valItem>
-                           <valItem ident="0.5">
-                              <desc>1:2 (20cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.2">
-                              <desc>1:5 (20cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.1">
-                              <desc>1:10 (10cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.05">
-                              <desc>1:20 (5 cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.02">
-                              <desc>1:50 (2 cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.01">
-                              <desc>1:100 (1 cm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.005">
-                              <desc>1:200 (5 mm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.002">
-                              <desc>1:500 (2 mm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.001">
-                              <desc>1:1000 (1 mm par m)</desc>
-                           </valItem>
-                           <valItem ident="0.0002">
-                              <desc>1:5000 (0.2 mm par m)</desc>
-                           </valItem>
-                           <valItem ident="4e-05">
-                              <desc>1:25000 (1 cm = 250 m)</desc>
-                           </valItem>
-                           <valItem ident="2e-05">
-                              <desc>1:50000 (2 cm = 1km)</desc>
-                           </valItem>
-                           <valItem ident="1e-05">
-                              <desc>1:100000 (1 cm = 1 km)</desc>
-                           </valItem>
-                        </valList>
-                     </attDef>
-                  </attList>
                   <exemplum>
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <edition>
@@ -2281,20 +2226,30 @@
                            <valItem ident="conformsTo"/>
                            <valItem ident="isVersionOf"/>
                            <valItem ident="hasVersion"/>
-                           <!--Datacite -->
+                           <!-- A garder ? -->
                            <valItem ident="IsOriginalFormOf">
                            </valItem>
-                           <valItem ident="HasPart"/>
-                           <valItem ident="HasVersion"/>
                            <valItem ident="Describes"/>
                            <valItem ident="isVariantFormatOf"/>
                            <valItem ident="IsDescribedBy"/>
-                           <valItem ident="IsPartOf"/>
                            <valItem ident="IsReferencedBy"/>
                            <valItem ident="IsRequiredBy"/>
-                           <valItem ident="IsVersionOf"/>
                            <valItem ident="References"/>
                            <valItem ident="Requires"/>
+                           <!--Datacite -->
+                           <valItem ident="Cites"/>
+                           <valItem ident="IsCitedBy"/>
+                           <valItem ident="HasVersion"/>
+                           <valItem ident="IsVersionOf"/>
+                           <valItem ident="IsIdenticalTo"/>
+                           <valItem ident="HasPart"/>
+                           <valItem ident="IsPartOf"/>
+                           <valItem ident="Reviews"/>
+                           <valItem ident="IsReviewedBy"/>
+                           <valItem ident="Documents"/>
+                           <valItem ident="IsDocumentedBy"/>
+                           <valItem ident="IsTranslationOf"/>
+                           <valItem ident="HasTranslation"/>
                         </valList>
                      </attDef>
                      <attDef ident="target" mode="change" usage="req"/>
@@ -2675,8 +2630,8 @@
                         <geo>
                            <gml:Rectangle>
                               <gml:exterior>
-                                 <gml:LinearRing>
-                                    40.7569734 -4.6722374 51.4047097 11.5737152 
+                                 <gml:LinearRing> 
+                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
                                  </gml:LinearRing>
                               </gml:exterior>
                            </gml:Rectangle>
@@ -2688,7 +2643,6 @@
                <elementSpec ident="exterior" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
-                        <textNode/>
                         <elementRef key="LinearRing" minOccurs="1" maxOccurs="unbounded"/>
                      </sequence>
                   </content>
@@ -2697,8 +2651,8 @@
                         <geo>
                            <gml:Rectangle>
                               <gml:exterior>
-                                 <gml:LinearRing>
-                                    40.7569734 -4.6722374 51.4047097 11.5737152 
+                                 <gml:LinearRing> 
+                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
                                  </gml:LinearRing>
                               </gml:exterior>
                            </gml:Rectangle>
@@ -2710,6 +2664,27 @@
                <elementSpec ident="LinearRing" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
+                        <elementRef key="posList" minOccurs="1" maxOccurs="unbounded"/>
+                     </sequence>
+                  </content>
+                  <exemplum>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.2">
+                        <geo>
+                           <gml:Rectangle>
+                              <gml:exterior>
+                                 <gml:LinearRing>
+                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
+                                 </gml:LinearRing>
+                              </gml:exterior>
+                           </gml:Rectangle>
+                        </geo>
+                     </egXML>
+                  </exemplum>
+               </elementSpec>
+               
+               <elementSpec ident="posList" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
+                  <content>
+                     <sequence preserveOrder="false">
                         <textNode/>
                      </sequence>
                   </content>
@@ -2719,7 +2694,7 @@
                            <gml:Rectangle>
                               <gml:exterior>
                                  <gml:LinearRing>
-                                    40.7569734 -4.6722374 51.4047097 11.5737152 
+                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
                                  </gml:LinearRing>
                               </gml:exterior>
                            </gml:Rectangle>
