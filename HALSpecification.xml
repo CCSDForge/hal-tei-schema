@@ -1558,6 +1558,7 @@
                            <valItem ident="http://creativecommons.org/choose/mark/">
                               <desc>Marque du Domaine Public</desc>
                            </valItem>
+                           <!-- CF : Ajout possible d'un target=""  en cas de non compatibilité avec l'ajout de Deprecated-->
                         </valList>
                      </attDef>
                      <attDef ident="targetLang" mode="delete"/>
