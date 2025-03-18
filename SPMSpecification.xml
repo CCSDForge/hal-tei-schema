@@ -20,7 +20,7 @@
         source="HALSpecification.compiled.xml" start="TEI">
         <moduleRef key="tei"/>
         <moduleRef key="header" except="funder authority notesStmt"/>
-        <moduleRef key="core" except="editor respStmt resp meeting biblScope note publisher pubPlace series relatedItem email ptr"/>
+        <moduleRef key="core" except="editor respStmt resp meeting biblScope note publisher pubPlace relatedItem"/>
         <moduleRef key="textstructure"/>
         <moduleRef key="namesdates" except="location geo"/>
         <moduleRef key="corpus"/>
@@ -29,6 +29,34 @@
         <!-- CF :Ajout de validUntil -->
         <moduleRef key="tagdocs"/>
         <moduleRef key="spoken"/>
+        
+        <elementSpec ident="licence" source="SPM" mode="change">
+          <classes mode="change">
+            <memberOf key="att.global" mode="delete"/>
+            <memberOf key="att.datable" mode="delete"/>
+          </classes>
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="target" mode="change" usage="rec">
+              <desc>Spécificie la licence</desc>
+              <valList mode="replace" type="closed">
+                <valItem ident="https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf">
+                  <desc></desc>
+                </valItem>
+              </valList>
+            </attDef>
+            <attDef ident="targetLang" mode="delete"/>
+            <attDef ident="evaluate" mode="delete"/>
+          </attList>
+          <exemplum>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <licence target="http://creativecommons.org/licenses/by/">Attribution</licence>
+            </egXML>
+          </exemplum>
+        </elementSpec>
+        
       </schemaSpec>
     </body>
   </text>

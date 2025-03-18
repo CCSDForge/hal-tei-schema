@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-03-18T10:14:31Z. .
+Schema generated from ODD source 2025-03-18T13:32:26Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -100,7 +100,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34959-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34974-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -149,7 +149,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36266-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36281-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -3438,39 +3438,33 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
             <attribute name="target">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence
 Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] http://creativecommons.org/licenses/by/; 3] http://hal.archives-ouvertes.fr/licences/copyright/; 4] http://creativecommons.org/licenses/by-nc-nd/; 5] http://creativecommons.org/licenses/by-nc-sa/; 6] http://creativecommons.org/licenses/by-nc/; 7] http://creativecommons.org/licenses/by-nd/; 8] http://creativecommons.org/publicdomain/zero/1.0/; 9] http://hal.archives-ouvertes.fr/licences/publicDomain/; 10] http://creativecommons.org/licenses/by-sa/; 11] http://hal.archives-ouvertes.fr/licences/etalab/; 12] http://creativecommons.org/choose/mark/</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <choice>
-                        <value>http://creativecommons.org/licenses/by/4.0/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>http://creativecommons.org/licenses/by/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/copyright/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Copyright (Tous droits réservés)</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc-nd/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-NoDerivatives</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc-sa/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-ShareAlike </a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nd/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NoDerivatives</a:documentation>
-                        <value>http://creativecommons.org/publicdomain/zero/1.0/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/publicDomain/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain </a:documentation>
-                        <value>http://creativecommons.org/licenses/by-sa/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-ShareAlike</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/etalab/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Licence Ouverte</a:documentation>
-                        <value>http://creativecommons.org/choose/mark/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marque du Domaine Public</a:documentation>
-                        <data type="anyURI">
-                           <param name="pattern">\S+</param>
-                        </data>
-                     </choice>
-                  </oneOrMore>
-               </list>
+               <choice>
+                  <value>http://creativecommons.org/licenses/by/4.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>http://creativecommons.org/licenses/by/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution</a:documentation>
+                  <value>http://hal.archives-ouvertes.fr/licences/copyright/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Copyright (Tous droits réservés)</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc-nd/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-NoDerivatives</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc-sa/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-ShareAlike </a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nc/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial</a:documentation>
+                  <value>http://creativecommons.org/licenses/by-nd/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NoDerivatives</a:documentation>
+                  <value>http://creativecommons.org/publicdomain/zero/1.0/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain</a:documentation>
+                  <value>http://hal.archives-ouvertes.fr/licences/publicDomain/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain </a:documentation>
+                  <value>http://creativecommons.org/licenses/by-sa/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-ShareAlike</a:documentation>
+                  <value>http://hal.archives-ouvertes.fr/licences/etalab/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Licence Ouverte</a:documentation>
+                  <value>http://creativecommons.org/choose/mark/</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marque du Domaine Public</a:documentation>
+                  <data type="Name"/>
+               </choice>
             </attribute>
          </optional>
          <empty/>

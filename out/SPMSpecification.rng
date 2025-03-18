@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-03-18T10:14:59Z. . 
+Schema generated from ODD source 2025-03-18T13:37:11Z. . 
 TEI Edition:  
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -90,7 +90,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e30339-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e30555-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -160,7 +160,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e31898-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e32114-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -2098,28 +2098,40 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    </define>
    <define name="model.addressLike">
       <choice>
+         <ref name="email"/>
          <ref name="affiliation"/>
       </choice>
    </define>
    <define name="model.addressLike_alternation">
       <choice>
+         <ref name="email"/>
          <ref name="affiliation"/>
       </choice>
    </define>
    <define name="model.addressLike_sequence">
+      <ref name="email"/>
       <ref name="affiliation"/>
    </define>
    <define name="model.addressLike_sequenceOptional">
+      <optional>
+         <ref name="email"/>
+      </optional>
       <optional>
          <ref name="affiliation"/>
       </optional>
    </define>
    <define name="model.addressLike_sequenceOptionalRepeatable">
       <zeroOrMore>
+         <ref name="email"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="affiliation"/>
       </zeroOrMore>
    </define>
    <define name="model.addressLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="email"/>
+      </oneOrMore>
       <oneOrMore>
          <ref name="affiliation"/>
       </oneOrMore>
@@ -2479,6 +2491,9 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
             <zeroOrMore>
                <ref name="persName"/>
             </zeroOrMore>
+            <zeroOrMore>
+               <ref name="email"/>
+            </zeroOrMore>
             <text/>
          </interleave>
          <ref name="att.global.attributes"/>
@@ -2495,6 +2510,26 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
             <attribute name="key">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <data type="string"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="email">
+      <element name="email">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(electronic mail address) contains an email address identifying a location to which email messages can be delivered. [3.6.2. Addresses]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.typed.attribute.subtype"/>
+         <ref name="att.cmc.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+               <choice>
+                  <value>md5</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caractérise le prénom</a:documentation>
+                  <value>domain</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">caractérise le nom intermédiaire</a:documentation>
+               </choice>
             </attribute>
          </optional>
          <empty/>
@@ -2712,6 +2747,33 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
          <empty/>
       </element>
    </define>
+   <define name="ptr">
+      <element name="ptr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) defines a pointer to another location. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
+         <empty/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="SPM-ptr-ptrAtts-constraint-rule-13">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="tei:ptr">
+               <sch:report test="@target and @cRef">Only one of the attributes @target and @cRef may be supplied on <sch:name/>.</sch:report>
+            </sch:rule>
+         </pattern>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
    <define name="ref">
       <element name="ref">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
@@ -2726,7 +2788,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-ref-refAtts-constraint-rule-13">
+                  id="SPM-ref-refAtts-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2860,11 +2922,27 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          </interleave>
       </element>
    </define>
+   <define name="series">
+      <element name="series">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series information) contains information about the series in which a book or other bibliographic item has appeared. [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="title"/>
+            </zeroOrMore>
+         </interleave>
+      </element>
+   </define>
    <define name="author">
       <element name="author">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(author) in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement]</a:documentation>
          <zeroOrMore>
             <ref name="persName"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="email"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="ptr"/>
          </zeroOrMore>
          <zeroOrMore>
             <ref name="idno"/>
@@ -2963,6 +3041,9 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </zeroOrMore>
             <zeroOrMore>
                <ref name="ref"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="series"/>
             </zeroOrMore>
          </interleave>
          <ref name="att.canonical.attributes"/>
@@ -3174,41 +3255,11 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <text/>
          <optional>
             <attribute name="target">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence
-Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] http://creativecommons.org/licenses/by/; 3] http://hal.archives-ouvertes.fr/licences/copyright/; 4] http://creativecommons.org/licenses/by-nc-nd/; 5] http://creativecommons.org/licenses/by-nc-sa/; 6] http://creativecommons.org/licenses/by-nc/; 7] http://creativecommons.org/licenses/by-nd/; 8] http://creativecommons.org/publicdomain/zero/1.0/; 9] http://hal.archives-ouvertes.fr/licences/publicDomain/; 10] http://creativecommons.org/licenses/by-sa/; 11] http://hal.archives-ouvertes.fr/licences/etalab/; 12] http://creativecommons.org/choose/mark/</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <choice>
-                        <value>http://creativecommons.org/licenses/by/4.0/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>http://creativecommons.org/licenses/by/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/copyright/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Copyright (Tous droits réservés)</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc-nd/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-NoDerivatives</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc-sa/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-ShareAlike </a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nc/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial</a:documentation>
-                        <value>http://creativecommons.org/licenses/by-nd/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NoDerivatives</a:documentation>
-                        <value>http://creativecommons.org/publicdomain/zero/1.0/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/publicDomain/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain </a:documentation>
-                        <value>http://creativecommons.org/licenses/by-sa/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-ShareAlike</a:documentation>
-                        <value>http://hal.archives-ouvertes.fr/licences/etalab/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Licence Ouverte</a:documentation>
-                        <value>http://creativecommons.org/choose/mark/</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marque du Domaine Public</a:documentation>
-                        <data type="anyURI">
-                           <param name="pattern">\S+</param>
-                        </data>
-                     </choice>
-                  </oneOrMore>
-               </list>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence</a:documentation>
+               <choice>
+                  <value>https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               </choice>
             </attribute>
          </optional>
          <empty/>
@@ -3352,6 +3403,9 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(creation) contains information about the creation of a text. [2.4.1. Creation 2.4. The Profile Description]</a:documentation>
          <zeroOrMore>
             <ref name="measure"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="ptr"/>
          </zeroOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.datable.attributes"/>
@@ -4074,7 +4128,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-ref-or-key-or-name-constraint-rule-14">
+                  id="SPM-relation-ref-or-key-or-name-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4086,7 +4140,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-active-mutual-constraint-rule-15">
+                  id="SPM-relation-active-mutual-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4098,7 +4152,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-active-passive-constraint-rule-16">
+                  id="SPM-relation-active-passive-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4353,7 +4407,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.repeatable-MINandMAXoccurs-constraint-rule-17">
+            id="SPM-att.repeatable-MINandMAXoccurs-constraint-rule-18">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4443,7 +4497,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.identified-spec-in-module-constraint-rule-19">
+            id="SPM-att.identified-spec-in-module-constraint-rule-20">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4469,7 +4523,7 @@ should correspond to an existing module, via a moduleSpec or
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-20">
+            id="SPM-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-21">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4491,7 +4545,7 @@ should correspond to an existing module, via a moduleSpec or
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-21">
+            id="SPM-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-22">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4798,7 +4852,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-modref-constraint-rule-24">
+                  id="SPM-moduleRef-modref-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4821,7 +4875,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-prefix-not-same-prefix-constraint-rule-25">
+                  id="SPM-moduleRef-prefix-not-same-prefix-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4835,7 +4889,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-prefix-not-except-and-include-constraint-rule-26">
+                  id="SPM-moduleRef-prefix-not-except-and-include-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4987,7 +5041,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-elementSpec-child-constraint-based-on-mode-constraint-rule-27">
+                  id="SPM-elementSpec-child-constraint-based-on-mode-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5169,7 +5223,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataSpec-no_elements_in_data_content-constraint-rule-29">
+                  id="SPM-dataSpec-no_elements_in_data_content-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5252,7 +5306,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-listRef-TagDocsNestinglistRef-constraint-rule-30">
+                  id="SPM-listRef-TagDocsNestinglistRef-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5264,7 +5318,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-listRef-TagDocslistRefChildren-constraint-rule-31">
+                  id="SPM-listRef-TagDocslistRefChildren-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5434,7 +5488,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-model-no_dup_default_models-constraint-rule-32">
+                  id="SPM-model-no_dup_default_models-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5450,7 +5504,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-model-no_dup_models-constraint-rule-33">
+                  id="SPM-model-no_dup_models-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5578,7 +5632,7 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-34">
+                  id="SPM-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5797,7 +5851,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-sequence-sequencechilden-constraint-rule-35">
+                  id="SPM-sequence-sequencechilden-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5829,7 +5883,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-alternate-alternatechilden-constraint-rule-36">
+                  id="SPM-alternate-alternatechilden-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5861,7 +5915,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-37">
+                  id="SPM-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5957,7 +6011,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-empty-based-on-mode-constraint-rule-39">
+                  id="SPM-constraintSpec-empty-based-on-mode-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5985,7 +6039,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-sch_no_more-constraint-rule-42">
+                  id="SPM-constraintSpec-sch_no_more-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6000,7 +6054,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-isosch-constraint-rule-43">
+                  id="SPM-constraintSpec-isosch-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6014,7 +6068,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-context-required-constraint-rule-44">
+                  id="SPM-constraintSpec-context-required-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6031,7 +6085,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-unique-constraintSpec-ident-constraint-rule-45">
+                  id="SPM-constraintSpec-unique-constraintSpec-ident-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6077,7 +6131,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-scheme-usage_based_on_mode-constraint-rule-48">
+                  id="SPM-constraintSpec-scheme-usage_based_on_mode-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6162,7 +6216,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                  uri="http://www.tei-c.org/ns/Examples"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-attDefContents-constraint-rule-49">
+                  id="SPM-attDef-attDefContents-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6180,7 +6234,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-noDefault4Required-constraint-rule-50">
+                  id="SPM-attDef-noDefault4Required-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6192,7 +6246,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-51">
+                  id="SPM-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6207,7 +6261,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-defaultIsInClosedList-one-constraint-rule-52">
+                  id="SPM-attDef-defaultIsInClosedList-one-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6302,7 +6356,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataRef-restrictDataFacet-constraint-rule-53">
+                  id="SPM-dataRef-restrictDataFacet-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6316,7 +6370,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataRef-restrictAttResctrictionName-constraint-rule-54">
+                  id="SPM-dataRef-restrictAttResctrictionName-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"

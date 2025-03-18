@@ -1519,9 +1519,9 @@
                      <textNode/>
                   </content>
                   <attList>
-                     <attDef ident="target" mode="change" usage="rec">
+                     <attDef ident="target" mode="replace" usage="rec">
                         <desc>Spécificie la licence</desc>
-                        <valList mode="change" type="semi">
+                        <valList mode="replace" type="semi">
                            <valItem ident="http://creativecommons.org/licenses/by/4.0/">
                               <desc></desc>
                            </valItem>
