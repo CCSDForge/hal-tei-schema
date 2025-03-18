@@ -2752,6 +2752,12 @@
                      <memberOf key="att.global" mode="delete"/>
                      <memberOf key="att.declarable" mode="delete"/>
                   </classes>
+                  <content>
+                     <sequence preserveOrder="false">
+                        <!-- CF: non prévu par la doc TEI comme enfant de monogr, logiquement ils doivent être enfant de imprim -->
+                        <elementRef key="measure" minOccurs="0" maxOccurs="unbounded"/>
+                     </sequence>
+                  </content>
                   <attList>
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="change" type="closed">

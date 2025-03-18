@@ -19,8 +19,8 @@
       <schemaSpec ident="SPM"
         source="HALSpecification.compiled.xml" start="TEI">
         <moduleRef key="tei"/>
-        <moduleRef key="header" except="funder authority"/>
-        <moduleRef key="core" except="editor respStmt resp note meeting biblScope publisher pubPlace series relatedItem measure email ptr"/>
+        <moduleRef key="header" except="funder authority notesStmt"/>
+        <moduleRef key="core" except="editor respStmt resp meeting biblScope note publisher pubPlace series relatedItem email ptr"/>
         <moduleRef key="textstructure"/>
         <moduleRef key="namesdates" except="location geo"/>
         <moduleRef key="corpus"/>
@@ -28,6 +28,7 @@
         <moduleRef key="canonical"/>
         <!-- CF :Ajout de validUntil -->
         <moduleRef key="tagdocs"/>
+        <moduleRef key="spoken"/>
       </schemaSpec>
     </body>
   </text>

@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-03-12T13:25:39Z. .
+Schema generated from ODD source 2025-03-18T10:14:31Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -100,7 +100,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34995-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34959-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -149,7 +149,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36301-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36266-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -4562,13 +4562,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
    <define name="model.global.spoken_sequenceRepeatable">
       <notAllowed/>
    </define>
-   <define name="model.recordingPart">
-      <choice>
-         <ref name="model.dateLike"/>
-         <ref name="media"/>
-         <ref name="respStmt"/>
-      </choice>
-   </define>
    <define name="model.divPart.spoken">
       <notAllowed/>
    </define>
@@ -4585,12 +4578,11 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
    <define name="recording">
       <element name="recording">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(recording event) provides details of an audio or video recording event used as the source of a spoken text, either directly or from a public broadcast. [8.2. Documenting the Source of Transcribed Speech 15.3.2. Declarable Elements]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <ref name="model.recordingPart"/>
-               <ref name="model.pLike"/>
-            </choice>
-         </zeroOrMore>
+         <interleave>
+            <zeroOrMore>
+               <ref name="measure"/>
+            </zeroOrMore>
+         </interleave>
          <optional>
             <attribute name="dur">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) indicates the length of this element in time.</a:documentation>
