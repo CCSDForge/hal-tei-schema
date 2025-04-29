@@ -2620,24 +2620,30 @@
                   </exemplum>
                </elementSpec>
                
-               <elementSpec ident="SimpleRectangle" ns="http://www.opengis.net/gml/3.3" module="measureLike" mode="add">
+               <elementSpec ident="SimpleRectangle" ns="http://www.opengis.net/gml/3.3/ce" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
-                        <elementRef key="posList" minOccurs="1" maxOccurs="unbounded"/>
+                        <elementRef key="pos" minOccurs="4" maxOccurs="4"/>
                      </sequence>
                   </content>
                   <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gmlce="http://www.opengis.net/gml/3.3/ce" xmlns:gml="http://www.opengis.net/gml/3.2">
                         <geo>
-                           <gml:SimpleRectangle>
-                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
-                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
-                           </gml:SimpleRectangle>
+                           <gmlce:SimpleRectangle>
+                              <gml:pos>41.043 45.312</gml:pos>
+                              <gml:pos>3.516 45.312</gml:pos>
+                              <gml:pos>3.516 -3.475</gml:pos>
+                              <gml:pos>41.043 -3.475</gml:pos>
+                              <gml:pos>latitudeSW,longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE,longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE,longitudeSW</gml:pos>
+                              <gml:pos>latitudeSW,longitudeSW</gml:pos>
+                           </gmlce:SimpleRectangle>
                         </geo>
                      </egXML>
                   </exemplum>
                </elementSpec>
-               <elementSpec ident="posList" ns="http://www.opengis.net/gml/3.3" module="measureLike" mode="add">
+               <elementSpec ident="pos" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
                         <textNode/>
@@ -2647,8 +2653,14 @@
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
                         <geo>
                            <gml:SimpleRectangle>
-                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
-                              <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
+                              <gml:pos>41.043 45.312</gml:pos>
+                              <gml:pos>3.516 45.312</gml:pos>
+                              <gml:pos>3.516 -3.475</gml:pos>
+                              <gml:pos>41.043 -3.475</gml:pos>
+                              <gml:pos>latitudeSW longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE longitudeSW</gml:pos>
+                              <gml:pos>latitudeSW longitudeSW</gml:pos>
                            </gml:SimpleRectangle>
                         </geo>
                      </egXML>
@@ -2674,8 +2686,14 @@
                      <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
                         <geo>                           
                            <gml:SimpleRectangle>
-                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
-                              <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
+                              <gml:pos>41.043 45.312</gml:pos>
+                              <gml:pos>3.516 45.312</gml:pos>
+                              <gml:pos>3.516 -3.475</gml:pos>
+                              <gml:pos>41.043 -3.475</gml:pos>
+                              <gml:pos>latitudeSW longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE longitudeNE</gml:pos>
+                              <gml:pos>latitudeNE longitudeSW</gml:pos>
+                              <gml:pos>latitudeSW longitudeSW</gml:pos>
                         </gml:SimpleRectangle>
                         </geo>
                      </egXML>
