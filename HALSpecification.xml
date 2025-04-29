@@ -2620,85 +2620,36 @@
                   </exemplum>
                </elementSpec>
                
-               <elementSpec ident="Rectangle" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
-                  <content>
-                     <sequence preserveOrder="false">
-                        <elementRef key="exterior" minOccurs="1" maxOccurs="unbounded"/>
-                     </sequence>
-                  </content>
-                  <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.2">
-                        <geo>
-                           <gml:Rectangle>
-                              <gml:exterior>
-                                 <gml:LinearRing> 
-                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
-                                 </gml:LinearRing>
-                              </gml:exterior>
-                           </gml:Rectangle>
-                        </geo>
-                     </egXML>
-                  </exemplum>
-               </elementSpec>
-               
-               <elementSpec ident="exterior" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
-                  <content>
-                     <sequence preserveOrder="false">
-                        <elementRef key="LinearRing" minOccurs="1" maxOccurs="unbounded"/>
-                     </sequence>
-                  </content>
-                  <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.2">
-                        <geo>
-                           <gml:Rectangle>
-                              <gml:exterior>
-                                 <gml:LinearRing> 
-                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
-                                 </gml:LinearRing>
-                              </gml:exterior>
-                           </gml:Rectangle>
-                        </geo>
-                     </egXML>
-                  </exemplum>
-               </elementSpec>
-               
-               <elementSpec ident="LinearRing" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
+               <elementSpec ident="SimpleRectangle" ns="http://www.opengis.net/gml/3.3" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
                         <elementRef key="posList" minOccurs="1" maxOccurs="unbounded"/>
                      </sequence>
                   </content>
                   <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.2">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
                         <geo>
-                           <gml:Rectangle>
-                              <gml:exterior>
-                                 <gml:LinearRing>
+                           <gml:SimpleRectangle>
+                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
                                     <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
-                                 </gml:LinearRing>
-                              </gml:exterior>
-                           </gml:Rectangle>
+                           </gml:SimpleRectangle>
                         </geo>
                      </egXML>
                   </exemplum>
                </elementSpec>
-               
-               <elementSpec ident="posList" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
+               <elementSpec ident="posList" ns="http://www.opengis.net/gml/3.3" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
                         <textNode/>
                      </sequence>
                   </content>
                   <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.2">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
                         <geo>
-                           <gml:Rectangle>
-                              <gml:exterior>
-                                 <gml:LinearRing>
-                                    <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
-                                 </gml:LinearRing>
-                              </gml:exterior>
-                           </gml:Rectangle>
+                           <gml:SimpleRectangle>
+                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
+                              <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
+                           </gml:SimpleRectangle>
                         </geo>
                      </egXML>
                   </exemplum>
@@ -2715,13 +2666,18 @@
                   </classes>
                   <content>
                      <sequence preserveOrder="false">
-                        <elementRef key="Rectangle" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="SimpleRectangle" minOccurs="0" maxOccurs="unbounded"/>
                         <textNode/>
                      </sequence>
                   </content>
                   <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <geo><gml_Rectangle></gml_Rectangle></geo>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
+                        <geo>                           
+                           <gml:SimpleRectangle>
+                              <gml:posList>latitudeSW,longitudeNE latitudeNE,longitudeNE latitudeNE,longitudeSW latitudeSW,longitudeSW latitudeSW,longitudeNE</gml:posList>
+                              <gml:posList> 41.043,45.312  3.516,45.312 3.516,-3.475  41.043,-3.475  41.043,45.312E</gml:posList>
+                        </gml:SimpleRectangle>
+                        </geo>
                      </egXML>
                   </exemplum>
                </elementSpec>
@@ -3004,13 +2960,13 @@
                            <valItem ident="halOldTypology"/>
                            <valItem ident="halTreeTypology"/>
                            <valItem ident="dl.acm.org/ccs"/>
-                           <valItem ident="https://hal.science/metadata/afssa_thematique"></valItem>
-                           <valItem ident="https://hal.science/metadata/baseMap"></valItem>
-                           <valItem ident="https://hal.science/metadata/bioemco_team"></valItem>
-                           <valItem ident="https://hal.science/metadata/campusaar_classaar"></valItem>
-                           <valItem ident="https://hal.science/metadata/campusaar_context"></valItem>
-                           <valItem ident="https://hal.science/metadata/campusaar_genre"></valItem>
-                           <valItem ident="https://hal.science/metadata/historicalPeriod"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/afssa_thematique"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/baseMap"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/bioemco_team"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_classaar"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_context"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_genre"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/historicalPeriod"></valItem>
                         </valList>
                      </attDef>
                   </attList>

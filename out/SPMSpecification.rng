@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-03-18T13:37:11Z. . 
+Schema generated from ODD source 2025-04-29T07:13:27Z. . 
 TEI Edition:  
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -90,7 +90,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e30555-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e30492-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -160,7 +160,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e32114-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e32051-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -394,9 +394,6 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
             </list>
          </attribute>
       </optional>
-   </define>
-   <define name="att.docStatus.attributes">
-      <ref name="att.docStatus.attribute.status"/>
    </define>
    <define name="att.docStatus.attribute.status">
       <optional>
@@ -3117,32 +3114,15 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
    </define>
    <define name="edition">
       <element name="edition">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) Contient chaque version du document déposé sur HAL, la version est noté dans l'attribut @n et la plus ancienne a pour valeur 1 et la version actuelle est précisé actuellement dans l'attribut @type et avec pour valeur current. [2.2.2. The Edition Statement]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <interleave>
             <zeroOrMore>
                <ref name="date"/>
             </zeroOrMore>
-            <zeroOrMore>
+            <oneOrMore>
                <ref name="ref"/>
-            </zeroOrMore>
+            </oneOrMore>
          </interleave>
-         <ref name="att.docStatus.attributes"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cet élément sera conservé jusqu'au XXXX-XX-XX pour être remplacé par status</a:documentation>
-               <choice>
-                  <value>current</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Valeur utilisé pour spécifier la version utilisé actuellement</a:documentation>
-               </choice>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="n">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
-               <data type="string"/>
-            </attribute>
-         </optional>
-         <empty/>
       </element>
    </define>
    <define name="publicationStmt">
@@ -3253,15 +3233,13 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <element name="licence">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <text/>
-         <optional>
-            <attribute name="target">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence</a:documentation>
-               <choice>
-                  <value>https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               </choice>
-            </attribute>
-         </optional>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence</a:documentation>
+            <choice>
+               <value>https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -3514,19 +3492,19 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>dl.acm.org/ccs</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/afssa_thematique</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/afssa_thematique</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/baseMap</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/baseMap</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/bioemco_team</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/bioemco_team</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_classaar</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_classaar</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_context</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_context</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_genre</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_genre</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/historicalPeriod</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/historicalPeriod</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>

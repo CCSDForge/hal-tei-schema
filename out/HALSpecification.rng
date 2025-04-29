@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-03-18T13:32:26Z. .
+Schema generated from ODD source 2025-04-07T08:28:08Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -3724,19 +3724,19 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>dl.acm.org/ccs</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/afssa_thematique</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/afssa_thematique</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/baseMap</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/baseMap</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/bioemco_team</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/bioemco_team</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_classaar</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_classaar</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_context</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_context</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/campusaar_genre</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/campusaar_genre</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>https://hal.science/metadata/historicalPeriod</value>
+               <value>https://namespace.ccsd.cnrs.fr/hal/metadata/historicalPeriod</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
