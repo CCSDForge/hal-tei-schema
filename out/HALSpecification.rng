@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-04-07T08:28:08Z. .
+Schema generated from ODD source 2025-04-30T06:45:07Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -100,7 +100,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e34974-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e35002-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -149,7 +149,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36281-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d10e36309-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -4292,7 +4292,7 @@ Feature Value]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]</a:documentation>
          <interleave>
             <zeroOrMore>
-               <ref name="Rectangle"/>
+               <ref name="SimpleRectangle"/>
             </zeroOrMore>
             <text/>
          </interleave>
@@ -6819,38 +6819,21 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <text/>
       </element>
    </define>
-   <define name="Rectangle">
-      <element name="Rectangle" ns="http://www.opengis.net/gml/3.2">
+   <define name="SimpleRectangle">
+      <element name="SimpleRectangle" ns="http://www.opengis.net/gml/3.3/ce">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <interleave>
-            <oneOrMore>
-               <ref name="exterior"/>
-            </oneOrMore>
+            <group>
+               <ref name="pos"/>
+               <ref name="pos"/>
+               <ref name="pos"/>
+               <ref name="pos"/>
+            </group>
          </interleave>
       </element>
    </define>
-   <define name="exterior">
-      <element name="exterior" ns="http://www.opengis.net/gml/3.2">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <interleave>
-            <oneOrMore>
-               <ref name="LinearRing"/>
-            </oneOrMore>
-         </interleave>
-      </element>
-   </define>
-   <define name="LinearRing">
-      <element name="LinearRing" ns="http://www.opengis.net/gml/3.2">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-         <interleave>
-            <oneOrMore>
-               <ref name="posList"/>
-            </oneOrMore>
-         </interleave>
-      </element>
-   </define>
-   <define name="posList">
-      <element name="posList" ns="http://www.opengis.net/gml/3.2">
+   <define name="pos">
+      <element name="pos" ns="http://www.opengis.net/gml/3.2">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
          <interleave>
             <text/>
