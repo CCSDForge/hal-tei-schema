@@ -2643,6 +2643,7 @@
                      </egXML>
                   </exemplum>
                </elementSpec>
+               
                <elementSpec ident="pos" ns="http://www.opengis.net/gml/3.2" module="measureLike" mode="add">
                   <content>
                      <sequence preserveOrder="false">
@@ -2650,18 +2651,18 @@
                      </sequence>
                   </content>
                   <exemplum>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gml="http://www.opengis.net/gml/3.3">
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xmlns:gmlce="http://www.opengis.net/gml/3.3/ce" xmlns:gml="http://www.opengis.net/gml/3.2">
                         <geo>
-                           <gml:SimpleRectangle>
+                           <gmlce:SimpleRectangle>
                               <gml:pos>41.043 45.312</gml:pos>
                               <gml:pos>3.516 45.312</gml:pos>
                               <gml:pos>3.516 -3.475</gml:pos>
                               <gml:pos>41.043 -3.475</gml:pos>
+                              <gml:pos>latitudeSW longitudeSW</gml:pos>
                               <gml:pos>latitudeSW longitudeNE</gml:pos>
                               <gml:pos>latitudeNE longitudeNE</gml:pos>
                               <gml:pos>latitudeNE longitudeSW</gml:pos>
-                              <gml:pos>latitudeSW longitudeSW</gml:pos>
-                           </gml:SimpleRectangle>
+                           </gmlce:SimpleRectangle>
                         </geo>
                      </egXML>
                   </exemplum>
@@ -2977,7 +2978,9 @@
                            </valItem>
                            <valItem ident="halOldTypology"/>
                            <valItem ident="halTreeTypology"/>
-                           <valItem ident="dl.acm.org/ccs"/>
+                           <valItem ident="https://dl.acm.org/ccs"/>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/acm"></valItem>
+                           <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/acm2012"></valItem>
                            <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/afssa_thematique"></valItem>
                            <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/baseMap"></valItem>
                            <valItem ident="https://namespace.ccsd.cnrs.fr/hal/metadata/bioemco_team"></valItem>
