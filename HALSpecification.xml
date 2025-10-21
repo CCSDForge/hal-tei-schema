@@ -1290,7 +1290,7 @@
                      </attDef>
                       -->
                      <!-- CF: Reprendre la liste -->
-                     <attDef ident="type" mode="change" usage="req">
+                     <attDef ident="type" mode="change" usage="opt">
                         <valList mode="change" type="open">
                            <valItem ident="file">
                               <desc>Document donc fichier où l'on ne peut modifier le contenu comme un pdf ou encore un jpg</desc>
@@ -1358,6 +1358,12 @@
                      </attDef>
                      <attDef ident="target" mode="change" usage="opt">
                         <desc>Nom du fichier concerné</desc>
+                     </attDef>
+                     <attDef ident="id" mode="change" usage="opt">
+                        <desc>Identifiant du fichier concerné</desc>
+                     </attDef>
+                     <attDef ident="corresp" mode="change" usage="opt">
+                        <desc>Identifiant du fichier visé par la licence, format #id</desc>
                      </attDef>
                      <attDef ident="targetLang" mode="delete"/>
                      <attDef ident="evaluate" mode="delete"/>
@@ -1495,7 +1501,7 @@
                      <memberOf key="att.global" mode="delete"/>
                   </classes>
                   <content>
-                     <elementRef key="licence" minOccurs="0" maxOccurs="unbounded"/>
+                     <elementRef key="licence" maxOccurs="unbounded"/>
                   </content>
                   <attList>
                      <attDef ident="status" mode="change"/>
@@ -1517,6 +1523,8 @@
                   </classes>
                   <content>
                      <textNode/>
+                     <!-- We keep minOccurs at 0 for rectrocompatibility purpose, in the futur all file should have a licence associated -->
+                     <elementRef key="ref" minOccurs="0" maxOccurs="unbounded"/>
                   </content>
                   <attList>
                      <attDef ident="target" mode="replace" usage="rec">
