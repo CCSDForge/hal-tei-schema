@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hal="http://hal.archives-ouvertes.fr/" xmlns:gml="http://www.opengis.net/gml/3.3/" xmlns:gmlce="http://www.opengis.net/gml/3.3/ce" version="1.1" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 http://api.archives-ouvertes.fr/documents/aofr-sword.xsd">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>HAL TEI export of hal-05324585</title>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>CCSD</distributor>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+        </availability>
+        <date when="2025-10-22T03:19:21+02:00"/>
+      </publicationStmt>
+      <sourceDesc>
+        <p part="N">HAL API Platform</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listBibl>
+        <biblFull>
+          <titleStmt>
+            <title xml:lang="en">The influence of batching and of the method of introduction of super-plasticizers on the durability of optimum workability of high-performance concretes with and without silica fume</title>
+            <title xml:lang="fr">Influence du dosage et du mode d'introduction des superplastifiants sur le maintien de la maniabilité optimale des bétons à hautes performances avec et sans fumées de silices</title>
+            <author role="aut">
+              <persName>
+                <forename type="first">Anne Marie</forename>
+                <surname>Paillere</surname>
+              </persName>
+              <idno type="halauthorid">3841343-0</idno>
+              <affiliation ref="#struct-13621"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Jean Joseph</forename>
+                <surname>Serrano</surname>
+              </persName>
+              <idno type="halauthorid">3841344-0</idno>
+              <affiliation ref="#struct-13621"/>
+            </author>
+            <author role="aut">
+              <persName>
+                <forename type="first">Gilbert</forename>
+                <surname>Grimaldi</surname>
+              </persName>
+              <idno type="halauthorid">3679155-0</idno>
+              <affiliation ref="#struct-58607"/>
+            </author>
+            <editor role="depositor">
+              <persName>
+                <forename>Ifsttar</forename>
+                <surname>Cadic</surname>
+              </persName>
+              <email type="md5">ac6d72b766ba563125152d1789e6a340</email>
+              <email type="domain">ifsttar.fr</email>
+            </editor>
+          </titleStmt>
+          <editionStmt>
+            <edition n="v1" type="current">
+              <date type="whenSubmitted">2025-10-21 14:33:28</date>
+              <date type="whenWritten">1990-01-01</date>
+              <date type="whenModified">2025-10-22 03:17:51</date>
+              <date type="whenReleased">2025-10-21 15:47:59</date>
+              <date type="whenProduced">1990-01-01</date>
+              <date type="whenEndEmbargoed">2025-10-21</date>
+              <ref type="file" target="https://hal.science/hal-05324585v1/document">
+                <date notBefore="2025-10-21"/>
+              </ref>
+              <ref type="file" subtype="greenPublisher" n="1" target="https://hal.science/hal-05324585v1/file/AEP000002024.pdf">
+                <date notBefore="2025-10-21"/>
+              </ref>
+            </edition>
+            <respStmt>
+              <resp>contributor</resp>
+              <name key="128222">
+                <persName>
+                  <forename>Ifsttar</forename>
+                  <surname>Cadic</surname>
+                </persName>
+                <email type="md5">ac6d72b766ba563125152d1789e6a340</email>
+                <email type="domain">ifsttar.fr</email>
+              </name>
+            </respStmt>
+          </editionStmt>
+          <publicationStmt>
+            <distributor>CCSD</distributor>
+            <idno type="halId">hal-05324585</idno>
+            <idno type="halUri">https://hal.science/hal-05324585</idno>
+            <idno type="halBibtex">paillere:hal-05324585</idno>
+            <idno type="halRefHtml">&lt;i&gt;BLPC - Bulletin des Laboratoires des Ponts et Chaussées&lt;/i&gt;, 1990, 170, pp 37-45</idno>
+            <idno type="halRef">BLPC - Bulletin des Laboratoires des Ponts et Chaussées, 1990, 170, pp 37-45</idno>
+            <availability status="restricted">
+              <licence target="http://creativecommons.org/licenses/by-nc-nd/">Attribution - NonCommercial - NoDerivatives</licence>
+            </availability>
+          </publicationStmt>
+          <seriesStmt>
+            <idno type="stamp" n="IFSTTAR">Ifsttar</idno>
+            <idno type="stamp" n="IFSTTAR-UNIVEIFFEL">Institut Français des Sciences et Technologies des Transports, de l'Aménagement et des Réseaux</idno>
+          </seriesStmt>
+          <notesStmt>
+            <note type="audience" n="1">Not set</note>
+            <note type="invited" n="0">No</note>
+            <note type="popular" n="0">No</note>
+            <note type="peer" n="1">Yes</note>
+          </notesStmt>
+          <sourceDesc>
+            <biblStruct>
+              <analytic>
+                <title xml:lang="en">The influence of batching and of the method of introduction of super-plasticizers on the durability of optimum workability of high-performance concretes with and without silica fume</title>
+                <title xml:lang="fr">Influence du dosage et du mode d'introduction des superplastifiants sur le maintien de la maniabilité optimale des bétons à hautes performances avec et sans fumées de silices</title>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Anne Marie</forename>
+                    <surname>Paillere</surname>
+                  </persName>
+                  <idno type="halauthorid">3841343-0</idno>
+                  <affiliation ref="#struct-13621"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Jean Joseph</forename>
+                    <surname>Serrano</surname>
+                  </persName>
+                  <idno type="halauthorid">3841344-0</idno>
+                  <affiliation ref="#struct-13621"/>
+                </author>
+                <author role="aut">
+                  <persName>
+                    <forename type="first">Gilbert</forename>
+                    <surname>Grimaldi</surname>
+                  </persName>
+                  <idno type="halauthorid">3679155-0</idno>
+                  <affiliation ref="#struct-58607"/>
+                </author>
+              </analytic>
+              <monogr>
+                <idno type="localRef">AEP000002024</idno>
+                <idno type="halJournalId" status="INCOMING">1392878</idno>
+                <title level="j">BLPC - Bulletin des Laboratoires des Ponts et Chaussées</title>
+                <imprint>
+                  <biblScope unit="issue">170</biblScope>
+                  <biblScope unit="pp">pp 37-45</biblScope>
+                  <date type="datePub">1990-01-01</date>
+                </imprint>
+              </monogr>
+            </biblStruct>
+          </sourceDesc>
+          <profileDesc>
+            <langUsage>
+              <language ident="fr">French</language>
+            </langUsage>
+            <textClass>
+              <keywords scheme="author">
+                <term xml:lang="fr">COMPOSITION DU MELANGE</term>
+                <term xml:lang="fr">ADSORPTION</term>
+                <term xml:lang="fr">SUPERPLASTIFIANT</term>
+                <term xml:lang="fr">SILICIUM</term>
+                <term xml:lang="fr">HAUTE RESISTANCE</term>
+                <term xml:lang="fr">BETON</term>
+              </keywords>
+              <classCode scheme="halDomain" n="spi.mat">Engineering Sciences [physics]/Materials</classCode>
+              <classCode scheme="halTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halOldTypology" n="ART">Journal articles</classCode>
+              <classCode scheme="halTreeTypology" n="ART">Journal articles</classCode>
+            </textClass>
+            <abstract xml:lang="en">
+              <p>On the basis of well-defined materials, cements and aggregates, the production of high-performance concretes, with or without silica fume, involves formulations comprising a minimum water content. This can be achieved by using admixtures with a very high water-reducing capacity such as super-plasticizers incorporating formaldehyde melamine resin and naphtalene sulphonates. But the durability of the initial high workability (settlement greater than 20 cm) is generally very limited. It has been observed that when the batching conforms to French regulations (between limits of 0.2% and 0.8% of dry extract), the maximum durability of workability of concretes with a low water/cement ratio is obtained by the fractioned introduction of the admixture, i.e. part of it in the mixing water and another part at the completion of mixing or before spreading the concrete. With higher batching it is observed, depending on the nature of the super-plasticizers and the cement, that there is a bracket within which workability increases with time, and then after 60 or sometimes 135 minutes reverts to its initial value. Beyond this bracket, batching once again leads to rapid stiffening of the concrete. The existence has been revealed of three batching brackets influencing the durability of workability of the concrete. The thorough study of this phenomenon provides an initial approach based on the adsorption or the saturation batching of the admixture.</p>
+            </abstract>
+            <abstract xml:lang="fr">
+              <p>A partir de matériaux, ciments et granulats, bien définis, l'obtention des bétons à hautes performances, avec ou sans fumées de silice, passe par des formulations à teneur en eau minimale. Cela peut être obtenu en utilisant des adjuvants à pouvoir réducteur d'eau très élevé tels que les superplastifiants à base de résine mélamine formaldehyde et naphtalène sulfonates. Cependant, le maintien dans le temps des maniabilités élevées initiales (affaissement &amp;gt; à 20 cm) est généralement très limité. Il est apparu ainsi que, lorsque le dosage est conforme à la réglementation française (à l'intérieur d'une plage comprise entre 0,2 et 0,8 % d'extrait sec), le maintien maximal de la maniabilité dans les bétons à faible rapport eau/ciment est obtenu grâce à l'introduction fractionnée de l'adjuvant, c'est-à-dire une partie dans l'eau de gâchage et une autre partie à la fin du malaxage ou avant la mise en oeuvre des bétons. Dès que l'on aborde des dosages supérieurs, on constate, selon la nature des superplastifiants et du ciment, qu'il existe une plage de valeurs à l'intérieur de laquelle la maniabilité augmente avec le temps pour redevenir après 60 et parfois 135 min égale à la maniabilité initiale. Au-delà de cette plage, les dosages conduisent de nouveau à des raidissements rapides des bétons. Il a été ainsi mis en évidence l'existence de trois plages de dosages influençant le maintien de la maniabilité du béton. L'étude approfondie de ce phénomène donne une première approche basée sur l'adsorption ou le dosage saturant de l'adjuvant.</p>
+            </abstract>
+          </profileDesc>
+        </biblFull>
+      </listBibl>
+    </body>
+    <back>
+      <listOrg type="structures">
+        <org type="institution" xml:id="struct-13621" status="OLD">
+          <orgName>Laboratoire Central des Ponts et Chaussées</orgName>
+          <orgName type="acronym">LCPC</orgName>
+          <desc>
+            <address>
+              <addrLine>58 boulevard Lefebvre 75732 PARIS Cedex 15</addrLine>
+              <country key="FR"/>
+            </address>
+            <ref type="url">http://www.lcpc.fr/</ref>
+          </desc>
+        </org>
+        <org type="laboratory" xml:id="struct-58607" status="VALID">
+          <orgName>Laboratoire Régional des Ponts et Chaussées de l'Est Parisien Melun</orgName>
+          <orgName type="acronym">LRPC Melun</orgName>
+          <desc>
+            <address>
+              <addrLine>319, avenue Georges Clémenceau BP 505 77015 Melun Cedex</addrLine>
+              <country key="FR"/>
+            </address>
+          </desc>
+          <listRelation>
+            <relation active="#struct-313794" type="direct"/>
+          </listRelation>
+        </org>
+        <org type="institution" xml:id="struct-313794" status="INCOMING">
+          <orgName>DREIF</orgName>
+          <desc>
+            <address>
+              <country key="FR"/>
+            </address>
+          </desc>
+        </org>
+      </listOrg>
+    </back>
+  </text>
+</TEI>
