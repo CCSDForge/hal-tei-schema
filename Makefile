@@ -1,46 +1,87 @@
 # Définir les variables
-SAXON_JAR = SaxonHE11-6J/saxon-he-11.6.jar  # Changez selon votre version de Saxon
+
+DOCKERIMAGE=atomgraph/saxon
+
+XML_CATALOG=catalog.xml
+
 XSL_ODD2ODD = Stylesheets/odds/odd2odd.xsl
-XSL_FILE2_INTERMEDIAIRE1= Stylesheets/odds/odd2lite.xsl
-XSL_FILE2_INTERMEDIAIRE2= Stylesheets/html/html.xsl
-XSL_FILE3_INTERMEDIAIRE= Stylesheets/profiles/default/rng/to.xsl
-XML_INPUT1= HALSpecification.xml
-XML_INPUT2 = SPMSpecification.xml
+XSL_ODDLITE= Stylesheets/odds/odd2lite.xsl
+# XSL_TOHTML= Stylesheets/html/html.xsl
+XSL_TOHTML= Stylesheets/odds/odd2html.xsl
+XSL_ODD_TO_RELAXNG= Stylesheets/profiles/default/rng/to.xsl
+
+# Docker mount point
+MP = /workdir
+
+DOCKER_RUN=docker run --rm -v "$(PWD)":"$(MP)" \
+	$(DOCKERIMAGE) 
+
+HAL_SPEC= HALSpecification.xml
+SPM_SPEC = SPMSpecification.xml
 
 #Variable Intermédiaire
-OUTPUT_FILE2_INTERMEDIAIRE1=SPMSpecificationIntermediaire1.xml
-OUTPUT_FILE2_INTERMEDIAIRE2=SPMSpecificationIntermediaire2.xml
+SPM_COMPILED_SPEC=SPMSpecification_compiled.xml
+SPM_ODD_LITE=SPMSpecification_lite.xml
+
+HAL_ODD_LITE=HALSpecification_lite.xml
 #
-OUTPUT_FILE1 = HALSpecification.compiled.xml
-OUTPUT_FILE2_FINAL = SPMSpecification.html
-OUTPUT_FILE3 = out/SPMSpecification.rng
+HAL_COMPILED_SPEC = HALSpecification.compiled.xml
+HAL_HTML_OUT = HALSpecification.html
+SPM_HTML_OUT = SPMSpecification.html
+SPM_RNG = out/SPMSpecification.rng
+
+HAL_RNG = out/HALSpecification.rng
 
 # Cible par défaut
-all: $(OUTPUT_FILE1) $(OUTPUT_FILE2_FINAL) $(OUTPUT_FILE3) clean_intermediates
+all: $(HAL_RNG) $(HAL_HTML_OUT) $(HAL_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) clean_intermediates
 
 # Règle pour transformer le fichier XML en utilisant XSLT
-$(OUTPUT_FILE1): $(XML_INPUT1) $(XSL_ODD2ODD)
-	java -jar $(SAXON_JAR) -s:$(XML_INPUT1) -xsl:$(XSL_ODD2ODD) -o:$(OUTPUT_FILE1)
+$(HAL_COMPILED_SPEC): $(HAL_SPEC) $(XSL_ODD2ODD)
+	@echo Make $(HAL_COMPILED_SPEC)
+	@$(DOCKER_RUN) -s:$(MP)/$(HAL_SPEC) -xsl:$(MP)/$(XSL_ODD2ODD) > $(HAL_COMPILED_SPEC)
 
-$(OUTPUT_FILE2_INTERMEDIAIRE1): $(XML_INPUT2) $(XSL_ODD2ODD)
-	java -jar $(SAXON_JAR) -s:$(XML_INPUT2) -xsl:$(XSL_ODD2ODD) -o:$(OUTPUT_FILE2_INTERMEDIAIRE1)
+$(HAL_RNG): $(HAL_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
+	@echo Make $(HAL_RNG)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $(HAL_RNG)
 
-$(OUTPUT_FILE2_INTERMEDIAIRE2): $(OUTPUT_FILE2_INTERMEDIAIRE1) $(XSL_FILE2_INTERMEDIAIRE1)
-	java -jar $(SAXON_JAR) -s:$(OUTPUT_FILE2_INTERMEDIAIRE1) -xsl:$(XSL_FILE2_INTERMEDIAIRE1) -o:$(OUTPUT_FILE2_INTERMEDIAIRE2)
-	
-$(OUTPUT_FILE2_FINAL): $(OUTPUT_FILE2_INTERMEDIAIRE2) $(XSL_FILE2_INTERMEDIAIRE2)
-	java -jar $(SAXON_JAR) -s:$(OUTPUT_FILE2_INTERMEDIAIRE2) -xsl:$(XSL_FILE2_INTERMEDIAIRE2) -o:$(OUTPUT_FILE2_FINAL)
+$(HAL_ODD_LITE): $(HAL_COMPILED_SPEC) $(XSL_ODDLITE)
+	@echo make $(HAL_ODD_LITE)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $(HAL_ODD_LITE)
 
-$(OUTPUT_FILE3): $(OUTPUT_FILE2_INTERMEDIAIRE1) $(XSL_FILE3_INTERMEDIAIRE)
-	java -jar $(SAXON_JAR) -s:$(OUTPUT_FILE2_INTERMEDIAIRE1) -xsl:$(XSL_FILE3_INTERMEDIAIRE) -o:$(OUTPUT_FILE3)
+$(HAL_HTML_OUT): $(HAL_SPEC) $(XSL_TOHTML) $(HAL_ODD_LITE)
+	@echo Make $(HAL_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_ODD_LITE)" -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $(HAL_HTML_OUT)
+
+
+# SPM
+$(SPM_COMPILED_SPEC): $(HAL_COMPILED_SPEC) $(SPM_SPEC) $(XSL_ODD2ODD)
+	@echo Make $(HAL_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_SPEC)" -xsl:$(MP)/$(XSL_ODD2ODD)  > $(SPM_COMPILED_SPEC)
+
+$(SPM_ODD_LITE): $(SPM_COMPILED_SPEC) $(XSL_ODDLITE)
+	@echo Make $(SPM_ODD_LITE)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $(SPM_ODD_LITE)
+
+$(SPM_HTML_OUT): $(SPM_ODD_LITE) $(XSL_TOHTML)
+	@echo Make $(SPM_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_ODD_LITE)" -xsl:$(MP)/$(XSL_TOHTML) > $(SPM_HTML_OUT)
+
+$(SPM_RNG): $(SPM_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
+	@echo Make $(SPM_RNG)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $(SPM_RNG)
 
 # Nettoyer les fichiers intermédiaires
 clean_intermediates:
-	rm -f $(OUTPUT_FILE2_INTERMEDIAIRE1) $(OUTPUT_FILE2_INTERMEDIAIRE2)
+	rm -f $(SPM_COMPILED_SPEC) $(SPM_ODD_LITE)
 
 # Nettoyer les fichiers générés
 clean:
-	rm -f $(OUTPUT_FILE1) $(FINAL_OUTPUT)
+	rm -f $(HAL_COMPILED_SPEC) $(FINAL_OUTPUT) $(HAL_HTML_OUT) $(SPM_HTML_OUT) $(SPM_RNG) $(HAL_RNG) 
 
 # Forcer la re-génération même si les fichiers n'ont pas changé
 .PHONY: all clean
+
+
+TESTFILES=$(wildcard listFichierTEIControleRNG/*)
+test:	
+	for f in $(TESTFILES) ; do echo "Test: $$f"; java -jar jing/bin/jing.jar out/HALSpecification.rng $$f; done
