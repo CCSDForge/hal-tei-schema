@@ -1,1 +1,0 @@
-This folder holds only the results of tests.

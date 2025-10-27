@@ -2978,6 +2978,9 @@
                            <valItem ident="vocinrae">
                               <desc>Thesaurus VOCINRAE</desc>
                            </valItem>
+			   <valItem ident="vocinrae-old">
+                              <desc>Deprecated Thesaurus VOCINRAE</desc>
+                           </valItem>
                            <valItem ident="halDomain">
                               <desc>La liste des domain Hal est disponible sur l'<ref target="http://api.archives-ouvertes.fr/ref/domain/?wt=xml">api</ref></desc>
                            </valItem>

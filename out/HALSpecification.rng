@@ -5,14 +5,11 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-10-22T08:11:52Z. . 
+Schema generated from ODD source 2025-10-27T09:03:08Z. . 
 TEI Edition: P5 Version 4.10.2. Last updated on 4th September 2025, revision bcfa98f42 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.2/ 
   
 --><!--[http://creativecommons.org/licenses/by/3.0/deed.fr] Creative Commons Attribution 3.0 non transposé (CC BY 3.0)-->
-   <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-           prefix="tei"
-           uri="http://www.tei-c.org/ns/1.0"/>
    <define name="macro.paraContent">
       <zeroOrMore>
          <choice>
@@ -102,7 +99,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.2/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e36562-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e36581-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -172,7 +169,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.2/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e38158-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e38177-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -3289,12 +3286,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                <ref name="series"/>
             </zeroOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:biblStruct"/>
-         </sch:pattern>
          <ref name="att.canonical.attributes"/>
          <ref name="att.cmc.attributes"/>
          <empty/>
@@ -3304,12 +3295,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
       <element name="listBibl">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation list) contains a list of bibliographic citations of any kind. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
          <ref name="biblFull"/>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:listBibl"/>
-         </sch:pattern>
          <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
@@ -3594,13 +3579,6 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <oneOrMore>
             <ref name="licence"/>
          </oneOrMore>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:availability"/>
-         </sch:pattern>
          <optional>
             <attribute name="status">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(status) supplies a code identifying the current availability of the text.</a:documentation>
@@ -3672,13 +3650,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="biblScope"/>
             </choice>
          </zeroOrMore>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:seriesStmt"/>
-         </sch:pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.declarable.attributes"/>
          <empty/>
@@ -3709,13 +3680,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
          <zeroOrMore>
             <ref name="recordingStmt"/>
          </zeroOrMore>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:sourceDesc"/>
-         </sch:pattern>
       </element>
    </define>
    <define name="biblFull">
@@ -3750,13 +3714,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="profileDesc"/>
             </group>
          </choice>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:biblFull"/>
-         </sch:pattern>
          <ref name="att.canonical.attributes"/>
          <ref name="att.cmc.attributes"/>
          <empty/>
@@ -3852,13 +3809,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="language"/>
             </optional>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:langUsage"/>
-         </sch:pattern>
       </element>
    </define>
    <define name="language">
@@ -3893,13 +3843,6 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <ref name="classCode"/>
             </zeroOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:textClass"/>
-         </sch:pattern>
       </element>
    </define>
    <define name="keywords">
@@ -3944,6 +3887,8 @@ Suggested values include: 1] http://creativecommons.org/licenses/by/4.0/; 2] htt
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Classification JEL</a:documentation>
                <value>vocinrae</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Thesaurus VOCINRAE</a:documentation>
+               <value>vocinrae-old</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Deprecated Thesaurus VOCINRAE</a:documentation>
                <value>halDomain</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">La liste des domain Hal est disponible sur l'<a xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4552,13 +4497,6 @@ Feature Value]</a:documentation>
                <ref name="org"/>
             </zeroOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:listOrg"/>
-         </sch:pattern>
          <ref name="att.global.attributes"/>
          <ref name="att.cmc.attributes"/>
          <ref name="att.declarable.attributes"/>
@@ -4581,13 +4519,6 @@ Feature Value]</a:documentation>
                <ref name="place"/>
             </zeroOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      xmlns:xi="http://www.w3.org/2001/XInclude"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:listPlace"/>
-         </sch:pattern>
          <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
@@ -4849,12 +4780,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                <ref name="measure"/>
             </zeroOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:recording"/>
-         </sch:pattern>
          <optional>
             <attribute name="dur">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) indicates the length of this element in time.</a:documentation>
@@ -4883,12 +4808,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                <ref name="org"/>
             </oneOrMore>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:particDesc"/>
-         </sch:pattern>
       </element>
    </define>
    <define name="settingDesc">
@@ -4899,12 +4818,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                <ref name="place"/>
             </optional>
          </interleave>
-         <sch:pattern xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      is-a="declarable">
-            <sch:param name="tde" value="tei:settingDesc"/>
-         </sch:pattern>
       </element>
    </define>
    <define name="att.global.linking.attributes">
@@ -7225,4 +7138,34 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          <ref name="TEI"/>
       </choice>
    </start>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="tei"
+           uri="http://www.tei-c.org/ns/1.0"/>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="xs"
+           uri="http://www.w3.org/2001/XMLSchema"/>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="rng"
+           uri="http://relaxng.org/ns/structure/1.0"/>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="rna"
+           uri="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="sch"
+           uri="http://purl.oclc.org/dsdl/schematron"/>
+   <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+           xmlns:rng="http://relaxng.org/ns/structure/1.0"
+           xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+           prefix="sch1x"
+           uri="http://www.ascc.net/xml/schematron"/>
 </grammar>

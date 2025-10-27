@@ -17,7 +17,7 @@
   <text>
     <body>
       <schemaSpec ident="SPM"
-        source="HALSpecification.compiled.xml" start="TEI">
+        source="build/HALSpecification.compiled.xml" start="TEI">
         <moduleRef key="tei"/>
         <moduleRef key="header" except="funder authority notesStmt"/>
         <moduleRef key="core" except="editor respStmt resp meeting biblScope note publisher pubPlace relatedItem"/>

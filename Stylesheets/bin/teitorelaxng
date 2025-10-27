@@ -1,4 +1,0 @@
-#!/bin/sh -e
-
-echo "$0 has been superseded by teitorng (and oddtorng, which is the same as \"teitorng --odd\")"
-exit 13

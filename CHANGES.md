@@ -1,6 +1,9 @@
+# jeudi 23 oct. 2025
 
+## Modification de l'attribute scheme de classCode
+   Ajout de la valeur deprecated vocinrae-old pour compatibilté.
 
-# mercredi 22 oct. 2025 #
+# mercredi 22 oct. 2025
 
 - Modification pour les licences
 - Redesign Makefile et génération ne passant pas par Oxygen

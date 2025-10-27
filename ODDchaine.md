@@ -1,5 +1,7 @@
 # Procédure ODD chainé pour SPM
 
+# Obsolete...
+
 * Transformer HALSpecification.xml avec odd2odd.xsl pour obtenir un fichier ODD compiled. Renommé ce fichier HALSpecification.compiled.xml
 * Contrôler le fichier HALSpecification.compiled.xml car quelques erreurs peuvent apparaitre au moment de la transformation
 * Créer un fichier ODD dans Oxygen 

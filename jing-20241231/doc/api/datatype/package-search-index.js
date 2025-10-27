@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.relaxng.datatype"},{"l":"org.relaxng.datatype.helpers"}];updateSearchResults();
