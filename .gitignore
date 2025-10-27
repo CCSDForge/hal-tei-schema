@@ -3,3 +3,6 @@
 HALSpecification_lite.xml
 HALSpecification.compiled.xml
 *.tidy
+test/dyn
+old
+
