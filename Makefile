@@ -115,16 +115,17 @@ getTests: build/sitemap.xml
 # internal tools
 # Nettoyer les fichiers intermédiaires
 clean_intermediates:
-	rm -f $(SPM_COMPILED_SPEC) $(SPM_ODD_LITE)
+	@rm -f $(SPM_COMPILED_SPEC) $(SPM_ODD_LITE)
 
 # Nettoyer les fichiers générés
 clean:
 	rm -f $(HAL_COMPILED_SPEC) $(HAL_HTML_OUT) $(HAL_RNG)  \
-	      $(SPM_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) 
+	      $(SPM_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG)  \
+	      build/*
 
 
 diff:
-	git diff | grep '^[-+] ' | grep -v "on 2025-"
+	@git diff | grep '^[-+]\s' | grep -v "on 2025-" || echo "No diff"
 
 # Forcer la re-génération même si les fichiers n'ont pas changé
 .PHONY: all clean test
