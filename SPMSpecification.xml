@@ -4,13 +4,16 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Title</title>
+        <title xml:lang="fr">Spécification du schéma d'import-export TEI de www.documentation-administrative.gouv.fr</title>
       </titleStmt>
       <publicationStmt>
-        <p>Publication Information</p>
+        <authority>CCSD</authority>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/3.0/deed.fr">Creative Commons Attribution 3.0 non transposé (CC BY 3.0)</licence>
+        </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Information about the source</p>
+        <p></p>
       </sourceDesc>
     </fileDesc>
   </teiHeader>

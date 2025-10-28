@@ -86,7 +86,7 @@ $(SPM_ODD_LITE): $(SPM_COMPILED_SPEC) $(XSL_ODDLITE)
 
 $(SPM_HTML_OUT): $(SPM_ODD_LITE) $(XSL_TOHTML)
 	@echo Make $(SPM_HTML_OUT)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_ODD_LITE)"      -xsl:$(MP)/$(XSL_TOHTML) > $(SPM_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_ODD_LITE)"      -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $(SPM_HTML_OUT)
 
 $(SPM_RNG): $(SPM_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
 	@echo Make $(SPM_RNG)
@@ -123,6 +123,12 @@ clean:
 	      $(SPM_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG)  \
 	      build/*
 
+dist-clean: 
+	@rm -f $(HAL_COMPILED_SPEC) \
+	      $(SPM_COMPILED_SPEC)  \
+	      build/*
+	@rm -rf Stylesheets
+	@rm -rf test/dyn
 
 diff:
 	@git diff | grep '^[-+]\s' | grep -v "on 2025-" || echo "No diff"

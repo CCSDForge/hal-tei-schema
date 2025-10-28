@@ -4,13 +4,6 @@
       <fileDesc>
          <titleStmt>
             <title xml:lang="fr">Spécification du schéma d'import-export TEI de l'archive ouverte HAL</title>
-            <author>
-               <persName>
-                  <forename>Laurent</forename>
-                  <surname>Romary</surname>
-               </persName>
-               <affiliation>Inria</affiliation>
-            </author>
          </titleStmt>
          <publicationStmt>
             <authority>CCSD</authority>
@@ -19,15 +12,23 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <p></p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
    <text>
-      <body>
-         <div>
-            <head>Description</head>
-            <div>
+     <body>
+       <div>
+	    <head>Remerciements</head>
+	    <p>
+	      Laurent Romary a écrit la version initiale de ce document, merci à lui pour ses conseils précieux concernant la TEI.
+	      Le texte a ensuite été amendé par plusieurs autres contributeurs.
+	    </p>
+       </div>
+        <div>
+	  
+          <head>Description</head>
+          <div>
                <head>Introduction</head>
                <p>La présente spécification décrit un format d'échange de données bibliographiques reposant sur les directives de la TEI (<ref target="http://www.tei-c.org">Text Encoding
                   Initiative</ref>). Ce format est destiné à couvrir les différentes situations où des données biblioghraphiques de référence, accompagnant éventuellement des liens vers les
