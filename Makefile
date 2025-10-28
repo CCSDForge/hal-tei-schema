@@ -6,7 +6,7 @@
 # A partir de la version "lite", on peut generer la documentation.
 # A partir de la version "conpilde", on genere les schema xsd ou relaxNg
 
-
+SHELL=/bin/bash
 DOCKERIMAGE=atomgraph/saxon
 
 XML_CATALOG=catalog.xml
@@ -24,6 +24,8 @@ MP = /workdir
 TESTDIR=test
 STATIC_TEST_DIR = $(TESTDIR)/static
 DYN_TEST_DIR = $(TESTDIR)/dyn
+
+MODULO=1000
 
 DOCKER_RUN=docker run --rm -v "$(PWD)":"$(MP)" \
 	$(DOCKERIMAGE) 
@@ -47,8 +49,9 @@ HAL_RNG = out/HALSpecification.rng
 SPM_XSD = out/SPMSpecification.xsd
 HAL_XSD = out/HALSpecification.xsd
 
+
 # Cible par défaut
-all: Stylesheets $(HAL_RNG) $(HAL_HTML_OUT) $(HAL_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) clean_intermediates
+all: docker Stylesheets $(HAL_RNG) $(HAL_HTML_OUT) $(HAL_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) clean_intermediates
 
 # Règle pour transformer le fichier XML en utilisant XSLT
 $(HAL_COMPILED_SPEC): build $(HAL_SPEC) $(XSL_ODD2ODD)
@@ -93,6 +96,23 @@ $(SPM_XSD): $(SPM_COMPILED_SPEC) $(XSL_ODD_TO_XSD)
 	@echo Make $(SPM_RNG)
 	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_XSD) > $(SPM_XSD)
 
+hal: $(HAL_HTML_OUT) $(HAL_RNG)
+
+spm: $(SPM_HTML_OUT) $(SPM_RNG)
+
+test:	/usr/bin/jing staticTests dynTests
+
+# We use sitemaps to get all documents and retreive on one on MODULO tei
+.ONESHELL:
+getTests: build/sitemap.xml
+	@for t in `zcat build/sitemap*.gz | grep '<loc>' | grep -v /document | sed -e 's/.*<loc>//' -e 's+</loc>++'` ; do 
+		f=`echo $$t | sed -e 's+.*/++'`;
+		rand="$$((RANDOM % $(MODULO) ))"
+		total=$$((total + 1))
+		if expr "$$rand" = 8 >/dev/null; then docDone=$$((docDone + 1)); echo -n -e "Rand=$$rand     $$docDone/$$total   $$f\r"; wget -q -O $(DYN_TEST_DIR)/$$f.xml $$t/tei; else echo -e -n "Rand=$$rand  \r";fi
+	done
+
+# internal tools
 # Nettoyer les fichiers intermédiaires
 clean_intermediates:
 	rm -f $(SPM_COMPILED_SPEC) $(SPM_ODD_LITE)
@@ -105,6 +125,10 @@ clean:
 # Forcer la re-génération même si les fichiers n'ont pas changé
 .PHONY: all clean test
 
+docker:
+	@docker ps 2>/dev/null >/dev/null ||  { echo "You need to install 'docker'";exit 1; }
+
+
 /usr/bin/jing:
 	echo "You need to install 'jing' (apt install jng) to make tests"
 	exit 1
@@ -113,31 +137,48 @@ Stylesheets:
 	git clone https://github.com/TEIC/Stylesheets.git
 	cd Stylesheets;git checkout release-$(STYLESHEETS_VERSION)
 
-STATIC_TESTFILES=$(wildcard $$STATIC_TEST_DIR/*.xml)
-DYN_TESTFILES=$(wildcard $$DYN_TEST_DIR/*.xml)
-
-test:	/usr/bin/jing staticTests dynTests
-
-
+STATIC_TESTFILES=$(wildcard $(STATIC_TEST_DIR)/*.xml)
 staticTests:
-	@for f in $(TESTFILES) ; do echo -n  "\rTest: $$f      "; jing out/HALSpecification.rng $$f || echo ; done
+	@echo "Do static tests..."
+	@for f in $(STATIC_TESTFILES) ; do echo -n -e "\r$$f           "; jing out/HALSpecification.rng $$f; done
+	@echo
+	@echo Done.
 
+$(DYN_TEST_DIR):
+	@mkdir $(DYN_TEST_DIR)
 
+.ONESHELL:
 dynTests:
-	@for f in $(TESTFILES) ; do echo -n  "\rTest: $$f      "; jing out/HALSpecification.rng $$f || echo ; done
-
+	@echo "Do dynamic tests..."
+	tested=0
+	find $(DYN_TEST_DIR) -name '*.xml' -print | while read -r file; do
+	     tested=$$(($$tested + 1))
+	     if ! output=$$(jing out/HALSpecification.rng "$$file" 2>&1); then
+	        echo "$$file: $$output"
+		   nbErrors=$$((nbErrors + 1))
+		else
+	     	echo -n -e " $$file\r"
+	     fi
+	done
+	echo
+	echo Done "($$tested tested files - $$nbErrors errors)".
 
 build:
 	@mkdir build
 
-build/sitemap:
-	wget -O build/sitemap https://hal.science/public/sitemap/
+# Retreve all sitemaps of hal.science
+build/sitemap.xml:
+	wget -O build/sitemap.xml https://hal.science/public/sitemap/sitemap.xml
+	for url in `cat build/sitemap.xml | grep '<loc>' |  sed -e 's/.*<loc>//' -e 's+</loc>++'` ; do \
+		cd build; \
+		wget $$url; \
+		cd ..; \
+	done; 
 
-getTests: build/sitemap
-	@for t in `zcat build/sitemap | grep '<loc>' | grep -v /document | sed -e 's/xxx/yyy' -e 's/xxxx/yyy/'` ; do \
-		f=`echo $t | sed -e 's+/tei$++' -e 's+.*/++'`; \
-		wget -O $$DYN_TEST_DIR/$f.xml $t;\
-	done
-
-DYN_TEST_DIR:
-	@mkdir $(DYN_TEST_DIR)
+help:   docker
+	@echo "Make file to construct relaxNG and documentation"
+	@echo "   make           : will make relaxNg schemas and documentation html files"
+	@echo "   make getTests  : will download some TEI files from Hal"
+	@echo "   make test      : will run test on static and previously downloaded tests"
+	@echo "       make staticTests : to just run static tests"
+	@echo "       make dynTests    : to just run dynamic tests"
