@@ -122,6 +122,10 @@ clean:
 	rm -f $(HAL_COMPILED_SPEC) $(HAL_HTML_OUT) $(HAL_RNG)  \
 	      $(SPM_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) 
 
+
+diff:
+	git diff | grep '^[-+] ' | grep -v "on 2025-"
+
 # Forcer la re-génération même si les fichiers n'ont pas changé
 .PHONY: all clean test
 
@@ -150,18 +154,20 @@ $(DYN_TEST_DIR):
 .ONESHELL:
 dynTests:
 	@echo "Do dynamic tests..."
-	tested=0
-	find $(DYN_TEST_DIR) -name '*.xml' -print | while read -r file; do
-	     tested=$$(($$tested + 1))
+	find $(DYN_TEST_DIR) -name '*.xml' -print | {
+	   tested=0
+	   nbErrors=0
+	   while read -r file; do
+	     tested=$$((tested + 1))
 	     if ! output=$$(jing out/HALSpecification.rng "$$file" 2>&1); then
-	        echo "$$file: $$output"
-		   nbErrors=$$((nbErrors + 1))
-		else
-	     	echo -n -e " $$file\r"
+	        echo "$$file:   $$output"
+	     else
+	        printf " %s %s\r" "$$file" "tested=$$tested"
 	     fi
-	done
-	echo
-	echo Done "($$tested tested files - $$nbErrors errors)".
+	  done
+	  echo
+	  echo Done "($$tested tested files - $$nbErrors errors)".
+	}
 
 build:
 	@mkdir build
