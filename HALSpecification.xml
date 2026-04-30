@@ -1360,7 +1360,7 @@
                      <attDef ident="target" mode="change" usage="opt">
                         <desc>Nom du fichier concerné</desc>
                      </attDef>
-                     <attDef ident="id" mode="change" usage="opt">
+                     <attDef ident="id" mode="add" usage="opt">
                         <desc>Identifiant du fichier concerné</desc>
                      </attDef>
                      <attDef ident="corresp" mode="change" usage="opt">
@@ -1531,41 +1531,39 @@
                      <attDef ident="target" mode="replace" usage="rec">
                         <desc>Spécificie la licence</desc>
                         <valList mode="replace" type="semi">
-                           <valItem ident="http://creativecommons.org/licenses/by/4.0/">
-                              <desc></desc>
-                           </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by/">
+			  <!-- ATTENTION: Si modification, modifier aussi dans HAL-SwordSpecification.xml -->
+                           <valItem ident="https://creativecommons.org/licenses/by/4.0/">
                               <desc>Attribution</desc>
                            </valItem>
-                           <valItem ident="http://hal.archives-ouvertes.fr/licences/copyright/">
-                              <desc>Copyright (Tous droits réservés)</desc>
-                           </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by-nc-nd/">
-                              <desc>Attribution-NonCommercial-NoDerivatives</desc>
-                           </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by-nc-sa/">
-                              <desc>Attribution-NonCommercial-ShareAlike </desc>
-                           </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by-nc/">
+                           <valItem ident="https://creativecommons.org/licenses/by-nc/4.0/">
                               <desc>Attribution-NonCommercial</desc>
                            </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by-nd/">
+                           <valItem ident="https://creativecommons.org/licenses/by-nd/4.0/">
                               <desc>Attribution-NoDerivatives</desc>
                            </valItem>
-                           <valItem ident="http://creativecommons.org/publicdomain/zero/1.0/">
-                              <desc>Public Domain</desc>
-                           </valItem>
-                           <valItem ident="http://hal.archives-ouvertes.fr/licences/publicDomain/">
-                              <desc>Public Domain </desc>
-                           </valItem>
-                           <valItem ident="http://creativecommons.org/licenses/by-sa/">
+                           <valItem ident="https://creativecommons.org/licenses/by-sa/">
                               <desc>Attribution-ShareAlike</desc>
                            </valItem>
-                           <valItem ident="http://hal.archives-ouvertes.fr/licences/etalab/">
-                              <desc>Licence Ouverte</desc>
+                           <valItem ident="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                              <desc>Attribution-NonCommercial-NoDerivatives</desc>
                            </valItem>
-                           <valItem ident="http://creativecommons.org/choose/mark/">
-                              <desc>Marque du Domaine Public</desc>
+                           <valItem ident="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                              <desc>Attribution-NonCommercial-ShareAlike </desc>
+                           </valItem>
+                           <valItem ident="https://creativecommons.org/public-domain/pdm/">
+                              <desc>Public Domain </desc>
+                           </valItem>
+                           <valItem ident="https://creativecommons.org/publicdomain/zero/1.0/">
+                              <desc>Public Domain</desc>
+                           </valItem>
+			   <valItem ident="https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf">
+                              <desc>Etalab</desc>
+                           </valItem>
+                           <valItem ident="https://hal.science/licences/copyright/">
+                              <desc>Copyright (Tous droits réservés)</desc>
+                           </valItem>
+			   <valItem ident="https://about.hal.science/hal-authorisation-v1/">
+                              <desc>Autorisation HAL</desc>
                            </valItem>
                            <!-- CF : Ajout possible d'un target=""  en cas de non compatibilité avec l'ajout de Deprecated-->
                         </valList>
@@ -2710,8 +2708,6 @@
                   </exemplum>
                </elementSpec>
                
-
-               
                <elementSpec ident="recordingStmt" mode="change">
                   <classes mode="change">
                      <memberOf key="att.global" mode="delete"/>
@@ -2736,7 +2732,7 @@
                      <memberOf key="att.global" mode="delete"/>
                      <memberOf key="att.declarable" mode="delete"/>
                   </classes>
-                  <content>
+                  <content mode="change">
                      <sequence preserveOrder="false">
                         <!-- CF: non prévu par la doc TEI comme enfant de monogr, logiquement ils doivent être enfant de imprim -->
                         <elementRef key="measure" minOccurs="0" maxOccurs="unbounded"/>
@@ -3104,8 +3100,9 @@
                
                <elementSpec ident="measure" mode="change">
                   <attList>
-                     <attDef ident="quantity" mode="change" usage="opt"/>
-                     <attDef ident="unit" mode="change" usage="opt"/>
+                     <attDef ident="quantity"  mode="change" usage="req"/>
+		     <attDef ident="type"      mode="change" usage="req"/>
+                     <attDef ident="unit"      mode="change" usage="opt"/>
                      <attDef ident="commodity" mode="change" usage="opt"/>
                   </attList>
                </elementSpec> 

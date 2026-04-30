@@ -9,7 +9,7 @@
       <publicationStmt>
         <distributor>CCSD</distributor>
         <availability status="restricted">
-          <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+          <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution - NonCommercial - ShareAlike</licence>
         </availability>
         <date when="2023-07-15T14:40:19+02:00"/>
       </publicationStmt>
@@ -104,7 +104,7 @@
             <idno type="halRefHtml">2008</idno>
             <idno type="halRef">2008</idno>
             <availability status="restricted">
-              <licence target="http://creativecommons.org/licenses/by-nc-sa/">Attribution - NonCommercial - ShareAlike</licence>
+              <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution - NonCommercial - ShareAlike</licence>
             </availability>
           </publicationStmt>
           <seriesStmt>

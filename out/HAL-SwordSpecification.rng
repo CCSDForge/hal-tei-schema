@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-04-30T14:20:45Z. . 
+Schema generated from ODD source 2026-04-30T14:20:34Z. . 
 TEI Edition:  
 TEI Edition Location: https://www.tei-c.org/Vault/P5// 
   
@@ -34,6 +34,18 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
          <choice>
             <text/>
             <ref name="model.limitedPhrase"/>
+            <ref name="model.global"/>
+         </choice>
+      </zeroOrMore>
+   </define>
+   <define name="macro.specialPara">
+      <zeroOrMore>
+         <choice>
+            <text/>
+            <ref name="model.gLike"/>
+            <ref name="model.phrase"/>
+            <ref name="model.inter"/>
+            <ref name="model.divPart"/>
             <ref name="model.global"/>
          </choice>
       </zeroOrMore>
@@ -87,7 +99,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e30876-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e33390-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -157,7 +169,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5//
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e32516-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d9e35030-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -218,7 +230,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
+            id="HAL-SWORD-att.cmc-generatedBy-CMC_generatedBy_within_post-constraint-rule-1">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -322,7 +334,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
+            id="HAL-SWORD-att.datable.w3c-att-datable-w3c-when-constraint-rule-2">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -334,7 +346,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
+            id="HAL-SWORD-att.datable.w3c-att-datable-w3c-from-constraint-rule-3">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -346,7 +358,7 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
+            id="HAL-SWORD-att.datable.w3c-att-datable-w3c-to-constraint-rule-4">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -391,6 +403,9 @@ Suggested values include: 1] human; 2] template; 3] system; 4] bot; 5] unspecifi
             </list>
          </attribute>
       </optional>
+   </define>
+   <define name="att.docStatus.attributes">
+      <ref name="att.docStatus.attribute.status"/>
    </define>
    <define name="att.docStatus.attribute.status">
       <optional>
@@ -582,7 +597,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.global.source-source-only_1_ODD_source-constraint-rule-5">
+            id="HAL-SWORD-att.global.source-source-only_1_ODD_source-constraint-rule-5">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -669,7 +684,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.pointing-targetLang-targetLang-constraint-rule-6">
+            id="HAL-SWORD-att.pointing-targetLang-targetLang-constraint-rule-6">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -816,7 +831,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.typed-subtypeTyped-constraint-rule-7">
+            id="HAL-SWORD-att.typed-subtypeTyped-constraint-rule-7">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -1220,29 +1235,41 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    <define name="model.measureLike">
       <choice>
          <ref name="measure"/>
+         <ref name="geo"/>
       </choice>
    </define>
    <define name="model.measureLike_alternation">
       <choice>
          <ref name="measure"/>
+         <ref name="geo"/>
       </choice>
    </define>
    <define name="model.measureLike_sequence">
       <ref name="measure"/>
+      <ref name="geo"/>
    </define>
    <define name="model.measureLike_sequenceOptional">
       <optional>
          <ref name="measure"/>
+      </optional>
+      <optional>
+         <ref name="geo"/>
       </optional>
    </define>
    <define name="model.measureLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="measure"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="geo"/>
+      </zeroOrMore>
    </define>
    <define name="model.measureLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="measure"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="geo"/>
       </oneOrMore>
    </define>
    <define name="model.egLike">
@@ -1882,22 +1909,32 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </oneOrMore>
    </define>
    <define name="model.noteLike">
-      <notAllowed/>
+      <choice>
+         <ref name="note"/>
+      </choice>
    </define>
    <define name="model.noteLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="note"/>
+      </choice>
    </define>
    <define name="model.noteLike_sequence">
-      <empty/>
+      <ref name="note"/>
    </define>
    <define name="model.noteLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="note"/>
+      </optional>
    </define>
    <define name="model.noteLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="note"/>
+      </zeroOrMore>
    </define>
    <define name="model.noteLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="note"/>
+      </oneOrMore>
    </define>
    <define name="model.lLike">
       <notAllowed/>
@@ -1993,29 +2030,41 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
    <define name="model.placeStateLike">
       <choice>
          <ref name="model.placeNamePart"/>
+         <ref name="location"/>
       </choice>
    </define>
    <define name="model.placeStateLike_alternation">
       <choice>
          <ref name="model.placeNamePart_alternation"/>
+         <ref name="location"/>
       </choice>
    </define>
    <define name="model.placeStateLike_sequence">
       <ref name="model.placeNamePart_sequence"/>
+      <ref name="location"/>
    </define>
    <define name="model.placeStateLike_sequenceOptional">
       <optional>
          <ref name="model.placeNamePart_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="location"/>
       </optional>
    </define>
    <define name="model.placeStateLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="model.placeNamePart_sequenceOptionalRepeatable"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="location"/>
+      </zeroOrMore>
    </define>
    <define name="model.placeStateLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="model.placeNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="location"/>
       </oneOrMore>
    </define>
    <define name="model.descLike">
@@ -2353,7 +2402,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-8">
+            id="HAL-SWORD-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-8">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -2382,7 +2431,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-9">
+                  id="HAL-SWORD-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-9">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2396,7 +2445,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-p-abstractModel-structure-p-in-l-constraint-rule-10">
+                  id="HAL-SWORD-p-abstractModel-structure-p-in-l-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2430,7 +2479,7 @@ Suggested values include: 1] sole; 2] major; 3] minor</a:documentation>
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-desc-deprecationInfo-only-in-deprecated-constraint-rule-11">
+                  id="HAL-SWORD-desc-deprecationInfo-only-in-deprecated-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2745,7 +2794,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-ptr-ptrAtts-constraint-rule-12">
+                  id="HAL-SWORD-ptr-ptrAtts-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2780,7 +2829,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
          </interleave>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-ref-refAtts-constraint-rule-13">
+                  id="HAL-SWORD-ref-refAtts-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -2875,6 +2924,27 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
          <empty/>
       </element>
    </define>
+   <define name="note">
+      <element name="note">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note) contains a note or annotation. [3.9.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.12.2.8. Notes and Statement of Language 10.3.5.4. Notes within Entries]</a:documentation>
+         <ref name="macro.specialPara"/>
+         <ref name="att.cmc.attributes"/>
+         <optional>
+            <attribute name="n">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie le type de fichier déposé en lien avec le document
+Sample values include: 1] commentary; 2] description; 3] audience; 4] invited; 5] popular; 6] peer; 7] proceedings; 8] report; 9] other; 10] image; 11] degree; 12] pastel_thematique; 13] pastel_library; 14] programmingLanguage; 15] platform; 16] developmentStatus; 17] runtimePlatform; 18] version; 19] operatingSystem; 20] archivesic_reference</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
    <define name="media">
       <element name="media">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the location of any form of external media such as an audio or video clip etc. [3.10. Graphics and Other Non-textual Components]</a:documentation>
@@ -2929,7 +2999,19 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
                <ref name="title"/>
             </zeroOrMore>
             <zeroOrMore>
+               <ref name="meeting"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="respStmt"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="editor"/>
+            </zeroOrMore>
+            <zeroOrMore>
                <ref name="imprint"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="authority"/>
             </zeroOrMore>
          </interleave>
       </element>
@@ -2938,6 +3020,9 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
       <element name="series">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series information) contains information about the series in which a book or other bibliographic item has appeared. [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
          <interleave>
+            <zeroOrMore>
+               <ref name="editor"/>
+            </zeroOrMore>
             <zeroOrMore>
                <ref name="title"/>
             </zeroOrMore>
@@ -2977,6 +3062,57 @@ Sample values include: 1] file; 2] src; 3] annex; 4] seeAlso; 5] esrFullText; 6]
                </oneOrMore>
             </list>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="editor">
+      <element name="editor">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a secondary statement of responsibility for a bibliographic item, for example the name of an individual, institution or organization, (or of several such) acting as editor, compiler, translator, etc. [3.12.2.2. Titles, Authors, and Editors]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="persName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="email"/>
+            </zeroOrMore>
+            <text/>
+         </interleave>
+         <optional>
+            <attribute name="role">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>depositor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     </choice>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="respStmt">
+      <element name="respStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="resp"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="name"/>
+            </zeroOrMore>
+         </interleave>
+      </element>
+   </define>
+   <define name="resp">
+      <element name="resp">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]</a:documentation>
+         <ref name="macro.phraseSeq.limited"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
+         <ref name="att.datable.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3028,14 +3164,78 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <empty/>
       </element>
    </define>
+   <define name="meeting">
+      <element name="meeting">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the formalized descriptive title for a meeting or conference, for use in a bibliographic description for an item derived from such a meeting, or as a heading or preamble to publications emanating from it. [3.12.2.2. Titles, Authors, and Editors]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="settlement"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="country"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="date"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="title"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="att.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="imprint">
       <element name="imprint">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups information relating to the publication or distribution of a bibliographic item. [3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
          <interleave>
             <zeroOrMore>
+               <ref name="publisher"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="pubPlace"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="biblScope"/>
+            </zeroOrMore>
+            <zeroOrMore>
                <ref name="date"/>
             </zeroOrMore>
          </interleave>
+      </element>
+   </define>
+   <define name="publisher">
+      <element name="publisher">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publisher) provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.12.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
+         <text/>
+      </element>
+   </define>
+   <define name="biblScope">
+      <element name="biblScope">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(scope of bibliographic reference) defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work. [3.12.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <text/>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>serie</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nom de la série</a:documentation>
+               <value>volume</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Volume concerné</a:documentation>
+               <value>issue</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Numéro</a:documentation>
+               <value>pp</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pagination</a:documentation>
+            </choice>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="pubPlace">
+      <element name="pubPlace">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(publication place) contains the name of the place where a bibliographic item was published. [3.12.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <text/>
+         <ref name="att.naming.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="biblStruct">
@@ -3055,6 +3255,9 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                <ref name="ref"/>
             </zeroOrMore>
             <zeroOrMore>
+               <ref name="relatedItem"/>
+            </zeroOrMore>
+            <zeroOrMore>
                <ref name="series"/>
             </zeroOrMore>
          </interleave>
@@ -3068,6 +3271,48 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation list) contains a list of bibliographic citations of any kind. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
          <ref name="biblFull"/>
          <ref name="att.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="relatedItem">
+      <element name="relatedItem">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains or references some other bibliographic item which is related to the present one in some specified manner, for example as a constituent or alternative version of it. [3.12.2.7. Related Items]</a:documentation>
+         <interleave>
+            <text/>
+         </interleave>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="HAL-SWORD-relatedItem-targetorcontent1-constraint-rule-14">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:math="http://www.w3.org/1998/Math/MathML"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:svg="http://www.w3.org/2000/svg"
+                      xmlns:xi="http://www.w3.org/2001/XInclude"
+                      context="tei:relatedItem">
+               <sch:report test="@target and count( child::* ) &gt; 0">If the @target attribute on <sch:name/> is used, the relatedItem element must be empty</sch:report>
+               <sch:assert test="@target or child::*">A relatedItem element should have either a @target attribute or a child element to indicate the related bibliographic item</sch:assert>
+            </sch:rule>
+         </pattern>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.
+Sample values include: 1] illustrate; 2] isIllustratedBy; 3] isRequiredBy; 4] requires; 5] isPartOf; 6] hasPart; 7] isReferencedBy; 8] references; 9] isFormatOf; 10] hasFormat; 11] conformsTo; 12] isVersionOf; 13] hasVersion; 14] IsOriginalFormOf; 15] Describes; 16] isVariantFormatOf; 17] IsDescribedBy; 18] IsReferencedBy; 19] IsRequiredBy; 20] References; 21] Requires; 22] Cites; 23] IsCitedBy; 24] HasVersion; 25] IsVersionOf; 26] IsIdenticalTo; 27] HasPart; 28] IsPartOf; 29] Reviews; 30] IsReviewedBy; 31] Documents; 32] IsDocumentedBy; 33] IsTranslationOf; 34] HasTranslation</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+         <attribute name="subtype">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subtype) provides a sub-categorization of the element, if needed.
+Sample values include: 1] http://purl.org/coar/resource_type/c_12cc; 2] http://purl.org/coar/resource_type/c_c513; 3] http://purl.org/coar/resource_type/c_ddb1; 4] http://purl.org/coar/resource_type/ACF7-8YT9; 5] http://purl.org/coar/resource_type/c_cb28; 6] http://purl.org/coar/resource_type/FXF3-D3G7; 7] http://purl.org/coar/resource_type/AM6W-6QAW; 8] http://purl.org/coar/resource_type/63NG-B465; 9] http://purl.org/coar/resource_type/A8F1-NPV9; 10] http://purl.org/coar/resource_type/2H0M-X761; 11] http://purl.org/coar/resource_type/H41Y-FW7B; 12] http://purl.org/coar/resource_type/DD58-GFSX; 13] http://purl.org/coar/resource_type/FF4C-28RK; 14] http://purl.org/coar/resource_type/CQMR-7K63; 15] http://purl.org/coar/resource_type/W2XT-7017; 16] http://purl.org/coar/resource_type/NHD0-W6SY; 17] http://purl.org/coar/resource_type/542X-3S04; 18] http://purl.org/coar/resource_type/JBNF-DYAD; 19] http://purl.org/coar/resource_type/BW7T-YM2G; 20] http://purl.org/coar/resource_type/c_c513; 21] http://purl.org/coar/resource_type/c_8a7e; 22] http://purl.org/coar/resource_type/c_12ce; 23] http://purl.org/coar/resource_type/c_ecc8; 24] http://purl.org/coar/resource_type/c_e9a0; 25] http://purl.org/coar/resource_type/c_7ad9; 26] http://purl.org/coar/resource_type/c_e059; 27] http://purl.org/coar/resource_type/c_1843; 28] http://purl.org/coar/resource_type/c_15cd; 29] http://purl.org/coar/resource_type/SB3Y-W4EH; 30] http://purl.org/coar/resource_type/C53B-JCY5; 31] http://purl.org/coar/resource_type/Z907-YMBB; 32] http://purl.org/coar/resource_type/GPQ7-G5VE; 33] http://purl.org/coar/resource_type/MW8G-3CR8; 34] http://purl.org/coar/resource_type/9DKX-KSAF; 35] http://purl.org/coar/resource_type/c_5ce6; 36] http://purl.org/coar/resource_type/c_c950; 37] http://purl.org/coar/resource_type/QH80-2R4E; 38] http://purl.org/coar/resource_type/c_18cc; 39] http://purl.org/coar/resource_type/c_18cd; 40] http://purl.org/coar/resource_type/c_18cf; 41] http://purl.org/coar/resource_type/c_1162; 42] http://purl.org/coar/resource_type/c_86bc; 43] http://purl.org/coar/resource_type/c_6947; 44] http://purl.org/coar/resource_type/c_2f33; 45] http://purl.org/coar/resource_type/c_3248; 46] http://purl.org/coar/resource_type/c_c94f; 47] http://purl.org/coar/resource_type/c_18cp; 48] http://purl.org/coar/resource_type/c_18co; 49] http://purl.org/coar/resource_type/R60J-J5BD; 50] http://purl.org/coar/resource_type/c_f744; 51] http://purl.org/coar/resource_type/c_5794; 52] http://purl.org/coar/resource_type/c_6670; 53] http://purl.org/coar/resource_type/c_0640; 54] http://purl.org/coar/resource_type/c_b239; 55] http://purl.org/coar/resource_type/c_6501; 56] http://purl.org/coar/resource_type/c_7acd; 57] http://purl.org/coar/resource_type/c_beb9; 58] http://purl.org/coar/resource_type/c_2df8fbb1; 59] http://purl.org/coar/resource_type/c_dcae04bc; 60] http://purl.org/coar/resource_type/c_7bab; 61] http://purl.org/coar/resource_type/c_545b; 62] http://purl.org/coar/resource_type/c_8544; 63] http://purl.org/coar/resource_type/c_0857; 64] http://purl.org/coar/resource_type/c_2cd9; 65] http://purl.org/coar/resource_type/c_0040; 66] http://purl.org/coar/resource_type/c_18cw; 67] http://purl.org/coar/resource_type/c_2fe3; 68] http://purl.org/coar/resource_type/c_998f; 69] http://purl.org/coar/resource_type/QX5C-AR31; 70] http://purl.org/coar/resource_type/c_93fc; 71] http://purl.org/coar/resource_type/c_7877; 72] http://purl.org/coar/resource_type/c_ab20; 73] http://purl.org/coar/resource_type/c_18wz; 74] http://purl.org/coar/resource_type/c_186u; 75] http://purl.org/coar/resource_type/c_18op; 76] http://purl.org/coar/resource_type/YZ1N-ZFT9; 77] http://purl.org/coar/resource_type/c_18ws; 78] http://purl.org/coar/resource_type/c_18gh; 79] http://purl.org/coar/resource_type/c_baaf; 80] http://purl.org/coar/resource_type/c_efa0; 81] http://purl.org/coar/resource_type/c_ba08; 82] http://purl.org/coar/resource_type/D97F-VB57; 83] http://purl.org/coar/resource_type/H9BQ-739P; 84] http://purl.org/coar/resource_type/c_71bd; 85] http://purl.org/coar/resource_type/c_46ec; 86] http://purl.org/coar/resource_type/c_7a1f; 87] http://purl.org/coar/resource_type/c_db06; 88] http://purl.org/coar/resource_type/c_bdcc; 89] http://purl.org/coar/resource_type/6NC7-GK9S; 90] http://purl.org/coar/resource_type/c_8042; 91] http://purl.org/coar/resource_type/H6QP-SC1X; 92] http://purl.org/coar/resource_type/c_393c</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
+         <attribute name="target">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to the related bibliographic element by means of an absolute or relative URI reference.</a:documentation>
+            <data type="anyURI">
+               <param name="pattern">\S+</param>
+            </data>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -3101,6 +3346,9 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                <optional>
                   <ref name="seriesStmt"/>
                </optional>
+               <optional>
+                  <ref name="notesStmt"/>
+               </optional>
                <zeroOrMore>
                   <ref name="sourceDesc"/>
                </zeroOrMore>
@@ -3117,6 +3365,36 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <zeroOrMore>
             <ref name="author"/>
          </zeroOrMore>
+         <zeroOrMore>
+            <ref name="editor"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="funder"/>
+         </zeroOrMore>
+      </element>
+   </define>
+   <define name="funder">
+      <element name="funder">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(funding body) specifies the name of an individual, institution, or organization responsible for the funding of a project or text. [2.2.1. The Title Statement]</a:documentation>
+         <ref name="macro.phraseSeq.limited"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Pour #projanr-%%ID, %%ID correspond à l'identifiant du projet de financement de l'ANR. Vous pouvez allez cherchez l'identifiant correspondant sur <a xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                     href="https://aurehal.archives-ouvertes.fr/anrproject/index">AuréHal</a>. Pour ##projeurop-%%ID, %%ID correspond à l'identifiant du projet de financement européen. Vous pouvez allez cherchez l'identifiant correspondant sur <a xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                     href="https://aurehal.archives-ouvertes.fr/europeanproject/index">AuréHal</a>. Pour #localProjeur-%%ID, %%ID correspond à la réfénce de l'institution, laboratoire ou encore équipe de recherche où l'auteur est affilié. Elle doit être répertorié dans l'élément <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;back&gt;</code>.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI">
+                        <param name="pattern">\S+</param>
+                     </data>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <empty/>
       </element>
    </define>
    <define name="editionStmt">
@@ -3125,19 +3403,39 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <oneOrMore>
             <ref name="edition"/>
          </oneOrMore>
+         <zeroOrMore>
+            <ref name="respStmt"/>
+         </zeroOrMore>
       </element>
    </define>
    <define name="edition">
       <element name="edition">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(edition) Contient chaque version du document déposé sur HAL, la version est noté dans l'attribut @n et la plus ancienne a pour valeur 1 et la version actuelle est précisé actuellement dans l'attribut @type et avec pour valeur current. [2.2.2. The Edition Statement]</a:documentation>
          <interleave>
             <zeroOrMore>
                <ref name="date"/>
             </zeroOrMore>
-            <oneOrMore>
+            <zeroOrMore>
                <ref name="ref"/>
-            </oneOrMore>
+            </zeroOrMore>
          </interleave>
+         <ref name="att.docStatus.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cet élément sera conservé jusqu'au XXXX-XX-XX pour être remplacé par status</a:documentation>
+               <choice>
+                  <value>current</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Valeur utilisé pour spécifier la version utilisé actuellement</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="n">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</a:documentation>
+               <data type="string"/>
+            </attribute>
+         </optional>
+         <empty/>
       </element>
    </define>
    <define name="publicationStmt">
@@ -3163,6 +3461,28 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
       <element name="distributor">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(distributor) supplies the name of a person or other agency responsible for the distribution of a text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
+      </element>
+   </define>
+   <define name="authority">
+      <element name="authority">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
+         <text/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>institution</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>school</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>supervisor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>jury</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>supervisorEmail</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <empty/>
       </element>
    </define>
    <define name="idno">
@@ -3248,11 +3568,56 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <element name="licence">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about a licence or other legal agreement applicable to the text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <text/>
+         <zeroOrMore>
+            <ref name="ref"/>
+         </zeroOrMore>
          <attribute name="target">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spécificie la licence</a:documentation>
             <choice>
+               <value>https://creativecommons.org/licenses/by/4.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc/4.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nd/4.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NoDerivatives</a:documentation>
+               <value>https://creativecommons.org/licenses/by-sa/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-ShareAlike</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc-nd/4.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-NoDerivatives</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc-sa/4.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attribution-NonCommercial-ShareAlike </a:documentation>
+               <value>https://creativecommons.org/public-domain/pdm/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain </a:documentation>
+               <value>https://creativecommons.org/publicdomain/zero/1.0/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Public Domain</a:documentation>
                <value>https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Etalab</a:documentation>
+               <value>https://hal.science/licences/copyright/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Copyright (Tous droits réservés)</a:documentation>
+               <value>https://about.hal.science/hal-authorisation-v1/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Autorisation HAL</a:documentation>
+               <value>https://creativecommons.org/choose/mark/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://hal.archives-ouvertes.fr/licences/etalab/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://hal.archives-ouvertes.fr/licences/copyright/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://hal.archives-ouvertes.fr/licences/publicDomain/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nd/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by-sa/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc-nd/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/licenses/by-nc-sa/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
+               <value>https://creativecommons.org/public-domain/pdm/</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Compatibilite: don't use</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -3264,11 +3629,24 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <zeroOrMore>
             <choice>
                <ref name="title"/>
+               <ref name="editor"/>
+               <ref name="respStmt"/>
                <ref name="idno"/>
+               <ref name="biblScope"/>
             </choice>
          </zeroOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.declarable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="notesStmt">
+      <element name="notesStmt">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(notes statement) collects together any notes providing information about a text additional to that recorded in other parts of the bibliographic description. [2.2.6. The Notes Statement 2.2. The File Description]</a:documentation>
+         <zeroOrMore>
+            <ref name="note"/>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3305,6 +3683,9 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
                </optional>
                <optional>
                   <ref name="seriesStmt"/>
+               </optional>
+               <optional>
+                  <ref name="notesStmt"/>
                </optional>
                <zeroOrMore>
                   <ref name="sourceDesc"/>
@@ -3977,6 +4358,16 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <empty/>
       </element>
    </define>
+   <define name="geo">
+      <element name="geo">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [14.3.4.1. Varieties of Location]</a:documentation>
+         <interleave>
+            <text/>
+         </interleave>
+         <ref name="att.cmc.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="listOrg">
       <element name="listOrg">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of organizations) contains a list of elements, each of which provides information about an identifiable organization. [14.2.2. Organizational Names]</a:documentation>
@@ -4023,6 +4414,18 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="att.cmc.attributes"/>
          <ref name="att.sortable.attributes"/>
          <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="location">
+      <element name="location">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(location) defines the location of a place as a set of geographical coordinates, in terms of other named geo-political entities, or as an address. [14.3.4. Places]</a:documentation>
+         <interleave>
+            <zeroOrMore>
+               <ref name="geo"/>
+            </zeroOrMore>
+         </interleave>
+         <ref name="att.cmc.attributes"/>
          <empty/>
       </element>
    </define>
@@ -4115,6 +4518,9 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       <element name="place">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(place) contains data about a geographic location. [14.3.4. Places]</a:documentation>
          <interleave>
+            <zeroOrMore>
+               <ref name="location"/>
+            </zeroOrMore>
             <text/>
          </interleave>
       </element>
@@ -4127,7 +4533,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-ref-or-key-or-name-constraint-rule-14">
+                  id="HAL-SWORD-relation-ref-or-key-or-name-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4139,7 +4545,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-active-mutual-constraint-rule-15">
+                  id="HAL-SWORD-relation-active-mutual-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4151,7 +4557,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-relation-active-passive-constraint-rule-16">
+                  id="HAL-SWORD-relation-active-passive-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4406,7 +4812,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.repeatable-MINandMAXoccurs-constraint-rule-17">
+            id="HAL-SWORD-att.repeatable-MINandMAXoccurs-constraint-rule-18">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4496,7 +4902,7 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.identified-spec-in-module-constraint-rule-19">
+            id="HAL-SWORD-att.identified-spec-in-module-constraint-rule-20">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4522,7 +4928,7 @@ should correspond to an existing module, via a moduleSpec or
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-20">
+            id="HAL-SWORD-att.deprecated-validUntil-deprecation-two-month-warning-constraint-rule-21">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4544,7 +4950,7 @@ should correspond to an existing module, via a moduleSpec or
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="SPM-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-21">
+            id="HAL-SWORD-att.deprecated-validUntil-deprecation-should-be-explained-constraint-rule-22">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:math="http://www.w3.org/1998/Math/MathML"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4851,7 +5257,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-modref-constraint-rule-24">
+                  id="HAL-SWORD-moduleRef-modref-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4874,7 +5280,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-prefix-not-same-prefix-constraint-rule-25">
+                  id="HAL-SWORD-moduleRef-prefix-not-same-prefix-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4888,7 +5294,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-moduleRef-prefix-not-except-and-include-constraint-rule-26">
+                  id="HAL-SWORD-moduleRef-prefix-not-except-and-include-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5040,7 +5446,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-elementSpec-child-constraint-based-on-mode-constraint-rule-27">
+                  id="HAL-SWORD-elementSpec-child-constraint-based-on-mode-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5222,7 +5628,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataSpec-no_elements_in_data_content-constraint-rule-29">
+                  id="HAL-SWORD-dataSpec-no_elements_in_data_content-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5305,7 +5711,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-listRef-TagDocsNestinglistRef-constraint-rule-30">
+                  id="HAL-SWORD-listRef-TagDocsNestinglistRef-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5317,7 +5723,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-listRef-TagDocslistRefChildren-constraint-rule-31">
+                  id="HAL-SWORD-listRef-TagDocslistRefChildren-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5487,7 +5893,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-model-no_dup_default_models-constraint-rule-32">
+                  id="HAL-SWORD-model-no_dup_default_models-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5503,7 +5909,7 @@ Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] X
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-model-no_dup_models-constraint-rule-33">
+                  id="HAL-SWORD-model-no_dup_models-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5631,7 +6037,7 @@ Sample values include: 1] web; 2] print; 3] plain</a:documentation>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-34">
+                  id="HAL-SWORD-modelSequence-no_outputs_nor_predicates_4_my_kids-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5850,7 +6256,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-sequence-sequencechilden-constraint-rule-35">
+                  id="HAL-SWORD-sequence-sequencechilden-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5882,7 +6288,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-alternate-alternatechilden-constraint-rule-36">
+                  id="HAL-SWORD-alternate-alternatechilden-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5914,7 +6320,7 @@ Suggested values include: 1] alternate; 2] default; 3] height; 4] id; 5] label; 
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-37">
+                  id="HAL-SWORD-constraintDecl-one-constraintDecl-per-scheme-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6010,7 +6416,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-empty-based-on-mode-constraint-rule-39">
+                  id="HAL-SWORD-constraintSpec-empty-based-on-mode-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6038,7 +6444,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-sch_no_more-constraint-rule-42">
+                  id="HAL-SWORD-constraintSpec-sch_no_more-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6053,7 +6459,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-isosch-constraint-rule-43">
+                  id="HAL-SWORD-constraintSpec-isosch-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6067,7 +6473,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-context-required-constraint-rule-44">
+                  id="HAL-SWORD-constraintSpec-context-required-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6085,7 +6491,7 @@ Suggested values include: 1] exslt; 2] stx; 3] xslt; 4] xslt2; 5] xslt3; 6] xpat
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-unique-constraintSpec-ident-constraint-rule-45">
+                  id="HAL-SWORD-constraintSpec-unique-constraintSpec-ident-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6131,7 +6537,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-constraintSpec-scheme-usage_based_on_mode-constraint-rule-48">
+                  id="HAL-SWORD-constraintSpec-scheme-usage_based_on_mode-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6157,7 +6563,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attList-no_duplicate_attrs-constraint-rule-49">
+                  id="HAL-SWORD-attList-no_duplicate_attrs-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6238,7 +6644,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
                  uri="http://www.tei-c.org/ns/Examples"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-attDefContents-constraint-rule-50">
+                  id="HAL-SWORD-attDef-attDefContents-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6256,7 +6662,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-noDefault4Required-constraint-rule-51">
+                  id="HAL-SWORD-attDef-noDefault4Required-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6268,7 +6674,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-52">
+                  id="HAL-SWORD-attDef-defaultIsInClosedList-twoOrMore-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6283,7 +6689,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-attDef-defaultIsInClosedList-one-constraint-rule-53">
+                  id="HAL-SWORD-attDef-defaultIsInClosedList-one-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6388,7 +6794,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataRef-restrictDataFacet-constraint-rule-54">
+                  id="HAL-SWORD-dataRef-restrictDataFacet-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6402,7 +6808,7 @@ Suggested values include: 1] schematron (ISO Schematron)</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="SPM-dataRef-restrictAttResctrictionName-constraint-rule-55">
+                  id="HAL-SWORD-dataRef-restrictAttResctrictionName-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:math="http://www.w3.org/1998/Math/MathML"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"

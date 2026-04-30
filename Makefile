@@ -32,6 +32,7 @@ DOCKER_RUN=docker run --rm -v "$(PWD)":"$(MP)" \
 
 HAL_SPEC = HALSpecification.xml
 SPM_SPEC = SPMSpecification.xml
+HAL_SWORD_SPEC = HALSpecification-Sword.xml
 
 #Variable Intermédiaire
 HAL_COMPILED_SPEC = build/HALSpecification.compiled.xml
@@ -49,58 +50,67 @@ HAL_RNG = out/HALSpecification.rng
 SPM_XSD = out/SPMSpecification.xsd
 HAL_XSD = out/HALSpecification.xsd
 
+HAL_SWORD_RNG = out/HAL-SwordSpecification.rng
+HAL_SWORD_COMPILED_SPEC = build/HAL-SwordSpecification.compiled.xml
 
 # Cible par défaut
-all: docker Stylesheets $(HAL_RNG) $(HAL_HTML_OUT) $(HAL_COMPILED_SPEC) $(SPM_HTML_OUT) $(SPM_RNG) clean_intermediates
+all: docker Stylesheets  hal spm
 
 # Règle pour transformer le fichier XML en utilisant XSLT
-$(HAL_COMPILED_SPEC): build $(HAL_SPEC) $(XSL_ODD2ODD)
+$(HAL_COMPILED_SPEC): $(HAL_SPEC) $(XSL_ODD2ODD) | build 
 	@echo Make $(HAL_COMPILED_SPEC)
-	@$(DOCKER_RUN) -s:$(MP)/$(HAL_SPEC) -xsl:$(MP)/$(XSL_ODD2ODD) > $(HAL_COMPILED_SPEC)
+	@$(DOCKER_RUN) -s:$(MP)/$(HAL_SPEC) -xsl:$(MP)/$(XSL_ODD2ODD) > $@
 
-$(HAL_RNG): build $(HAL_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
+$(HAL_RNG): $(HAL_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
 	@echo Make $(HAL_RNG)
-	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $(HAL_RNG)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $@
 
 $(HAL_XSD): $(HAL_COMPILED_SPEC) $(XSL_ODD_TO_XSD)
 	@echo Make $(HAL_RNG)
-	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_XSD) > $(HAL_XSD)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_XSD) > $@
 
-$(HAL_ODD_LITE): build $(HAL_COMPILED_SPEC) $(XSL_ODDLITE)
+$(HAL_ODD_LITE): $(HAL_COMPILED_SPEC) $(XSL_ODDLITE)
 	@echo make $(HAL_ODD_LITE)
-	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $(HAL_ODD_LITE)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $@
 
 $(HAL_HTML_OUT): $(HAL_SPEC) $(XSL_TOHTML) $(HAL_ODD_LITE)
 	@echo Make $(HAL_HTML_OUT)
-	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_ODD_LITE)" -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $(HAL_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_ODD_LITE)" -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $@
 
+$(HAL_SWORD_COMPILED_SPEC):  $(HAL_COMPILED_SPEC) $(HAL_SWORD_SPEC) $(XSL_ODD2ODD)
+	@echo Make $(HAL_SWORD_COMPILED_SPEC)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_SWORD_SPEC)"   -xsl:$(MP)/$(XSL_ODD2ODD)  > $@
+
+$(HAL_SWORD_RNG): $(HAL_SWORD_COMPILED_SPEC)
+	@echo Make $(HAL_SWORD_RNG)
+	@$(DOCKER_RUN) -s:"$(MP)/$(HAL_SWORD_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $@
 
 # SPM
 $(SPM_COMPILED_SPEC): $(HAL_COMPILED_SPEC) $(SPM_SPEC) $(XSL_ODD2ODD)
-	@echo Make $(HAL_HTML_OUT)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_SPEC)"          -xsl:$(MP)/$(XSL_ODD2ODD)  > $(SPM_COMPILED_SPEC)
+	@echo Make $(SPM_COMPILED_SPEC)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_SPEC)"          -xsl:$(MP)/$(XSL_ODD2ODD)  > $@
 
 $(SPM_ODD_LITE): $(SPM_COMPILED_SPEC) $(XSL_ODDLITE)
 	@echo Make $(SPM_ODD_LITE)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $(SPM_ODD_LITE)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODDLITE) > $@
 
 $(SPM_HTML_OUT): $(SPM_ODD_LITE) $(XSL_TOHTML)
 	@echo Make $(SPM_HTML_OUT)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_ODD_LITE)"      -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $(SPM_HTML_OUT)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_ODD_LITE)"      -xsl:$(MP)/$(XSL_TOHTML)  showTitleAuthor=false authorWord='' includeAuthor=false includeAffiliation=false > $@
 
 $(SPM_RNG): $(SPM_COMPILED_SPEC) $(XSL_ODD_TO_RELAXNG)
 	@echo Make $(SPM_RNG)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $(SPM_RNG)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_RELAXNG) > $@
 
 $(SPM_XSD): $(SPM_COMPILED_SPEC) $(XSL_ODD_TO_XSD)
 	@echo Make $(SPM_RNG)
-	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_XSD) > $(SPM_XSD)
+	@$(DOCKER_RUN) -s:"$(MP)/$(SPM_COMPILED_SPEC)" -xsl:$(MP)/$(XSL_ODD_TO_XSD) > $@
 
-hal: $(HAL_HTML_OUT) $(HAL_RNG)
+hal: $(HAL_HTML_OUT) $(HAL_RNG) $(HAL_SWORD_RNG)
 
 spm: $(SPM_HTML_OUT) $(SPM_RNG)
 
-test:	/usr/bin/jing staticTests dynTests
+test: /usr/bin/jing staticTests dynTests
 
 # We use sitemaps to get all documents and retreive on one on MODULO tei
 .ONESHELL:

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="fr">Spécification du schéma d'import-export TEI de www.documentation-administrative.gouv.fr</title>
+      </titleStmt>
+      <publicationStmt>
+        <authority>CCSD</authority>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/3.0/deed.fr">Creative Commons Attribution 3.0 non transposé (CC BY 3.0)</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p></p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="HAL-SWORD"
+        source="build/HALSpecification.compiled.xml" start="TEI">
+        <moduleRef key="tei"/>
+        <moduleRef key="header" />
+        <moduleRef key="core" />
+        <moduleRef key="textstructure"/>
+        <moduleRef key="namesdates" />
+        <moduleRef key="corpus"/>
+        <moduleRef key="linking"/>
+        <moduleRef key="canonical"/>
+        <!-- CF :Ajout de validUntil -->
+        <moduleRef key="tagdocs"/>
+        <moduleRef key="spoken"/>
+        
+        <elementSpec ident="licence" source="HAL" mode="change">
+          <attList>
+            <attDef ident="target" mode="change" usage="req">
+              <desc>Spécificie la licence</desc>
+              <valList mode="add" type="closed">
+		<valItem ident="https://creativecommons.org/licenses/by/4.0/">
+                <desc>Attribution</desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/licenses/by-nc/4.0/">
+                <desc>Attribution-NonCommercial</desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/licenses/by-nd/4.0/">
+                <desc>Attribution-NoDerivatives</desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/licenses/by-sa/">
+                <desc>Attribution-ShareAlike</desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                <desc>Attribution-NonCommercial-NoDerivatives</desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <desc>Attribution-NonCommercial-ShareAlike </desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/public-domain/pdm/">
+                <desc>Public Domain </desc>
+              </valItem>
+              <valItem ident="https://creativecommons.org/publicdomain/zero/1.0/">
+                <desc>Public Domain</desc>
+              </valItem>
+	      <valItem ident="https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf">
+                <desc>Etalab</desc>
+              </valItem>
+              <valItem ident="https://hal.science/licences/copyright/">
+                <desc>Copyright (Tous droits réservés)</desc>
+              </valItem>
+	      <valItem ident="https://about.hal.science/hal-authorisation-v1/">
+                <desc>Autorisation HAL</desc>
+              </valItem>
+	      <valItem ident="https://creativecommons.org/choose/mark/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://hal.archives-ouvertes.fr/licences/etalab/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://hal.archives-ouvertes.fr/licences/copyright/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://hal.archives-ouvertes.fr/licences/publicDomain/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by-nc/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by-nd/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by-sa/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by-nc-nd/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/licenses/by-nc-sa/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+	      <valItem ident="https://creativecommons.org/public-domain/pdm/">
+		<desc>Compatibilite: don't use</desc>
+	      </valItem>
+              </valList>
+            </attDef>
+          </attList>
+          <exemplum>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <licence target="http://creativecommons.org/licenses/by/">Attribution</licence>
+            </egXML>
+          </exemplum>
+        </elementSpec>
+
+	<elementSpec ident="licence" source="HAL" mode="change">
+        </elementSpec>
+	  
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
